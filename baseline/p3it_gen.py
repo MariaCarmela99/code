@@ -1,12 +1,13 @@
-"""P3 corretta: dominio italiano con geografia coerente.
+"""P3 variante italiana (P3IT): dominio italiano con geografia coerente.
 Stato -> regione (blocco), città -> comune della regione, provincia/CAP/ospedale derivati dal comune.
-Output nella cartella di lavoro: p3_clean.csv, p3_dirty.csv, p3_mappa_geografica.csv"""
+Output: db/p3it_clean.csv, db/p3it_dirty.csv, baseline/p3it_geo_map.csv. Input aggiuntivo: baseline/comuni_cap_map.csv"""
 import os
 import pandas as pd
 
-# I file CSV di partenza devono stare nella stessa cartella di questo script
-D = os.path.dirname(os.path.abspath(__file__)) + os.sep
-OUT = D  # tutti i file nella stessa cartella dello script
+# I CSV di partenza stanno in code/db/ (lanciare lo script dalla directory code)
+HERE = "./baseline/"  # path relativi alla directory code (lanciare gli script da code/)
+D = "./db/"  # i CSV stanno in code/db/
+OUT = D  # anche i dataset perturbati stanno in code/db/
 
 CLEAN_TO_DIRTY = {
     "index": "index", "ProviderNumber": "provider_number", "HospitalName": "name",
@@ -96,8 +97,8 @@ def functional(df, x, y):
     return bool((df.groupby(x)[y].nunique() == 1).all())
 
 # ---------- caricamento ----------
-clean = pd.read_csv(D + "0499ba75-clean.csv", dtype=str, keep_default_na=False).apply(lambda s: s.str.strip())
-dirty = pd.read_csv(D + "3192ed70-dirty.csv", dtype=str, keep_default_na=False).apply(lambda s: s.str.strip())
+clean = pd.read_csv(D + "clean.csv", dtype=str, keep_default_na=False).apply(lambda s: s.str.strip())
+dirty = pd.read_csv(D + "dirty.csv", dtype=str, keep_default_na=False).apply(lambda s: s.str.strip())
 dirty = dirty.set_index("index", drop=False).loc[clean["index"]].reset_index(drop=True)
 clean = clean.reset_index(drop=True)
 
@@ -113,7 +114,7 @@ print("FD nel dataset originale:", checks)
 assert all(checks.values()), "dipendenze originali non funzionali: lo script si ferma"
 
 # ---------- tabella comuni (ISTAT + CAP) ----------
-cap = pd.read_csv(D + "f9c7760a-gi_comuni_cap.csv", sep=";", dtype=str, keep_default_na=False)
+cap = pd.read_csv(HERE + "comuni_cap_map.csv", sep=";", dtype=str, keep_default_na=False)
 cap = cap.apply(lambda s: s.str.strip())
 comuni = (cap.groupby("codice_istat")
           .agg(den=("denominazione_ita", "first"), prov=("denominazione_provincia", "first"),
@@ -247,7 +248,7 @@ for i in range(len(clean)):
 
 # ---------- verifiche ----------
 out = new_clean.copy()
-print("\nFD nel dataset P3 corretto:", {
+print("\nFD nel dataset P3IT:", {
     "City->State": functional(out, "City", "State"),
     "ZipCode->City": functional(out, "ZipCode", "City"),
     "City->CountyName": functional(out, "City", "CountyName"),
@@ -272,18 +273,18 @@ print("righe con comune/CAP/provincia non coerenti:", len(bad))
 assert not bad, bad[:5]
 
 for col in ["State", "City", "ZipCode", "CountyName", "HospitalName", "Address1", "ProviderNumber"]:
-    print(f"valori distinti {col}: originale={clean[col].nunique()} P3={out[col].nunique()}")
+    print(f"valori distinti {col}: originale={clean[col].nunique()} P3IT={out[col].nunique()}")
 
 diffs = int(new_dirty.ne(new_clean.rename(columns=CLEAN_TO_DIRTY)).to_numpy().sum())
 print("celle corrotte (tutte le colonne):", diffs)
 
 # ---------- salvataggio ----------
-new_clean.to_csv(OUT + "p3_clean.csv", index=False)
-new_dirty.to_csv(OUT + "p3_dirty.csv", index=False)
+new_clean.to_csv(OUT + "p3it_clean.csv", index=False)
+new_dirty.to_csv(OUT + "p3it_dirty.csv", index=False)
 mappa = pd.DataFrame([{"stato_originale": st, "citta_originale": c, "stato_p3": STATE_NEW[st],
                        "comune_p3": r.den, "provincia_p3": r.prov, "regione_codice": r.reg, "prefisso": PREFIX[r.den]}
                       for (st, c), r in city_map.items()])
-mappa.to_csv(OUT + "p3_mappa_geografica.csv", index=False)
+mappa.to_csv(HERE + "p3it_geo_map.csv", index=False)
 print("\nMappa città:")
 print(mappa.to_string(index=False))
-print("\nSalvati:", OUT + "p3_clean.csv", OUT + "p3_dirty.csv", OUT + "p3_mappa_geografica.csv")
+print("\nSalvati:", OUT + "p3it_clean.csv", OUT + "p3it_dirty.csv", HERE + "p3it_geo_map.csv")

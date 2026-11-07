@@ -3,9 +3,10 @@ import sys
 import pandas as pd
 
 # Percorsi: dati originali e cartella con i dataset v2 da verificare
-# I file CSV di partenza devono stare nella stessa cartella di questo script
-D = os.path.dirname(os.path.abspath(__file__)) + os.sep
-V = D  # tutti i file nella stessa cartella dello script
+# I CSV di partenza stanno in code/db/ (lanciare lo script dalla directory code)
+HERE = "./baseline/"  # path relativi alla directory code (lanciare gli script da code/)
+D = "./db/"  # i CSV stanno in code/db/
+V = D  # anche i dataset perturbati stanno in code/db/
 
 # Corrispondenza colonne clean (CamelCase) -> dirty (minuscole); tutti i confronti avvengono nei nomi dirty
 CLEAN_TO_DIRTY = {
@@ -50,9 +51,9 @@ def lev(a, b):
 
 # Carica il clean e il dirty originali, nei nomi dirty, con il dirty allineato al clean per 'index'
 def load_original():
-    c = pd.read_csv(D + "0499ba75-clean.csv", dtype=str, keep_default_na=False)
+    c = pd.read_csv(D + "clean.csv", dtype=str, keep_default_na=False)
     c = c.apply(lambda s: s.str.strip()).rename(columns=CLEAN_TO_DIRTY)
-    d = pd.read_csv(D + "3192ed70-dirty.csv", dtype=str, keep_default_na=False)
+    d = pd.read_csv(D + "dirty.csv", dtype=str, keep_default_na=False)
     d = d.apply(lambda s: s.str.strip())
     d = d.set_index("index", drop=False).loc[c["index"]].reset_index(drop=True)
     return c.reset_index(drop=True), d
@@ -169,11 +170,12 @@ def run(label, cpath, dpath, p4, required_edit, declared=()):
     return not fails
 
 
-# Esecuzione sui quattro dataset v2; exit code 1 se un controllo obbligatorio fallisce
+# Esecuzione sui dataset v2 (P3IT e P3FR = varianti italiana e francese di P3); exit code 1 se un controllo obbligatorio fallisce
 results = {
     "P1": run("P1", V + "p1_clean.csv", V + "p1_dirty.csv", False, True),
     "P2": run("P2", V + "p2_clean.csv", V + "p2_dirty.csv", False, False),
-    "P3": run("P3", V + "p3_clean.csv", V + "p3_dirty.csv", False, False, declared=("county",)),
+    "P3IT": run("P3IT", V + "p3it_clean.csv", V + "p3it_dirty.csv", False, False, declared=("county",)),
+    "P3FR": run("P3FR", V + "p3fr_clean.csv", V + "p3fr_dirty.csv", False, False, declared=("county",)),
     "P4": run("P4", V + "p4_clean.csv", V + "p4_dirty.csv", True, True),
 }
 print({k: ("OK" if v else "FALLITO") for k, v in results.items()})

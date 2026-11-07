@@ -1,0 +1,40 @@
+stato_originale,citta_originale,stato_p3,comune_p3,provincia_p3,regione_codice,prefisso
+al,alabaster,lo,Agra,Varese,03,0332
+al,andalusia,lo,Brunello,Varese,03,0332
+al,anniston,lo,Castelseprio,Varese,03,0331
+al,birmingham,lo,Milano,Milano,03,02
+al,boaz,lo,Ispra,Varese,03,0332
+al,centre,lo,Oggiona con Santo Stefano,Varese,03,0331
+al,clanton,lo,Travedona-Monate,Varese,03,0332
+al,cullman,lo,Alzate Brianza,Como,03,031
+al,decatur,lo,Caglio,Como,03,031
+al,dothan,lo,Bergamo,Bergamo,03,035
+al,elba,lo,Grandate,Como,03,031
+al,enterprise,lo,Mariano Comense,Como,03,031
+al,fayette,lo,Plesio,Como,03,0344
+al,florence,lo,Tavernerio,Como,03,031
+al,fort payne,lo,Centro Valle Intelvi,Como,03,031
+al,gadsden,lo,Brescia,Brescia,03,030
+al,georgiana,lo,Lovero,Sondrio,03,0342
+al,guntersville,lo,Sondalo,Sondrio,03,0342
+al,hamilton,lo,Abbiategrasso,Milano,03,02
+al,hartselle,lo,Busto Garolfo,Milano,03,0331
+al,huntsville,lo,Colturano,Milano,03,02
+al,luverne,lo,Legnano,Milano,03,0331
+al,mobile,lo,Ozzero,Milano,03,02
+al,montgomery,lo,Montalto Pavese,Pavia,03,0383
+al,oneonta,lo,Turbigo,Milano,03,0331
+al,opelika,lo,Alzano Lombardo,Bergamo,03,035
+al,opp,lo,Bolgare,Bergamo,03,035
+al,ozark,lo,Capizzone,Bergamo,03,035
+al,prattville,lo,Cerete,Bergamo,03,0346
+al,russellville,lo,Dalmine,Bergamo,03,035
+al,sheffield,lo,Ghisalba,Bergamo,03,035
+al,sylacauga,lo,Martinengo,Bergamo,03,0363
+al,tallassee,lo,Pagazzano,Bergamo,03,0363
+al,thomasville,lo,Romano di Lombardia,Bergamo,03,0363
+al,valley,lo,Sedrina,Bergamo,03,0345
+al,wedowee,lo,Trescore Balneario,Bergamo,03,035
+al,winfield,lo,Villa d'Almè,Bergamo,03,035
+ak,anchorage,ve,Affi,Verona,05,045
+ak,bethel,ve,Laghi,Vicenza,05,0445

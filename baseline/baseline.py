@@ -3,8 +3,8 @@ di una dipendenza funzionale. Usa solo il dirty (nessuna ground truth nella pred
 import pandas as pd
 from collections import Counter, defaultdict
 
-D = "/mnt/user-data/attachments/be48e8bc-8215-55c7-b4da-1e0267c0e58a/"
-OUT = "/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/"
+HERE = "./baseline/"  # path relativi alla directory code (lanciare gli script da code/)
+D = "./db/"  # i CSV stanno in code/db/
 
 CLEAN_TO_DIRTY = {
     "ProviderNumber": "provider_number", "HospitalName": "name", "Address1": "address_1",
@@ -92,14 +92,15 @@ def run(name, dirty_f, clean_f):
     return pd.DataFrame(recs)
 
 sets = {
-    "original": ("/mnt/user-data/attachments/be48e8bc-8215-55c7-b4da-1e0267c0e58a/3192ed70-dirty.csv", "/mnt/user-data/attachments/be48e8bc-8215-55c7-b4da-1e0267c0e58a/0499ba75-clean.csv"),
-    "P1": ("/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p1_dirty.csv", "/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p1_clean.csv"),
-    "P2": ("/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p2_dirty.csv", "/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p2_clean.csv"),
-    "P3": ("/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p3_dirty.csv", "/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p3_clean.csv"),
-    "P4": ("/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p4_dirty.csv", "/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/p4_clean.csv"),
+    "original": (D + "dirty.csv", D + "clean.csv"),
+    "P1": (D + "p1_dirty.csv", D + "p1_clean.csv"),
+    "P2": (D + "p2_dirty.csv", D + "p2_clean.csv"),
+    "P3IT": (D + "p3it_dirty.csv", D + "p3it_clean.csv"),
+    "P3FR": (D + "p3fr_dirty.csv", D + "p3fr_clean.csv"),
+    "P4": (D + "p4_dirty.csv", D + "p4_clean.csv"),
 }
 all_res = pd.concat([run(k, *v) for k, v in sets.items()], ignore_index=True)
-all_res.to_csv("/tmp/claude-0/-home-claude/be48e8bc-8215-55c7-b4da-1e0267c0e58a/scratchpad/v2/baseline_results_v2.csv", index=False)
+all_res.to_csv(HERE + "baseline_results.csv", index=False)
 
 print("== Riepilogo per dataset ==")
 for k, g in all_res.groupby("dataset", sort=False):
@@ -112,7 +113,7 @@ for k, g in all_res.groupby("dataset", sort=False):
 
 print("\n== Invarianza: confronto con l'originale (stessa cella, stessa regola, stesso esito) ==")
 base = all_res[all_res.dataset == "original"].set_index(["index", "col"])
-for k in ["P1", "P2", "P3", "P4"]:
+for k in ["P1", "P2", "P3IT", "P3FR", "P4"]:
     g = all_res[all_res.dataset == k].set_index(["index", "col"])
     common = base.index.intersection(g.index)
     same_rule = (base.loc[common, "rule"] == g.loc[common, "rule"]).mean() * 100

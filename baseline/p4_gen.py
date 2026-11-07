@@ -3,9 +3,10 @@ import numpy as np
 import pandas as pd
 
 # Input originali e cartella di output della versione 2
-# I file CSV di partenza devono stare nella stessa cartella di questo script
-D = os.path.dirname(os.path.abspath(__file__)) + os.sep
-OUT = D  # tutti i file nella stessa cartella dello script
+# I CSV di partenza stanno in code/db/ (lanciare lo script dalla directory code)
+HERE = "./baseline/"  # path relativi alla directory code (lanciare gli script da code/)
+D = "./db/"  # i CSV stanno in code/db/
+OUT = D  # anche i dataset perturbati stanno in code/db/
 
 # Corrispondenza colonne clean (CamelCase) -> colonne dirty (minuscole)
 CLEAN_TO_DIRTY = {
@@ -29,9 +30,9 @@ P4_RENAME_MAP = {
 
 def main():
     # Caricamento: clean portato ai nomi dirty, dirty allineato al clean per 'index'
-    clean = pd.read_csv(D + "0499ba75-clean.csv", dtype=str, keep_default_na=False)
+    clean = pd.read_csv(D + "clean.csv", dtype=str, keep_default_na=False)
     clean = clean.apply(lambda s: s.str.strip()).rename(columns=CLEAN_TO_DIRTY).reset_index(drop=True)
-    dirty = pd.read_csv(D + "3192ed70-dirty.csv", dtype=str, keep_default_na=False)
+    dirty = pd.read_csv(D + "dirty.csv", dtype=str, keep_default_na=False)
     dirty = dirty.apply(lambda s: s.str.strip())
     dirty = dirty.set_index("index", drop=False).loc[clean["index"]].reset_index(drop=True)
 

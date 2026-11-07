@@ -3,9 +3,10 @@ import random
 import pandas as pd
 
 # Input originali e cartella di output della versione 2
-# I CSV originali devono stare nella stessa cartella di questo script
-D = os.path.dirname(os.path.abspath(__file__)) + os.sep
-OUT = D  # p1_clean.csv e p1_dirty.csv vengono scritti nella stessa cartella
+# I CSV originali stanno in code/db/ (lanciare lo script dalla directory code)
+HERE = "./baseline/"  # path relativi alla directory code (lanciare gli script da code/)
+D = "./db/"  # i CSV stanno in code/db/
+OUT = D  # anche i dataset perturbati stanno in code/db/
 
 # Corrispondenza colonne clean (CamelCase) -> colonne dirty (minuscole)
 CLEAN_TO_DIRTY = {
@@ -149,9 +150,9 @@ def functional(df, lhs, rhs):
 
 def main():
     # Caricamento: clean e dirty originali, senza spazi, dirty allineato al clean per 'index'
-    clean = pd.read_csv(D + "0499ba75-clean.csv", dtype=str, keep_default_na=False)
+    clean = pd.read_csv(D + "clean.csv", dtype=str, keep_default_na=False)
     clean = clean.apply(lambda s: s.str.strip()).reset_index(drop=True)
-    dirty = pd.read_csv(D + "3192ed70-dirty.csv", dtype=str, keep_default_na=False)
+    dirty = pd.read_csv(D + "dirty.csv", dtype=str, keep_default_na=False)
     dirty = dirty.apply(lambda s: s.str.strip())
     dirty = dirty.set_index("index", drop=False).loc[clean["index"]].reset_index(drop=True)
     n = len(clean)

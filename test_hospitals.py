@@ -1,12 +1,13 @@
 """Esperimento di cell repair (Hospital dirty/clean) con Llama 3.1 + retrieval.
-Supporta il dataset originale e le 4 perturbazioni (p1_, p2_, p3_, p4_) da protocollo.
+Supporta il dataset originale e le perturbazioni (p1_, p2_, p3it_, p3fr_, p4_) da protocollo.
 
 Esecuzione:
-    python3 test_hospital.py --dry-run
-    python3 test_hospital.py --prefix p1_
-    python3 test_hospital.py --prefix p2_
-    python3 test_hospital.py --prefix p3_
-    python3 test_hospital.py --prefix p4_
+    python test_hospitals.py --dry-run
+    python test_hospitals.py --prefix p1_
+    python test_hospitals.py --prefix p2_
+    python test_hospitals.py --prefix p3it_   (P3 variante italiana)
+    python test_hospitals.py --prefix p3fr_   (P3 variante francese)
+    python test_hospitals.py --prefix p4_
 """
 
 from __future__ import annotations
@@ -28,6 +29,9 @@ NUM_THREADS = 6
 SEED = 42
 
 HERE = Path(__file__).resolve().parent
+
+# Prefissi dei dataset in db/: "" = originale; p3it_ e p3fr_ sono le varianti italiana e francese di P3
+PREFIXES = ["", "p1_", "p2_", "p3it_", "p3fr_", "p4_"]
 
 CLEAN_TO_DIRTY = {
     "index": "index",
@@ -365,8 +369,8 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true", help="Stampa differenze senza usare Ollama")
     parser.add_argument("--max-rows", type=int, default=MAX_ROWS,
                         help="Numero di righe CON errori da testare (0=tutte)")
-    parser.add_argument("--prefix", type=str, default="",
-                        help="Prefisso dei file CSV (es. 'p1_', 'p2_', 'p3_', 'p4_')")
+    parser.add_argument("--prefix", type=str, default="", choices=PREFIXES,
+                        help="Prefisso dei file CSV in db/ ('' = originale, poi 'p1_', 'p2_', 'p3it_', 'p3fr_', 'p4_')")
     parser.add_argument("--include-non-fd", action="store_true",
                         help="Include anche score e sample (colonne prive di FD)")
     args = parser.parse_args()

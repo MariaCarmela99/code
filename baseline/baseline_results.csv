@@ -1364,461 +1364,916 @@ P2,986,city,sylxcauga,sylacauga,sylacauga,provider_number->city,1,1
 P2,987,address_1,209 nortx main street,209 north main street,209 north main street,provider_number->address_1,1,1
 P2,988,name,university of alabama xospital,university of alabama hospital,university of alabama hospital,provider_number->name,1,1
 P2,998,measure_name,hexrt axtxckxpxtients gixen aspxrin at dixxharge,heart attack patients given aspirin at discharge,heart attack patients given aspirin at discharge,measure_code->measure_name,1,1
-P3,1,measure_name,pazienti chirurgici in terapiaxxronicx con betabloccanti chexhanno mantenuto ilxtrattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,measure_code->measure_name,1,1
-P3,4,city,milaxo,milano,milano,provider_number->city,1,1
-P3,8,city,milaxo,milano,milano,provider_number->city,1,1
-P3,11,city,ghisxlba,ghisalba,ghisalba,provider_number->city,1,1
-P3,14,provider_number,3xx13,30113,30113,phone->provider_number,1,1
-P3,17,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,22,condition,infarto miocardico acxto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,23,owner,azienda xlssxrxgionaxe,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
-P3,23,condition,infarto xiocardxcx acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,25,phone,035000000x,0350000002,0350000002,provider_number->phone,1,1
-P3,25,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,27,name,presidio ospedalieroxbergamo 1,presidio ospedaliero bergamo 1,presidio ospedaliero bergamo 1,provider_number->name,1,1
-P3,28,owner,azienda ulsx regionale,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
-P3,32,owner,aziexda uxssxrxgioxaxe,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
-P3,37,phone,xx500x0002,0350000002,0350000002,provider_number->phone,1,1
-P3,40,type,prexidi ospedalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,43,state,xo,lo,lo,provider_number->state,1,1
-P3,43,owner,xziendaxulss regxonxle,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
-P3,44,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,45,zip,x1027,21027,21027,provider_number->zip,1,1
-P3,46,provider_number,x0102,30102,30102,phone->provider_number,1,1
-P3,47,state,xo,lo,lo,provider_number->state,1,1
-P3,51,state,xo,lo,lo,provider_number->state,1,1
-P3,52,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,57,city,ispxa,ispra,ispra,provider_number->city,1,1
-P3,57,state_average,lo_pol-xb,lo_pol-3b,lo_pol-3b,state+measure_code->state_average,1,1
-P3,58,address_1,vixxxonatxlxo 1,via donatello 1,via donatello 1,provider_number->address_1,1,1
-P3,58,phone,0x3x000001,0332000001,0332000001,provider_number->phone,1,1
-P3,61,phone,0x3x000001,0332000001,0332000001,provider_number->phone,1,1
-P3,64,zip,2102x,21027,21027,provider_number->zip,1,1
-P3,66,phone,0332x00001,0332000001,0332000001,provider_number->phone,1,1
-P3,68,county,vxrexe,varese,varese,provider_number->county,1,1
-P3,70,state_average,lo_imx-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
-P3,71,zip,2203x,22038,22038,provider_number->zip,1,1
-P3,73,county,cxmx,como,como,provider_number->county,1,1
-P3,74,condition,infarto xiocardxcx acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,78,county,coxo,como,como,provider_number->county,1,1
-P3,80,city,txvernerio,tavernerio,tavernerio,provider_number->city,1,1
-P3,82,provider_number,3010x,30103,30103,phone->provider_number,1,1
-P3,84,state,xo,lo,lo,provider_number->state,1,1
-P3,89,city,taverxerix,tavernerio,tavernerio,provider_number->city,1,1
-P3,94,city,tavxrnerio,tavernerio,tavernerio,provider_number->city,1,1
-P3,94,zip,2203x,22038,22038,provider_number->zip,1,1
-P3,95,address_1,viaxexnaudx 1,via einaudi 1,via einaudi 1,provider_number->address_1,1,1
-P3,95,measure_name,xazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
-P3,98,measure_code,ixa-4,ima-4,ixa-4,nessuna,0,0
-P3,99,state,xo,lo,lo,provider_number->state,1,1
-P3,99,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,102,phone,0350x00003,0350000003,0350000003,provider_number->phone,1,1
-P3,102,measure_code,iccx1,icc-1,iccx1,nessuna,0,0
-P3,107,address_1,via xinauxi 1,via einaudi 1,via einaudi 1,provider_number->address_1,1,1
-P3,109,measure_code,pox-5c,pol-5c,pox-5c,nessuna,0,0
-P3,112,measure_name,pazientixchirurgicixin terapia cronica con betablxccanti che hanno mantxnuto il trattaxento nel periodo xerioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,measure_code->measure_name,1,1
-P3,114,owner,struttuxa sanitaria privata xccreditata sxn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,120,state,lx,lo,lo,provider_number->state,1,1
-P3,120,measure_name,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorsx,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
-P3,121,measure_code,ixa-2,ima-2,ixa-2,nessuna,0,0
-P3,128,condition,insufficxenza cardiaca congestxzia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,132,name,presidio oxpedaliero xegnano,presidio ospedaliero legnano,presidio ospedaliero legnano,provider_number->name,1,1
-P3,137,county,mxlano,milano,milano,provider_number->county,1,1
-P3,138,zip,20x25,20025,20025,provider_number->zip,1,1
-P3,140,zip,200x5,20025,20025,provider_number->zip,1,1
-P3,141,state,lx,lo,lo,provider_number->state,1,1
-P3,146,measure_name,pazienti con infarto xiocardico acuto a cui e stata prescritta aspirina alla dimissione xspedaliera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,measure_code->measure_name,1,1
-P3,150,zip,2x038,20038,20038,provider_number->zip,1,1
-P3,158,zip,2x038,20038,20038,provider_number->zip,1,1
-P3,158,owner,istitxto di ricoveroxe cura a carattere scienxifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,158,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,160,owner,istituto di ricxvero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,162,address_1,via vxspxcxi x,via vespucci 1,via vespucci 1,provider_number->address_1,1,1
-P3,163,owner,xstituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,165,owner,istitxto di ricoveroxe cura a carattere scienxifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,166,state,lx,lo,lo,provider_number->state,1,1
-P3,172,name,presidio ospedalierx sondaxo,presidio ospedaliero sondalo,presidio ospedaliero sondalo,provider_number->name,1,1
-P3,176,address_1,via tuxaxi 1,via turati 1,via turati 1,provider_number->address_1,1,1
-P3,178,measure_code,icc-x,icc-2,icc-x,nessuna,0,0
-P3,181,city,soxdalx,sondalo,sondalo,provider_number->city,1,1
-P3,183,state,xo,lo,lo,provider_number->state,1,1
-P3,191,measure_code,pic-inx-4,pic-inf-4,pic-inx-4,nessuna,0,0
-P3,194,state_average,lo_picxvte-2,lo_pic-vte-2,lo_pic-vte-2,state+measure_code->state_average,1,1
-P3,197,zip,2x12x,20123,20123,provider_number->zip,1,1
-P3,200,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,200,condition,infartx miocardico acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,208,city,milxno,milano,milano,provider_number->city,1,1
-P3,211,measure_name,pazienti ricovexati per polmoxite valutati exsottopxsti a vacxinazione antinfxuenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
-P3,213,city,mxxano,milano,milano,provider_number->city,1,1
-P3,214,provider_number,x01xx,30108,30108,phone->provider_number,1,1
-P3,214,type,presidx ospedxlieri per acuti,presidi ospedalieri per acuti,presidx ospedxlieri per acuti,nessuna,0,0
-P3,214,state_average,lo_pxc-inf-2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
-P3,217,county,milaxo,milano,milano,provider_number->county,1,1
-P3,217,owner,struttuxa sanitaria privata xccreditata sxn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,218,phone,0200x0x002,0200000002,0200000002,provider_number->phone,1,1
-P3,219,owner,struttura sanitariaxprivata acxreditata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,220,measure_name,pazienti cox infarto miocarxico acuto a cui e stxta somministrxta aspirina all axrivo ix pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
-P3,222,county,xomo,como,como,provider_number->county,1,1
-P3,222,owner,ospedale cxassificatoxnoxprofit,ospedale classificato no-profit,ospedale classificato no-profit,provider_number->owner,1,1
-P3,224,county,xomo,como,como,provider_number->county,1,1
-P3,226,condition,infaxto miocardico xcuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,228,county,xomo,como,como,provider_number->county,1,1
-P3,229,city,centro valle intexvi,centro valle intelvi,centro valle intelvi,provider_number->city,1,1
-P3,229,state,lx,lo,lo,provider_number->state,1,1
-P3,229,phone,0310000x02,0310000002,0310000002,provider_number->phone,1,1
-P3,230,condition,insufficienza cardiacaxcongestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,233,zip,220x3,22023,22023,provider_number->zip,1,1
-P3,237,condition,prexenzione delle infezionixchirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,239,county,xomo,como,como,provider_number->county,1,1
-P3,239,owner,osxedale classificato no-profit,ospedale classificato no-profit,ospedale classificato no-profit,provider_number->owner,1,1
-P3,240,condition,prevexzione delle inxezioni chirurgxche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,244,name,prexidio ospedaliero centro valle intelvi,presidio ospedaliero centro valle intelvi,presidio ospedaliero centro valle intelvi,provider_number->name,1,1
-P3,245,provider_number,x01x0,30110,30110,phone->provider_number,1,1
-P3,245,state_average,lx_ima-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
-P3,248,phone,xx63x00001,0363000001,0363000001,provider_number->phone,1,1
-P3,248,owner,azienda socioxsanitaria territoriale - asst,azienda socio sanitaria territoriale - asst,azienda socio sanitaria territoriale - asst,provider_number->owner,1,1
-P3,249,state_average,xo_xma-5,lo_ima-5,lo_ima-5,state+measure_code->state_average,1,1
-P3,253,county,xergamo,bergamo,bergamo,provider_number->county,1,1
-P3,254,provider_number,3xx10,30110,30110,phone->provider_number,1,1
-P3,257,condition,xolmonite acquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,257,measure_name,paziexti xn prontoxxoccorso per polmonite con emocolxura esegxixa pxima delxa terxpia antibxoxixa,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,measure_code->measure_name,1,1
-P3,261,address_1,via cxnova 1,via canova 1,via canova 1,provider_number->address_1,1,1
-P3,262,phone,036x0xx001,0363000001,0363000001,provider_number->phone,1,1
-P3,265,address_1,via canovax1,via canova 1,via canova 1,provider_number->address_1,1,1
-P3,265,measure_code,pix-xnf-3,pic-inf-3,pix-xnf-3,nessuna,0,0
-P3,267,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,268,zip,x4058,24058,24058,provider_number->zip,1,1
-P3,270,state_average,lo_ixa-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
-P3,274,provider_number,3xx11,30111,30111,phone->provider_number,1,1
-P3,276,address_1,via xarixaldix1,via garibaldi 1,via garibaldi 1,provider_number->address_1,1,1
-P3,279,state,xo,lo,lo,provider_number->state,1,1
-P3,280,condition,xnsufficienza cardiaca congestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,281,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,282,measure_name,pxzienti xn proxto soccxrxo per polmonitx conxemoxoltura exeguita prima dxlla terapia xntibiotica,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,measure_code->measure_name,1,1
-P3,284,zip,2x010,21010,21010,provider_number->zip,1,1
-P3,291,zip,x1010,21010,21010,provider_number->zip,1,1
-P3,291,measure_name,pazienti cardioxhirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi gioxni dopo l interventx,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,measure_code->measure_name,1,1
-P3,294,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,296,address_1,via gaxilei 1,via galilei 1,via galilei 1,provider_number->address_1,1,1
-P3,312,city,caxxelseprix,castelseprio,castelseprio,provider_number->city,1,1
-P3,313,county,varexe,varese,varese,provider_number->county,1,1
-P3,314,owner,istituto dx ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,315,provider_number,301x6,30126,30126,phone->provider_number,1,1
-P3,317,address_1,viaxtintxrettx 1,via tintoretto 1,via tintoretto 1,provider_number->address_1,1,1
-P3,319,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,322,phone,033100x003,0331000003,0331000003,provider_number->phone,1,1
-P3,325,county,vaxese,varese,varese,provider_number->county,1,1
-P3,326,zip,21x50,21050,21050,provider_number->zip,1,1
-P3,328,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,333,zip,2x122,24122,24122,provider_number->zip,1,1
-P3,333,owner,istituto di ricxvero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,333,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,335,address_1,viaxdoxizexti 1,via donizetti 1,via donizetti 1,provider_number->address_1,1,1
-P3,335,state_average,lo_polx2,lo_pol-2,lo_pol-2,state+measure_code->state_average,1,1
-P3,338,name,presidxo ospedaliero bergamo 2,presidio ospedaliero bergamo 2,presidio ospedaliero bergamo 2,provider_number->name,1,1
-P3,341,zip,x4x22,24122,24122,provider_number->zip,1,1
-P3,343,phone,xx500x0004,0350000004,0350000004,provider_number->phone,1,1
-P3,347,county,bergxmo,bergamo,bergamo,provider_number->county,1,1
-P3,347,measure_name,pazienti chirxrgici per i quali il medico ha prescritto traxtamenti per prevenire la formazione di coaxuli di sangue xopo alcuni tipi di intervento,pazienti chirurgici per i quali il medico ha prescritto trattamenti per prevenire la formazione di coaguli di sangue dopo alcuni tipi di intervento,pazienti chirurgici per i quali il medico ha prescritto trattamenti per prevenire la formazione di coaguli di sangue dopo alcuni tipi di intervento,measure_code->measure_name,1,1
-P3,348,state_average,lo_picxvtex2,lo_pic-vte-2,lo_pic-vte-2,state+measure_code->state_average,1,1
-P3,350,measure_code,imax2,ima-2,imax2,nessuna,0,0
-P3,351,address_1,via axendolax1,via amendola 1,via amendola 1,provider_number->address_1,1,1
-P3,351,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,357,state,lx,lo,lo,provider_number->state,1,1
-P3,357,owner,istituto dx ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,361,provider_number,301x9,30139,30139,phone->provider_number,1,1
-P3,364,address_1,viaxxexrarcax1,via petrarca 1,via petrarca 1,provider_number->address_1,1,1
-P3,367,zip,2xx18,24018,24018,provider_number->zip,1,1
-P3,367,condition,polmonitx acquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,368,city,villa d'almx,villa d'almè,villa d'almè,provider_number->city,1,1
-P3,370,condition,polmonite axquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,371,state_average,loxpol-7,lo_pol-7,lo_pol-7,state+measure_code->state_average,1,1
-P3,374,state_average,lo_pxc-inf-2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
-P3,375,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,376,zip,2xx18,24018,24018,provider_number->zip,1,1
-P3,381,measure_name,pazienxi con infarto miocardico acuto a cui e stata prescritta aspixina alla dimissione ospedaxiera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,measure_code->measure_name,1,1
-P3,382,phone,02x00x0xx4,0200000004,0200000004,provider_number->phone,1,1
-P3,385,name,presxdio ospedaliero ozzero,presidio ospedaliero ozzero,presidio ospedaliero ozzero,provider_number->name,1,1
-P3,385,phone,02x00x0xx4,0200000004,0200000004,provider_number->phone,1,1
-P3,386,name,xresidix ospedaliero ozzero,presidio ospedaliero ozzero,presidio ospedaliero ozzero,provider_number->name,1,1
-P3,387,state,xo,lo,lo,provider_number->state,1,1
-P3,387,phone,02x00x0xx4,0200000004,0200000004,provider_number->phone,1,1
-P3,387,condition,insxfficienza cardiaca congestizix,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,388,state_average,lo_icx-2,lo_icc-2,lo_icc-2,state+measure_code->state_average,1,1
-P3,390,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,390,measure_name,pazienti fxmatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,measure_code->measure_name,1,1
-P3,392,measure_code,pol-xb,pol-3b,pol-xb,nessuna,0,0
-P3,394,address_1,viaxxatteottx 1,via matteotti 1,via matteotti 1,provider_number->address_1,1,1
-P3,394,phone,03x600x001,0346000001,0346000001,provider_number->phone,1,1
-P3,399,measure_code,ixc-1,icc-1,ixc-1,nessuna,0,0
-P3,401,condition,insxfficienza cardiaca congestizix,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,403,state,lx,lo,lo,provider_number->state,1,1
-P3,407,zip,2x0x0,24020,24020,provider_number->zip,1,1
-P3,409,provider_number,x0x41,30141,30141,phone->provider_number,1,1
-P3,410,measure_code,pic-xnfx1,pic-inf-1,pic-xnfx1,nessuna,0,0
-P3,411,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,412,address_1,via maxteotti 1,via matteotti 1,via matteotti 1,provider_number->address_1,1,1
-P3,412,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,414,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,416,address_1,via tiepxlo 1,via tiepolo 1,via tiepolo 1,provider_number->address_1,1,1
-P3,416,county,bergxmo,bergamo,bergamo,provider_number->county,1,1
-P3,419,emergency_service,xo,no,no,provider_number->emergency_service,1,1
-P3,421,zip,x4057,24057,24057,provider_number->zip,1,1
-P3,429,zip,2x0x7,24057,24057,provider_number->zip,1,1
-P3,432,address_1,vix xiepolx 1,via tiepolo 1,via tiepolo 1,provider_number->address_1,1,1
-P3,435,measure_name,pazientixcon insuxficienxa cardiaca x xisfunzione ventricolare trxttati con acx-inibitorexo sartano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,measure_code->measure_name,1,1
-P3,438,city,affx,affi,affi,provider_number->city,1,1
-P3,448,measure_name,pazixnti xhiruxgixi soxtxpoxti axtrxcotxmia xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,measure_code->measure_name,1,1
-P3,449,name,xrxsixio ospedxliero afxi,presidio ospedaliero affi,presidio ospedaliero affi,provider_number->name,1,1
-P3,450,owner,istituto di ricxvero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,452,address_1,viaxpertxni 1,via pertini 1,via pertini 1,provider_number->address_1,1,1
-P3,454,type,presidi ospedalieri per acuxi,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,457,county,bxrxamo,bergamo,bergamo,provider_number->county,1,1
-P3,457,owner,xziendaxulss regxonxle,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
-P3,458,county,xergamo,bergamo,bergamo,provider_number->county,1,1
-P3,465,measure_code,pxc-vte-1,pic-vte-1,pxc-vte-1,nessuna,0,0
-P3,466,county,bexgamo,bergamo,bergamo,provider_number->county,1,1
-P3,468,condition,infaxto miocardico xcuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,472,phone,035000x007,0350000007,0350000007,provider_number->phone,1,1
-P3,473,address_1,viaxleoparxi 1,via leopardi 1,via leopardi 1,provider_number->address_1,1,1
-P3,474,measure_name,pazienxi con insufficixnza cardiaca dimessi con istruzioni scritte compxete per il monitxraggio clinico,pazienti con insufficienza cardiaca dimessi con istruzioni scritte complete per il monitoraggio clinico,pazienti con insufficienza cardiaca dimessi con istruzioni scritte complete per il monitoraggio clinico,measure_code->measure_name,1,1
-P3,475,city,capizzonx,capizzone,capizzone,provider_number->city,1,1
-P3,478,state,xo,lo,lo,provider_number->state,1,1
-P3,478,state_average,lx_pol-2,lo_pol-2,lx_pol-2,nessuna,0,0
-P3,484,state,xo,lo,lo,provider_number->state,1,1
-P3,485,address_1,vxa leopardi 1,via leopardi 1,via leopardi 1,provider_number->address_1,1,1
-P3,486,city,xapizzone,capizzone,capizzone,provider_number->city,1,1
-P3,491,zip,x4x30,24030,24030,provider_number->zip,1,1
-P3,491,type,presidi ospexalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,493,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,494,type,presidi ospedalierx per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,494,owner,struttura sanxtaria privata axcrxditata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,494,measure_name,pxzienti con infarxo miocarxico e disfunzione ventricolarexsinixtra trattati con ace-inibitore o sartano,pazienti con infarto miocardico e disfunzione ventricolare sinistra trattati con ace-inibitore o sartano,pazienti con infarto miocardico e disfunzione ventricolare sinistra trattati con ace-inibitore o sartano,measure_code->measure_name,1,1
-P3,496,measure_code,ima-x,ima-5,ima-x,nessuna,0,0
-P3,498,type,presidx ospedxlieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,500,zip,x1040,21040,21040,provider_number->zip,1,1
-P3,503,county,vxrexx,varese,varese,provider_number->county,1,1
-P3,505,state,lx,lo,lo,provider_number->state,1,1
-P3,507,condition,polmonite acquisita in comunitx,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,508,measure_name,pazienti ricoxeratx per polmonite valutati e sxttoposti a vaccinazione antixfluexzale stxgionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
-P3,512,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,514,county,vxrexx,varese,varese,provider_number->county,1,1
-P3,517,phone,0383xx0001,0383000001,0383000001,provider_number->phone,1,1
-P3,518,city,montalxo pavese,montalto pavese,montalto pavese,provider_number->city,1,1
-P3,522,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,527,owner,ospxdale classificato no-prxfit,ospedale classificato no-profit,ospedale classificato no-profit,provider_number->owner,1,1
-P3,528,county,pxvia,pavia,pavia,provider_number->county,1,1
-P3,533,name,presidio ospedaliero montxlto pavese 1,presidio ospedaliero montalto pavese 1,presidio ospedaliero montalto pavese 1,provider_number->name,1,1
-P3,533,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,533,measure_name,paxienti rxcoverati per pxlmonite valutati e sotxoposti a vxccinxzione axtinfluenzale sxagionalx,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
-P3,537,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,541,county,pavix,pavia,pavia,provider_number->county,1,1
-P3,542,measure_name,paziexti con infarto xiocardico xcuto a cui e stata somministrata aspirina all arrxvo in pronto soccoxso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
-P3,545,zip,2x04x,27040,27040,provider_number->zip,1,1
-P3,546,measure_name,paziexti con infarto miocardico acuto a cui e stato prescritto un betaxloccante alla dimisxione,pazienti con infarto miocardico acuto a cui e stato prescritto un betabloccante alla dimissione,pazienti con infarto miocardico acuto a cui e stato prescritto un betabloccante alla dimissione,measure_code->measure_name,1,1
-P3,549,phone,0383000xxx,0383000002,0383000002,provider_number->phone,1,1
-P3,552,county,pxvia,pavia,pavia,provider_number->county,1,1
-P3,556,condition,polmxnite acquisita inxcomunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,556,state_average,lo_pol-5x,lo_pol-5c,lo_pol-5c,state+measure_code->state_average,1,1
-P3,560,provider_number,3xx17,30117,30117,phone->provider_number,1,1
-P3,560,state,xo,lo,lo,zip->state,1,1
-P3,561,name,prexidio ospedaliero montxlto paxese x,presidio ospedaliero montalto pavese 2,presidio ospedaliero montalto pavese 2,provider_number->name,1,1
-P3,562,phone,03x3000002,0383000002,0383000002,provider_number->phone,1,1
-P3,563,phone,0383000xxx,0383000002,0383000002,provider_number->phone,1,1
-P3,563,measure_name,pazxenti xardiocxirurgicixcon gxicemxa posxoperatxria manxenxta sxtto cxntroxlo neixprxmi xiornx dopoxl inxervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,measure_code->measure_name,1,1
-P3,565,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,565,state_average,lo_picxvtex1,lo_pic-vte-1,lo_pic-vte-1,state+measure_code->state_average,1,1
-P3,568,state_average,xo_xma-2,lo_ima-2,lo_ima-2,state+measure_code->state_average,1,1
-P3,573,state,lx,lo,lo,provider_number->state,1,1
-P3,573,phone,034x000001,0345000001,0345000001,provider_number->phone,1,1
-P3,573,owner,presidio ospedaliero a gestione dirxtta,presidio ospedaliero a gestione diretta,presidio ospedaliero a gestione diretta,provider_number->owner,1,1
-P3,579,city,sedrinx,sedrina,sedrina,provider_number->city,1,1
-P3,579,county,xergamo,bergamo,bergamo,provider_number->county,1,1
-P3,580,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,581,measure_code,pxl-5c,pol-5c,pxl-5c,nessuna,0,0
-P3,588,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,589,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,591,city,sxdrina,sedrina,sedrina,provider_number->city,1,1
-P3,591,county,berxamo,bergamo,bergamo,provider_number->county,1,1
-P3,593,state,lx,lo,lo,provider_number->state,1,1
-P3,594,phone,03x0000004,0310000004,0310000004,provider_number->phone,1,1
-P3,600,condition,insufficienza cardiaca coxgestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,602,city,grxndate,grandate,grandate,provider_number->city,1,1
-P3,603,county,coxx,como,como,provider_number->county,1,1
-P3,609,provider_number,x0119,30119,30119,phone->provider_number,1,1
-P3,609,condition,prevenzione dexle infezxoni chiruxgichx,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,613,measure_name,pazientx caxdixchirurgici con glicemia poxtoperatoria mantenuta sotto xontrollo xei primi giornixdopo l ixterxenxo,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,measure_code->measure_name,1,1
-P3,623,state_average,lo_imax8a,lo_ima-8a,lo_ima-8a,state+measure_code->state_average,1,1
-P3,628,provider_number,x0120,30120,30120,phone->provider_number,1,1
-P3,629,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,632,condition,polmonite acquisita in comxnita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,634,county,xergamo,bergamo,bergamo,provider_number->county,1,1
-P3,635,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,640,provider_number,3xx20,30120,30120,phone->provider_number,1,1
-P3,640,measure_code,pic-vtx-1,pic-vte-1,pic-vtx-1,nessuna,0,0
-P3,646,provider_number,3xx21,30121,30121,phone->provider_number,1,1
-P3,647,state_average,loxima-7a,lo_ima-7a,lo_ima-7a,state+measure_code->state_average,1,1
-P3,649,measure_code,iccx1,icc-1,iccx1,nessuna,0,0
-P3,651,measure_name,pazienti con insufficienza cardiaca e disfunzione ventricolaxe trattati con ace-inibitore o sarxano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,measure_code->measure_name,1,1
-P3,652,measure_name,pazienti fumaxori con insufxicienza caxdiaca che hanxo ricevuto suppxrto antifuxo durante il ricoxero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,measure_code->measure_name,1,1
-P3,653,address_1,viaxda vxnci 1,via da vinci 1,via da vinci 1,provider_number->address_1,1,1
-P3,654,emergency_service,xo,no,no,provider_number->emergency_service,1,1
-P3,655,name,presidio ospedaliero trescorx balneario,presidio ospedaliero trescore balneario,presidio ospedaliero trescore balneario,provider_number->name,1,1
-P3,655,city,trexcore balnexrix,trescore balneario,trescore balneario,provider_number->city,1,1
-P3,656,provider_number,3xx21,30121,30121,phone->provider_number,1,1
-P3,667,phone,02000xx005,0200000005,0200000005,provider_number->phone,1,1
-P3,673,county,mxxano,milano,milano,provider_number->county,1,1
-P3,673,measure_name,pazientixcon infartx miocardico soxtoposti xd angixplastica pximarxa entro 90 mxnutixdall arrivo,pazienti con infarto miocardico sottoposti ad angioplastica primaria entro 90 minuti dall arrivo,pazienti con infarto miocardico sottoposti ad angioplastica primaria entro 90 minuti dall arrivo,measure_code->measure_name,1,1
-P3,674,measure_code,xcc-1,icc-1,xcc-1,nessuna,0,0
-P3,675,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,677,measure_code,iccx4,icc-4,iccx4,nessuna,0,0
-P3,679,state_average,loxpol-3b,lo_pol-3b,lo_pol-3b,state+measure_code->state_average,1,1
-P3,680,zip,2x122,20122,20122,provider_number->zip,1,1
-P3,680,condition,xolmonite acquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
-P3,686,zip,x01xx,20122,20122,provider_number->zip,1,1
-P3,690,county,mxxano,milano,milano,provider_number->county,1,1
-P3,691,city,milxno,milano,milano,provider_number->city,1,1
-P3,692,measure_code,imax1,ima-1,imax1,nessuna,0,0
-P3,693,county,bergaxo,bergamo,bergamo,provider_number->county,1,1
-P3,695,measure_code,imx-4,ima-4,imx-4,nessuna,0,0
-P3,696,type,presidi osxedalieri per axuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,696,condition,infarto miocardico acxto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,697,city,pagazxxno,pagazzano,pagazzano,provider_number->city,1,1
-P3,698,name,presidio osxedaliero pagazzano,presidio ospedaliero pagazzano,presidio ospedaliero pagazzano,provider_number->name,1,1
-P3,699,county,bexgamo,bergamo,bergamo,provider_number->county,1,1
-P3,699,condition,insuffxcienza cardixca congestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
-P3,700,phone,036x000003,0363000003,0363000003,provider_number->phone,1,1
-P3,702,state,xo,lo,lo,provider_number->state,1,1
-P3,705,provider_number,301x3,30123,30123,phone->provider_number,1,1
-P3,706,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,706,measure_name,pxzientixospedalizzaxi per polxonixe trattatixcon antibiotico entro x ore dall accesso in ospedale,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,measure_code->measure_name,1,1
-P3,707,measure_name,paxienti cxn polmonite axquisita in cxmunita trattati con regime antibioticoxappropriato xecondo linee guida,pazienti con polmonite acquisita in comunita trattati con regime antibiotico appropriato secondo linee guida,pazienti con polmonite acquisita in comunita trattati con regime antibiotico appropriato secondo linee guida,measure_code->measure_name,1,1
-P3,711,name,presidio oxpedaliero xagazzano,presidio ospedaliero pagazzano,presidio ospedaliero pagazzano,provider_number->name,1,1
-P3,711,zip,24x40,24040,24040,provider_number->zip,1,1
-P3,713,condition,prevenzione delle infezionx chirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,714,phone,03x30000x3,0363000003,0363000003,provider_number->phone,1,1
-P3,714,measure_name,pazienxixchirurgici sottoxosti a tricotomia preoperatoria mediantexclippxr elettrico e non con xasoio,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,measure_code->measure_name,1,1
-P3,717,condition,infarto mixcardico acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,719,measure_code,imx-3,ima-3,imx-3,nessuna,0,0
-P3,722,provider_number,301x4,30124,30124,phone->provider_number,1,1
-P3,722,state_average,lo_imx-7a,lo_ima-7a,lo_ima-7a,state+measure_code->state_average,1,1
-P3,723,county,xomo,como,como,provider_number->county,1,1
-P3,725,provider_number,3xx24,30124,30124,phone->provider_number,1,1
-P3,730,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,730,measure_code,pxl-4,pol-4,pxl-4,nessuna,0,0
-P3,731,name,presidxo ospedalxero alzaxe brianza,presidio ospedaliero alzate brianza,presidio ospedaliero alzate brianza,provider_number->name,1,1
-P3,731,county,xomo,como,como,provider_number->county,1,1
-P3,734,condition,prexenzione delle infezionixchirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,736,measure_code,picxinf-2,pic-inf-2,picxinf-2,nessuna,0,0
-P3,737,address_1,vix maxconx 1,via marconi 1,via marconi 1,provider_number->address_1,1,1
-P3,737,city,alzaxexbrianza,alzate brianza,alzate brianza,provider_number->city,1,1
-P3,745,owner,istituto dx ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
-P3,750,measure_code,ixc-2,icc-2,ixc-2,nessuna,0,0
-P3,751,zip,2102x,21020,21020,provider_number->zip,1,1
-P3,752,phone,033xxx0003,0332000003,0332000003,provider_number->phone,1,1
-P3,753,county,vxrese,varese,varese,provider_number->county,1,1
-P3,756,provider_number,3xx25,30125,30125,phone->provider_number,1,1
-P3,757,city,brunexlo,brunello,brunello,provider_number->city,1,1
-P3,759,name,presxdio ospedaliexo brunellx,presidio ospedaliero brunello,presidio ospedaliero brunello,provider_number->name,1,1
-P3,761,state_average,lo_picxinfx2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
-P3,764,phone,03320000xx,0332000003,0332000003,provider_number->phone,1,1
-P3,765,state,xo,lo,lo,provider_number->state,1,1
-P3,765,state_average,lo_picxvte-1,lo_pic-vte-1,lo_pic-vte-1,state+measure_code->state_average,1,1
-P3,766,name,presidxo ospedaliero brxnello,presidio ospedaliero brunello,presidio ospedaliero brunello,provider_number->name,1,1
-P3,768,address_1,via tintorxtto 1,via tintoretto 1,via tintoretto 1,provider_number->address_1,1,1
-P3,773,city,castexseprio,castelseprio,castelseprio,provider_number->city,1,1
-P3,775,measure_code,xsx-1,asm-1,xsx-1,nessuna,0,0
-P3,778,name,presidio oxpedaliero colxurano,presidio ospedaliero colturano,presidio ospedaliero colturano,provider_number->name,1,1
-P3,780,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,781,provider_number,3012x,30127,30127,phone->provider_number,1,1
-P3,781,condition,infarto miocardico acxto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,783,type,presidi ospedalieri per acuxi,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,785,owner,azxexda ulss regionale,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
-P3,786,county,milaxo,milano,milano,provider_number->county,1,1
-P3,786,measure_name,pazxenti conxinsufficienza cardiaca sottoposti a valutazione dxlla fuxzione ventricolare sinistra,pazienti con insufficienza cardiaca sottoposti a valutazione della funzione ventricolare sinistra,pazienti con insufficienza cardiaca sottoposti a valutazione della funzione ventricolare sinistra,measure_code->measure_name,1,1
-P3,788,state_average,lo_icc-x,lo_icc-4,lo_icc-4,state+measure_code->state_average,1,1
-P3,789,measure_code,pol-x,pol-2,pol-x,nessuna,0,0
-P3,790,provider_number,3xx27,30127,30127,phone->provider_number,1,1
-P3,792,state,xo,lo,lo,provider_number->state,1,1
-P3,794,provider_number,301x7,30127,30127,phone->provider_number,1,1
-P3,797,state_average,xo_pic-inf-2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
-P3,798,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,799,county,milanx,milano,milano,provider_number->county,1,1
-P3,803,measure_name,pazienti con infarto miocardico acutoxa cui e stata sxmministrata aspirxna axl arrivo in pronto xoccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
-P3,810,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,815,type,pxesidi ospedalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,816,zip,x512x,25122,25122,provider_number->zip,1,1
-P3,817,measure_name,pazienti oxpedxlizzati per polmonite trxttati con antibiotico entro 6 ore dall accesso in ospedaxe,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,measure_code->measure_name,1,1
-P3,822,city,bxescia,brescia,brescia,provider_number->city,1,1
-P3,825,phone,0300000xxx,0300000001,0300000001,provider_number->phone,1,1
-P3,828,state_average,xo_xma-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
-P3,843,measure_code,polx6,pol-6,polx6,nessuna,0,0
-P3,843,state_average,lo_polx6,lo_pol-6,lo_polx6,nessuna,0,0
-P3,847,owner,struttura xanitaria prxvata accredixata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,849,type,presidi ospexalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,850,address_1,xxa verdi 1,via verdi 1,via verdi 1,provider_number->address_1,1,1
-P3,852,condition,prevenzione dellx infezioni xhixurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,856,city,abbiategrxsso,abbiategrasso,abbiategrasso,provider_number->city,1,1
-P3,856,phone,x200x00x07,0200000007,0200000007,provider_number->phone,1,1
-P3,858,address_1,via gramscix1,via gramsci 1,via gramsci 1,provider_number->address_1,1,1
-P3,860,provider_number,3xx30,30130,30130,phone->provider_number,1,1
-P3,866,phone,02x0000007,0200000007,0200000007,provider_number->phone,1,1
-P3,866,measure_code,pxl-4,pol-4,pxl-4,nessuna,0,0
-P3,867,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,869,owner,struttxra sanixarxa privata accreditata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,870,condition,prevenzione dexle infezxoni chiruxgichx,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,873,owner,struttura xanitaria prxvata accredixata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
-P3,878,type,presidi ospedalierixper acutx,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,879,provider_number,3xx31,30131,30131,phone->provider_number,1,1
-P3,882,phone,x3440x0001,0344000001,0344000001,provider_number->phone,1,1
-P3,884,phone,x3440x0001,0344000001,0344000001,provider_number->phone,1,1
-P3,885,state,xo,lo,lo,provider_number->state,1,1
-P3,887,state,xo,lo,lo,provider_number->state,1,1
-P3,889,provider_number,x0131,30131,30131,phone->provider_number,1,1
-P3,890,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,894,measure_name,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzxlx stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
-P3,896,city,plxsio,plesio,plesio,provider_number->city,1,1
-P3,896,county,coxo,como,como,provider_number->county,1,1
-P3,903,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,903,measure_name,bambini ricxveraxi per asma xhe hanno rixevuto farmaci xroncodixatatori a breve dxrataxd azione,bambini ricoverati per asma che hanno ricevuto farmaci broncodilatatori a breve durata d azione,bambini ricoverati per asma che hanno ricevuto farmaci broncodilatatori a breve durata d azione,measure_code->measure_name,1,1
-P3,904,name,prexidxo oxpedaliexo bresxiax2,presidio ospedaliero brescia 2,presidio ospedaliero brescia 2,provider_number->name,1,1
-P3,916,address_1,via txsxanixi x,via toscanini 1,via toscanini 1,provider_number->address_1,1,1
-P3,916,measure_name,pazienxi fumatori con insxfficiexza cardiaca che hanno ricevuto supxorto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,measure_code->measure_name,1,1
-P3,917,phone,x300000x02,0300000002,0300000002,provider_number->phone,1,1
-P3,918,county,brescxa,brescia,brescia,provider_number->county,1,1
-P3,920,emergency_service,sx,si,si,provider_number->emergency_service,1,1
-P3,921,state_average,loxpol-6,lo_pol-6,lo_pol-6,state+measure_code->state_average,1,1
-P3,922,name,xresxdio xspedaliero brescia x,presidio ospedaliero brescia 2,presidio ospedaliero brescia 2,provider_number->name,1,1
-P3,922,emergency_service,xi,si,si,provider_number->emergency_service,1,1
-P3,923,name,presidio osxedaliero brescia 2,presidio ospedaliero brescia 2,presidio ospedaliero brescia 2,provider_number->name,1,1
-P3,923,state,lx,lo,lo,provider_number->state,1,1
-P3,924,zip,2512x,25121,25121,provider_number->zip,1,1
-P3,927,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,931,measure_code,imax1,ima-1,imax1,nessuna,0,0
-P3,934,provider_number,3xx33,30133,30133,phone->provider_number,1,1
-P3,935,address_1,via corelli x,via corelli 1,via corelli 1,provider_number->address_1,1,1
-P3,936,address_1,via corexli 1,via corelli 1,via corelli 1,provider_number->address_1,1,1
-P3,939,name,presidio osxedaliero lovero,presidio ospedaliero lovero,presidio ospedaliero lovero,provider_number->name,1,1
-P3,944,county,sondxio,sondrio,sondrio,provider_number->county,1,1
-P3,946,address_1,via coxelxi 1,via corelli 1,via corelli 1,provider_number->address_1,1,1
-P3,950,city,loxero,lovero,lovero,provider_number->city,1,1
-P3,950,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,956,provider_number,3013x,30134,30134,phone->provider_number,1,1
-P3,956,condition,infaxto miocardico xcuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
-P3,957,name,presidxo ospxdaliero mariano comense,presidio ospedaliero mariano comense,presidio ospedaliero mariano comense,provider_number->name,1,1
-P3,957,address_1,vixxrossxni 1,via rossini 1,via rossini 1,provider_number->address_1,1,1
-P3,957,type,presidi oxpedalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,961,city,mariano comxnse,mariano comense,mariano comense,provider_number->city,1,1
-P3,963,name,presxdio ospedaliero mariano comxnse,presidio ospedaliero mariano comense,presidio ospedaliero mariano comense,provider_number->name,1,1
-P3,965,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,967,county,cxmo,como,como,provider_number->county,1,1
-P3,969,city,xariaxo comensx,mariano comense,mariano comense,provider_number->city,1,1
-P3,975,condition,prevenzione xelle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
-P3,977,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
-P3,986,city,tuxbigo,turbigo,turbigo,provider_number->city,1,1
-P3,987,address_1,via cxrducci 1,via carducci 1,via carducci 1,provider_number->address_1,1,1
-P3,988,name,presidio ospedaliero xurbigo,presidio ospedaliero turbigo,presidio ospedaliero turbigo,provider_number->name,1,1
-P3,998,measure_name,pazienxi chirurgixi inxterapix cronxca con betabloccanti chx hanno mantenuto xl trattamento nel periodoxpxrioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,measure_code->measure_name,1,1
+P3IT,1,measure_name,pazienti chirurgici in terapiaxxronicx con betabloccanti chexhanno mantenuto ilxtrattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,measure_code->measure_name,1,1
+P3IT,4,city,milaxo,milano,milano,provider_number->city,1,1
+P3IT,8,city,milaxo,milano,milano,provider_number->city,1,1
+P3IT,11,city,ghisxlba,ghisalba,ghisalba,provider_number->city,1,1
+P3IT,14,provider_number,3xx13,30113,30113,phone->provider_number,1,1
+P3IT,17,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,22,condition,infarto miocardico acxto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,23,owner,azienda xlssxrxgionaxe,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
+P3IT,23,condition,infarto xiocardxcx acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,25,phone,035000000x,0350000002,0350000002,provider_number->phone,1,1
+P3IT,25,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,27,name,presidio ospedalieroxbergamo 1,presidio ospedaliero bergamo 1,presidio ospedaliero bergamo 1,provider_number->name,1,1
+P3IT,28,owner,azienda ulsx regionale,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
+P3IT,32,owner,aziexda uxssxrxgioxaxe,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
+P3IT,37,phone,xx500x0002,0350000002,0350000002,provider_number->phone,1,1
+P3IT,40,type,prexidi ospedalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,43,state,xo,lo,lo,provider_number->state,1,1
+P3IT,43,owner,xziendaxulss regxonxle,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
+P3IT,44,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,45,zip,x1027,21027,21027,provider_number->zip,1,1
+P3IT,46,provider_number,x0102,30102,30102,phone->provider_number,1,1
+P3IT,47,state,xo,lo,lo,provider_number->state,1,1
+P3IT,51,state,xo,lo,lo,provider_number->state,1,1
+P3IT,52,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,57,city,ispxa,ispra,ispra,provider_number->city,1,1
+P3IT,57,state_average,lo_pol-xb,lo_pol-3b,lo_pol-3b,state+measure_code->state_average,1,1
+P3IT,58,address_1,vixxxonatxlxo 1,via donatello 1,via donatello 1,provider_number->address_1,1,1
+P3IT,58,phone,0x3x000001,0332000001,0332000001,provider_number->phone,1,1
+P3IT,61,phone,0x3x000001,0332000001,0332000001,provider_number->phone,1,1
+P3IT,64,zip,2102x,21027,21027,provider_number->zip,1,1
+P3IT,66,phone,0332x00001,0332000001,0332000001,provider_number->phone,1,1
+P3IT,68,county,vxrexe,varese,varese,provider_number->county,1,1
+P3IT,70,state_average,lo_imx-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
+P3IT,71,zip,2203x,22038,22038,provider_number->zip,1,1
+P3IT,73,county,cxmx,como,como,provider_number->county,1,1
+P3IT,74,condition,infarto xiocardxcx acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,78,county,coxo,como,como,provider_number->county,1,1
+P3IT,80,city,txvernerio,tavernerio,tavernerio,provider_number->city,1,1
+P3IT,82,provider_number,3010x,30103,30103,phone->provider_number,1,1
+P3IT,84,state,xo,lo,lo,provider_number->state,1,1
+P3IT,89,city,taverxerix,tavernerio,tavernerio,provider_number->city,1,1
+P3IT,94,city,tavxrnerio,tavernerio,tavernerio,provider_number->city,1,1
+P3IT,94,zip,2203x,22038,22038,provider_number->zip,1,1
+P3IT,95,address_1,viaxexnaudx 1,via einaudi 1,via einaudi 1,provider_number->address_1,1,1
+P3IT,95,measure_name,xazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
+P3IT,98,measure_code,ixa-4,ima-4,ixa-4,nessuna,0,0
+P3IT,99,state,xo,lo,lo,provider_number->state,1,1
+P3IT,99,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,102,phone,0350x00003,0350000003,0350000003,provider_number->phone,1,1
+P3IT,102,measure_code,iccx1,icc-1,iccx1,nessuna,0,0
+P3IT,107,address_1,via xinauxi 1,via einaudi 1,via einaudi 1,provider_number->address_1,1,1
+P3IT,109,measure_code,pox-5c,pol-5c,pox-5c,nessuna,0,0
+P3IT,112,measure_name,pazientixchirurgicixin terapia cronica con betablxccanti che hanno mantxnuto il trattaxento nel periodo xerioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,measure_code->measure_name,1,1
+P3IT,114,owner,struttuxa sanitaria privata xccreditata sxn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,120,state,lx,lo,lo,provider_number->state,1,1
+P3IT,120,measure_name,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorsx,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
+P3IT,121,measure_code,ixa-2,ima-2,ixa-2,nessuna,0,0
+P3IT,128,condition,insufficxenza cardiaca congestxzia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,132,name,presidio oxpedaliero xegnano,presidio ospedaliero legnano,presidio ospedaliero legnano,provider_number->name,1,1
+P3IT,137,county,mxlano,milano,milano,provider_number->county,1,1
+P3IT,138,zip,20x25,20025,20025,provider_number->zip,1,1
+P3IT,140,zip,200x5,20025,20025,provider_number->zip,1,1
+P3IT,141,state,lx,lo,lo,provider_number->state,1,1
+P3IT,146,measure_name,pazienti con infarto xiocardico acuto a cui e stata prescritta aspirina alla dimissione xspedaliera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,measure_code->measure_name,1,1
+P3IT,150,zip,2x038,20038,20038,provider_number->zip,1,1
+P3IT,158,zip,2x038,20038,20038,provider_number->zip,1,1
+P3IT,158,owner,istitxto di ricoveroxe cura a carattere scienxifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,158,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,160,owner,istituto di ricxvero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,162,address_1,via vxspxcxi x,via vespucci 1,via vespucci 1,provider_number->address_1,1,1
+P3IT,163,owner,xstituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,165,owner,istitxto di ricoveroxe cura a carattere scienxifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,166,state,lx,lo,lo,provider_number->state,1,1
+P3IT,172,name,presidio ospedalierx sondaxo,presidio ospedaliero sondalo,presidio ospedaliero sondalo,provider_number->name,1,1
+P3IT,176,address_1,via tuxaxi 1,via turati 1,via turati 1,provider_number->address_1,1,1
+P3IT,178,measure_code,icc-x,icc-2,icc-x,nessuna,0,0
+P3IT,181,city,soxdalx,sondalo,sondalo,provider_number->city,1,1
+P3IT,183,state,xo,lo,lo,provider_number->state,1,1
+P3IT,191,measure_code,pic-inx-4,pic-inf-4,pic-inx-4,nessuna,0,0
+P3IT,194,state_average,lo_picxvte-2,lo_pic-vte-2,lo_pic-vte-2,state+measure_code->state_average,1,1
+P3IT,197,zip,2x12x,20123,20123,provider_number->zip,1,1
+P3IT,200,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,200,condition,infartx miocardico acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,208,city,milxno,milano,milano,provider_number->city,1,1
+P3IT,211,measure_name,pazienti ricovexati per polmoxite valutati exsottopxsti a vacxinazione antinfxuenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
+P3IT,213,city,mxxano,milano,milano,provider_number->city,1,1
+P3IT,214,provider_number,x01xx,30108,30108,phone->provider_number,1,1
+P3IT,214,type,presidx ospedxlieri per acuti,presidi ospedalieri per acuti,presidx ospedxlieri per acuti,nessuna,0,0
+P3IT,214,state_average,lo_pxc-inf-2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
+P3IT,217,county,milaxo,milano,milano,provider_number->county,1,1
+P3IT,217,owner,struttuxa sanitaria privata xccreditata sxn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,218,phone,0200x0x002,0200000002,0200000002,provider_number->phone,1,1
+P3IT,219,owner,struttura sanitariaxprivata acxreditata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,220,measure_name,pazienti cox infarto miocarxico acuto a cui e stxta somministrxta aspirina all axrivo ix pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
+P3IT,222,county,xomo,como,como,provider_number->county,1,1
+P3IT,222,owner,ospedale cxassificatoxnoxprofit,ospedale classificato no-profit,ospedale classificato no-profit,provider_number->owner,1,1
+P3IT,224,county,xomo,como,como,provider_number->county,1,1
+P3IT,226,condition,infaxto miocardico xcuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,228,county,xomo,como,como,provider_number->county,1,1
+P3IT,229,city,centro valle intexvi,centro valle intelvi,centro valle intelvi,provider_number->city,1,1
+P3IT,229,state,lx,lo,lo,provider_number->state,1,1
+P3IT,229,phone,0310000x02,0310000002,0310000002,provider_number->phone,1,1
+P3IT,230,condition,insufficienza cardiacaxcongestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,233,zip,220x3,22023,22023,provider_number->zip,1,1
+P3IT,237,condition,prexenzione delle infezionixchirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,239,county,xomo,como,como,provider_number->county,1,1
+P3IT,239,owner,osxedale classificato no-profit,ospedale classificato no-profit,ospedale classificato no-profit,provider_number->owner,1,1
+P3IT,240,condition,prevexzione delle inxezioni chirurgxche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,244,name,prexidio ospedaliero centro valle intelvi,presidio ospedaliero centro valle intelvi,presidio ospedaliero centro valle intelvi,provider_number->name,1,1
+P3IT,245,provider_number,x01x0,30110,30110,phone->provider_number,1,1
+P3IT,245,state_average,lx_ima-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
+P3IT,248,phone,xx63x00001,0363000001,0363000001,provider_number->phone,1,1
+P3IT,248,owner,azienda socioxsanitaria territoriale - asst,azienda socio sanitaria territoriale - asst,azienda socio sanitaria territoriale - asst,provider_number->owner,1,1
+P3IT,249,state_average,xo_xma-5,lo_ima-5,lo_ima-5,state+measure_code->state_average,1,1
+P3IT,253,county,xergamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,254,provider_number,3xx10,30110,30110,phone->provider_number,1,1
+P3IT,257,condition,xolmonite acquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,257,measure_name,paziexti xn prontoxxoccorso per polmonite con emocolxura esegxixa pxima delxa terxpia antibxoxixa,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,measure_code->measure_name,1,1
+P3IT,261,address_1,via cxnova 1,via canova 1,via canova 1,provider_number->address_1,1,1
+P3IT,262,phone,036x0xx001,0363000001,0363000001,provider_number->phone,1,1
+P3IT,265,address_1,via canovax1,via canova 1,via canova 1,provider_number->address_1,1,1
+P3IT,265,measure_code,pix-xnf-3,pic-inf-3,pix-xnf-3,nessuna,0,0
+P3IT,267,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,268,zip,x4058,24058,24058,provider_number->zip,1,1
+P3IT,270,state_average,lo_ixa-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
+P3IT,274,provider_number,3xx11,30111,30111,phone->provider_number,1,1
+P3IT,276,address_1,via xarixaldix1,via garibaldi 1,via garibaldi 1,provider_number->address_1,1,1
+P3IT,279,state,xo,lo,lo,provider_number->state,1,1
+P3IT,280,condition,xnsufficienza cardiaca congestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,281,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,282,measure_name,pxzienti xn proxto soccxrxo per polmonitx conxemoxoltura exeguita prima dxlla terapia xntibiotica,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,pazienti in pronto soccorso per polmonite con emocoltura eseguita prima della terapia antibiotica,measure_code->measure_name,1,1
+P3IT,284,zip,2x010,21010,21010,provider_number->zip,1,1
+P3IT,291,zip,x1010,21010,21010,provider_number->zip,1,1
+P3IT,291,measure_name,pazienti cardioxhirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi gioxni dopo l interventx,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,measure_code->measure_name,1,1
+P3IT,294,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,296,address_1,via gaxilei 1,via galilei 1,via galilei 1,provider_number->address_1,1,1
+P3IT,312,city,caxxelseprix,castelseprio,castelseprio,provider_number->city,1,1
+P3IT,313,county,varexe,varese,varese,provider_number->county,1,1
+P3IT,314,owner,istituto dx ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,315,provider_number,301x6,30126,30126,phone->provider_number,1,1
+P3IT,317,address_1,viaxtintxrettx 1,via tintoretto 1,via tintoretto 1,provider_number->address_1,1,1
+P3IT,319,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,322,phone,033100x003,0331000003,0331000003,provider_number->phone,1,1
+P3IT,325,county,vaxese,varese,varese,provider_number->county,1,1
+P3IT,326,zip,21x50,21050,21050,provider_number->zip,1,1
+P3IT,328,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,333,zip,2x122,24122,24122,provider_number->zip,1,1
+P3IT,333,owner,istituto di ricxvero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,333,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,335,address_1,viaxdoxizexti 1,via donizetti 1,via donizetti 1,provider_number->address_1,1,1
+P3IT,335,state_average,lo_polx2,lo_pol-2,lo_pol-2,state+measure_code->state_average,1,1
+P3IT,338,name,presidxo ospedaliero bergamo 2,presidio ospedaliero bergamo 2,presidio ospedaliero bergamo 2,provider_number->name,1,1
+P3IT,341,zip,x4x22,24122,24122,provider_number->zip,1,1
+P3IT,343,phone,xx500x0004,0350000004,0350000004,provider_number->phone,1,1
+P3IT,347,county,bergxmo,bergamo,bergamo,provider_number->county,1,1
+P3IT,347,measure_name,pazienti chirxrgici per i quali il medico ha prescritto traxtamenti per prevenire la formazione di coaxuli di sangue xopo alcuni tipi di intervento,pazienti chirurgici per i quali il medico ha prescritto trattamenti per prevenire la formazione di coaguli di sangue dopo alcuni tipi di intervento,pazienti chirurgici per i quali il medico ha prescritto trattamenti per prevenire la formazione di coaguli di sangue dopo alcuni tipi di intervento,measure_code->measure_name,1,1
+P3IT,348,state_average,lo_picxvtex2,lo_pic-vte-2,lo_pic-vte-2,state+measure_code->state_average,1,1
+P3IT,350,measure_code,imax2,ima-2,imax2,nessuna,0,0
+P3IT,351,address_1,via axendolax1,via amendola 1,via amendola 1,provider_number->address_1,1,1
+P3IT,351,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,357,state,lx,lo,lo,provider_number->state,1,1
+P3IT,357,owner,istituto dx ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,361,provider_number,301x9,30139,30139,phone->provider_number,1,1
+P3IT,364,address_1,viaxxexrarcax1,via petrarca 1,via petrarca 1,provider_number->address_1,1,1
+P3IT,367,zip,2xx18,24018,24018,provider_number->zip,1,1
+P3IT,367,condition,polmonitx acquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,368,city,villa d'almx,villa d'almè,villa d'almè,provider_number->city,1,1
+P3IT,370,condition,polmonite axquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,371,state_average,loxpol-7,lo_pol-7,lo_pol-7,state+measure_code->state_average,1,1
+P3IT,374,state_average,lo_pxc-inf-2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
+P3IT,375,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,376,zip,2xx18,24018,24018,provider_number->zip,1,1
+P3IT,381,measure_name,pazienxi con infarto miocardico acuto a cui e stata prescritta aspixina alla dimissione ospedaxiera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera,measure_code->measure_name,1,1
+P3IT,382,phone,02x00x0xx4,0200000004,0200000004,provider_number->phone,1,1
+P3IT,385,name,presxdio ospedaliero ozzero,presidio ospedaliero ozzero,presidio ospedaliero ozzero,provider_number->name,1,1
+P3IT,385,phone,02x00x0xx4,0200000004,0200000004,provider_number->phone,1,1
+P3IT,386,name,xresidix ospedaliero ozzero,presidio ospedaliero ozzero,presidio ospedaliero ozzero,provider_number->name,1,1
+P3IT,387,state,xo,lo,lo,provider_number->state,1,1
+P3IT,387,phone,02x00x0xx4,0200000004,0200000004,provider_number->phone,1,1
+P3IT,387,condition,insxfficienza cardiaca congestizix,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,388,state_average,lo_icx-2,lo_icc-2,lo_icc-2,state+measure_code->state_average,1,1
+P3IT,390,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,390,measure_name,pazienti fxmatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,measure_code->measure_name,1,1
+P3IT,392,measure_code,pol-xb,pol-3b,pol-xb,nessuna,0,0
+P3IT,394,address_1,viaxxatteottx 1,via matteotti 1,via matteotti 1,provider_number->address_1,1,1
+P3IT,394,phone,03x600x001,0346000001,0346000001,provider_number->phone,1,1
+P3IT,399,measure_code,ixc-1,icc-1,ixc-1,nessuna,0,0
+P3IT,401,condition,insxfficienza cardiaca congestizix,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,403,state,lx,lo,lo,provider_number->state,1,1
+P3IT,407,zip,2x0x0,24020,24020,provider_number->zip,1,1
+P3IT,409,provider_number,x0x41,30141,30141,phone->provider_number,1,1
+P3IT,410,measure_code,pic-xnfx1,pic-inf-1,pic-xnfx1,nessuna,0,0
+P3IT,411,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,412,address_1,via maxteotti 1,via matteotti 1,via matteotti 1,provider_number->address_1,1,1
+P3IT,412,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,414,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,416,address_1,via tiepxlo 1,via tiepolo 1,via tiepolo 1,provider_number->address_1,1,1
+P3IT,416,county,bergxmo,bergamo,bergamo,provider_number->county,1,1
+P3IT,419,emergency_service,xo,no,no,provider_number->emergency_service,1,1
+P3IT,421,zip,x4057,24057,24057,provider_number->zip,1,1
+P3IT,429,zip,2x0x7,24057,24057,provider_number->zip,1,1
+P3IT,432,address_1,vix xiepolx 1,via tiepolo 1,via tiepolo 1,provider_number->address_1,1,1
+P3IT,435,measure_name,pazientixcon insuxficienxa cardiaca x xisfunzione ventricolare trxttati con acx-inibitorexo sartano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,measure_code->measure_name,1,1
+P3IT,438,city,affx,affi,affi,provider_number->city,1,1
+P3IT,448,measure_name,pazixnti xhiruxgixi soxtxpoxti axtrxcotxmia xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,measure_code->measure_name,1,1
+P3IT,449,name,xrxsixio ospedxliero afxi,presidio ospedaliero affi,presidio ospedaliero affi,provider_number->name,1,1
+P3IT,450,owner,istituto di ricxvero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,452,address_1,viaxpertxni 1,via pertini 1,via pertini 1,provider_number->address_1,1,1
+P3IT,454,type,presidi ospedalieri per acuxi,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,457,county,bxrxamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,457,owner,xziendaxulss regxonxle,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
+P3IT,458,county,xergamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,465,measure_code,pxc-vte-1,pic-vte-1,pxc-vte-1,nessuna,0,0
+P3IT,466,county,bexgamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,468,condition,infaxto miocardico xcuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,472,phone,035000x007,0350000007,0350000007,provider_number->phone,1,1
+P3IT,473,address_1,viaxleoparxi 1,via leopardi 1,via leopardi 1,provider_number->address_1,1,1
+P3IT,474,measure_name,pazienxi con insufficixnza cardiaca dimessi con istruzioni scritte compxete per il monitxraggio clinico,pazienti con insufficienza cardiaca dimessi con istruzioni scritte complete per il monitoraggio clinico,pazienti con insufficienza cardiaca dimessi con istruzioni scritte complete per il monitoraggio clinico,measure_code->measure_name,1,1
+P3IT,475,city,capizzonx,capizzone,capizzone,provider_number->city,1,1
+P3IT,478,state,xo,lo,lo,provider_number->state,1,1
+P3IT,478,state_average,lx_pol-2,lo_pol-2,lx_pol-2,nessuna,0,0
+P3IT,484,state,xo,lo,lo,provider_number->state,1,1
+P3IT,485,address_1,vxa leopardi 1,via leopardi 1,via leopardi 1,provider_number->address_1,1,1
+P3IT,486,city,xapizzone,capizzone,capizzone,provider_number->city,1,1
+P3IT,491,zip,x4x30,24030,24030,provider_number->zip,1,1
+P3IT,491,type,presidi ospexalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,493,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,494,type,presidi ospedalierx per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,494,owner,struttura sanxtaria privata axcrxditata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,494,measure_name,pxzienti con infarxo miocarxico e disfunzione ventricolarexsinixtra trattati con ace-inibitore o sartano,pazienti con infarto miocardico e disfunzione ventricolare sinistra trattati con ace-inibitore o sartano,pazienti con infarto miocardico e disfunzione ventricolare sinistra trattati con ace-inibitore o sartano,measure_code->measure_name,1,1
+P3IT,496,measure_code,ima-x,ima-5,ima-x,nessuna,0,0
+P3IT,498,type,presidx ospedxlieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,500,zip,x1040,21040,21040,provider_number->zip,1,1
+P3IT,503,county,vxrexx,varese,varese,provider_number->county,1,1
+P3IT,505,state,lx,lo,lo,provider_number->state,1,1
+P3IT,507,condition,polmonite acquisita in comunitx,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,508,measure_name,pazienti ricoxeratx per polmonite valutati e sxttoposti a vaccinazione antixfluexzale stxgionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
+P3IT,512,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,514,county,vxrexx,varese,varese,provider_number->county,1,1
+P3IT,517,phone,0383xx0001,0383000001,0383000001,provider_number->phone,1,1
+P3IT,518,city,montalxo pavese,montalto pavese,montalto pavese,provider_number->city,1,1
+P3IT,522,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,527,owner,ospxdale classificato no-prxfit,ospedale classificato no-profit,ospedale classificato no-profit,provider_number->owner,1,1
+P3IT,528,county,pxvia,pavia,pavia,provider_number->county,1,1
+P3IT,533,name,presidio ospedaliero montxlto pavese 1,presidio ospedaliero montalto pavese 1,presidio ospedaliero montalto pavese 1,provider_number->name,1,1
+P3IT,533,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,533,measure_name,paxienti rxcoverati per pxlmonite valutati e sotxoposti a vxccinxzione axtinfluenzale sxagionalx,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
+P3IT,537,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,541,county,pavix,pavia,pavia,provider_number->county,1,1
+P3IT,542,measure_name,paziexti con infarto xiocardico xcuto a cui e stata somministrata aspirina all arrxvo in pronto soccoxso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
+P3IT,545,zip,2x04x,27040,27040,provider_number->zip,1,1
+P3IT,546,measure_name,paziexti con infarto miocardico acuto a cui e stato prescritto un betaxloccante alla dimisxione,pazienti con infarto miocardico acuto a cui e stato prescritto un betabloccante alla dimissione,pazienti con infarto miocardico acuto a cui e stato prescritto un betabloccante alla dimissione,measure_code->measure_name,1,1
+P3IT,549,phone,0383000xxx,0383000002,0383000002,provider_number->phone,1,1
+P3IT,552,county,pxvia,pavia,pavia,provider_number->county,1,1
+P3IT,556,condition,polmxnite acquisita inxcomunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,556,state_average,lo_pol-5x,lo_pol-5c,lo_pol-5c,state+measure_code->state_average,1,1
+P3IT,560,provider_number,3xx17,30117,30117,phone->provider_number,1,1
+P3IT,560,state,xo,lo,lo,zip->state,1,1
+P3IT,561,name,prexidio ospedaliero montxlto paxese x,presidio ospedaliero montalto pavese 2,presidio ospedaliero montalto pavese 2,provider_number->name,1,1
+P3IT,562,phone,03x3000002,0383000002,0383000002,provider_number->phone,1,1
+P3IT,563,phone,0383000xxx,0383000002,0383000002,provider_number->phone,1,1
+P3IT,563,measure_name,pazxenti xardiocxirurgicixcon gxicemxa posxoperatxria manxenxta sxtto cxntroxlo neixprxmi xiornx dopoxl inxervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,measure_code->measure_name,1,1
+P3IT,565,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,565,state_average,lo_picxvtex1,lo_pic-vte-1,lo_pic-vte-1,state+measure_code->state_average,1,1
+P3IT,568,state_average,xo_xma-2,lo_ima-2,lo_ima-2,state+measure_code->state_average,1,1
+P3IT,573,state,lx,lo,lo,provider_number->state,1,1
+P3IT,573,phone,034x000001,0345000001,0345000001,provider_number->phone,1,1
+P3IT,573,owner,presidio ospedaliero a gestione dirxtta,presidio ospedaliero a gestione diretta,presidio ospedaliero a gestione diretta,provider_number->owner,1,1
+P3IT,579,city,sedrinx,sedrina,sedrina,provider_number->city,1,1
+P3IT,579,county,xergamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,580,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,581,measure_code,pxl-5c,pol-5c,pxl-5c,nessuna,0,0
+P3IT,588,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,589,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,591,city,sxdrina,sedrina,sedrina,provider_number->city,1,1
+P3IT,591,county,berxamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,593,state,lx,lo,lo,provider_number->state,1,1
+P3IT,594,phone,03x0000004,0310000004,0310000004,provider_number->phone,1,1
+P3IT,600,condition,insufficienza cardiaca coxgestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,602,city,grxndate,grandate,grandate,provider_number->city,1,1
+P3IT,603,county,coxx,como,como,provider_number->county,1,1
+P3IT,609,provider_number,x0119,30119,30119,phone->provider_number,1,1
+P3IT,609,condition,prevenzione dexle infezxoni chiruxgichx,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,613,measure_name,pazientx caxdixchirurgici con glicemia poxtoperatoria mantenuta sotto xontrollo xei primi giornixdopo l ixterxenxo,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento,measure_code->measure_name,1,1
+P3IT,623,state_average,lo_imax8a,lo_ima-8a,lo_ima-8a,state+measure_code->state_average,1,1
+P3IT,628,provider_number,x0120,30120,30120,phone->provider_number,1,1
+P3IT,629,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,632,condition,polmonite acquisita in comxnita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,634,county,xergamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,635,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,640,provider_number,3xx20,30120,30120,phone->provider_number,1,1
+P3IT,640,measure_code,pic-vtx-1,pic-vte-1,pic-vtx-1,nessuna,0,0
+P3IT,646,provider_number,3xx21,30121,30121,phone->provider_number,1,1
+P3IT,647,state_average,loxima-7a,lo_ima-7a,lo_ima-7a,state+measure_code->state_average,1,1
+P3IT,649,measure_code,iccx1,icc-1,iccx1,nessuna,0,0
+P3IT,651,measure_name,pazienti con insufficienza cardiaca e disfunzione ventricolaxe trattati con ace-inibitore o sarxano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,pazienti con insufficienza cardiaca e disfunzione ventricolare trattati con ace-inibitore o sartano,measure_code->measure_name,1,1
+P3IT,652,measure_name,pazienti fumaxori con insufxicienza caxdiaca che hanxo ricevuto suppxrto antifuxo durante il ricoxero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,measure_code->measure_name,1,1
+P3IT,653,address_1,viaxda vxnci 1,via da vinci 1,via da vinci 1,provider_number->address_1,1,1
+P3IT,654,emergency_service,xo,no,no,provider_number->emergency_service,1,1
+P3IT,655,name,presidio ospedaliero trescorx balneario,presidio ospedaliero trescore balneario,presidio ospedaliero trescore balneario,provider_number->name,1,1
+P3IT,655,city,trexcore balnexrix,trescore balneario,trescore balneario,provider_number->city,1,1
+P3IT,656,provider_number,3xx21,30121,30121,phone->provider_number,1,1
+P3IT,667,phone,02000xx005,0200000005,0200000005,provider_number->phone,1,1
+P3IT,673,county,mxxano,milano,milano,provider_number->county,1,1
+P3IT,673,measure_name,pazientixcon infartx miocardico soxtoposti xd angixplastica pximarxa entro 90 mxnutixdall arrivo,pazienti con infarto miocardico sottoposti ad angioplastica primaria entro 90 minuti dall arrivo,pazienti con infarto miocardico sottoposti ad angioplastica primaria entro 90 minuti dall arrivo,measure_code->measure_name,1,1
+P3IT,674,measure_code,xcc-1,icc-1,xcc-1,nessuna,0,0
+P3IT,675,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,677,measure_code,iccx4,icc-4,iccx4,nessuna,0,0
+P3IT,679,state_average,loxpol-3b,lo_pol-3b,lo_pol-3b,state+measure_code->state_average,1,1
+P3IT,680,zip,2x122,20122,20122,provider_number->zip,1,1
+P3IT,680,condition,xolmonite acquisita in comunita,polmonite acquisita in comunita,polmonite acquisita in comunita,measure_code->condition,1,1
+P3IT,686,zip,x01xx,20122,20122,provider_number->zip,1,1
+P3IT,690,county,mxxano,milano,milano,provider_number->county,1,1
+P3IT,691,city,milxno,milano,milano,provider_number->city,1,1
+P3IT,692,measure_code,imax1,ima-1,imax1,nessuna,0,0
+P3IT,693,county,bergaxo,bergamo,bergamo,provider_number->county,1,1
+P3IT,695,measure_code,imx-4,ima-4,imx-4,nessuna,0,0
+P3IT,696,type,presidi osxedalieri per axuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,696,condition,infarto miocardico acxto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,697,city,pagazxxno,pagazzano,pagazzano,provider_number->city,1,1
+P3IT,698,name,presidio osxedaliero pagazzano,presidio ospedaliero pagazzano,presidio ospedaliero pagazzano,provider_number->name,1,1
+P3IT,699,county,bexgamo,bergamo,bergamo,provider_number->county,1,1
+P3IT,699,condition,insuffxcienza cardixca congestizia,insufficienza cardiaca congestizia,insufficienza cardiaca congestizia,measure_code->condition,1,1
+P3IT,700,phone,036x000003,0363000003,0363000003,provider_number->phone,1,1
+P3IT,702,state,xo,lo,lo,provider_number->state,1,1
+P3IT,705,provider_number,301x3,30123,30123,phone->provider_number,1,1
+P3IT,706,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,706,measure_name,pxzientixospedalizzaxi per polxonixe trattatixcon antibiotico entro x ore dall accesso in ospedale,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,measure_code->measure_name,1,1
+P3IT,707,measure_name,paxienti cxn polmonite axquisita in cxmunita trattati con regime antibioticoxappropriato xecondo linee guida,pazienti con polmonite acquisita in comunita trattati con regime antibiotico appropriato secondo linee guida,pazienti con polmonite acquisita in comunita trattati con regime antibiotico appropriato secondo linee guida,measure_code->measure_name,1,1
+P3IT,711,name,presidio oxpedaliero xagazzano,presidio ospedaliero pagazzano,presidio ospedaliero pagazzano,provider_number->name,1,1
+P3IT,711,zip,24x40,24040,24040,provider_number->zip,1,1
+P3IT,713,condition,prevenzione delle infezionx chirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,714,phone,03x30000x3,0363000003,0363000003,provider_number->phone,1,1
+P3IT,714,measure_name,pazienxixchirurgici sottoxosti a tricotomia preoperatoria mediantexclippxr elettrico e non con xasoio,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio,measure_code->measure_name,1,1
+P3IT,717,condition,infarto mixcardico acuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,719,measure_code,imx-3,ima-3,imx-3,nessuna,0,0
+P3IT,722,provider_number,301x4,30124,30124,phone->provider_number,1,1
+P3IT,722,state_average,lo_imx-7a,lo_ima-7a,lo_ima-7a,state+measure_code->state_average,1,1
+P3IT,723,county,xomo,como,como,provider_number->county,1,1
+P3IT,725,provider_number,3xx24,30124,30124,phone->provider_number,1,1
+P3IT,730,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,730,measure_code,pxl-4,pol-4,pxl-4,nessuna,0,0
+P3IT,731,name,presidxo ospedalxero alzaxe brianza,presidio ospedaliero alzate brianza,presidio ospedaliero alzate brianza,provider_number->name,1,1
+P3IT,731,county,xomo,como,como,provider_number->county,1,1
+P3IT,734,condition,prexenzione delle infezionixchirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,736,measure_code,picxinf-2,pic-inf-2,picxinf-2,nessuna,0,0
+P3IT,737,address_1,vix maxconx 1,via marconi 1,via marconi 1,provider_number->address_1,1,1
+P3IT,737,city,alzaxexbrianza,alzate brianza,alzate brianza,provider_number->city,1,1
+P3IT,745,owner,istituto dx ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,istituto di ricovero e cura a carattere scientifico,provider_number->owner,1,1
+P3IT,750,measure_code,ixc-2,icc-2,ixc-2,nessuna,0,0
+P3IT,751,zip,2102x,21020,21020,provider_number->zip,1,1
+P3IT,752,phone,033xxx0003,0332000003,0332000003,provider_number->phone,1,1
+P3IT,753,county,vxrese,varese,varese,provider_number->county,1,1
+P3IT,756,provider_number,3xx25,30125,30125,phone->provider_number,1,1
+P3IT,757,city,brunexlo,brunello,brunello,provider_number->city,1,1
+P3IT,759,name,presxdio ospedaliexo brunellx,presidio ospedaliero brunello,presidio ospedaliero brunello,provider_number->name,1,1
+P3IT,761,state_average,lo_picxinfx2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
+P3IT,764,phone,03320000xx,0332000003,0332000003,provider_number->phone,1,1
+P3IT,765,state,xo,lo,lo,provider_number->state,1,1
+P3IT,765,state_average,lo_picxvte-1,lo_pic-vte-1,lo_pic-vte-1,state+measure_code->state_average,1,1
+P3IT,766,name,presidxo ospedaliero brxnello,presidio ospedaliero brunello,presidio ospedaliero brunello,provider_number->name,1,1
+P3IT,768,address_1,via tintorxtto 1,via tintoretto 1,via tintoretto 1,provider_number->address_1,1,1
+P3IT,773,city,castexseprio,castelseprio,castelseprio,provider_number->city,1,1
+P3IT,775,measure_code,xsx-1,asm-1,xsx-1,nessuna,0,0
+P3IT,778,name,presidio oxpedaliero colxurano,presidio ospedaliero colturano,presidio ospedaliero colturano,provider_number->name,1,1
+P3IT,780,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,781,provider_number,3012x,30127,30127,phone->provider_number,1,1
+P3IT,781,condition,infarto miocardico acxto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,783,type,presidi ospedalieri per acuxi,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,785,owner,azxexda ulss regionale,azienda ulss regionale,azienda ulss regionale,provider_number->owner,1,1
+P3IT,786,county,milaxo,milano,milano,provider_number->county,1,1
+P3IT,786,measure_name,pazxenti conxinsufficienza cardiaca sottoposti a valutazione dxlla fuxzione ventricolare sinistra,pazienti con insufficienza cardiaca sottoposti a valutazione della funzione ventricolare sinistra,pazienti con insufficienza cardiaca sottoposti a valutazione della funzione ventricolare sinistra,measure_code->measure_name,1,1
+P3IT,788,state_average,lo_icc-x,lo_icc-4,lo_icc-4,state+measure_code->state_average,1,1
+P3IT,789,measure_code,pol-x,pol-2,pol-x,nessuna,0,0
+P3IT,790,provider_number,3xx27,30127,30127,phone->provider_number,1,1
+P3IT,792,state,xo,lo,lo,provider_number->state,1,1
+P3IT,794,provider_number,301x7,30127,30127,phone->provider_number,1,1
+P3IT,797,state_average,xo_pic-inf-2,lo_pic-inf-2,lo_pic-inf-2,state+measure_code->state_average,1,1
+P3IT,798,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,799,county,milanx,milano,milano,provider_number->county,1,1
+P3IT,803,measure_name,pazienti con infarto miocardico acutoxa cui e stata sxmministrata aspirxna axl arrivo in pronto xoccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso,measure_code->measure_name,1,1
+P3IT,810,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,815,type,pxesidi ospedalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,816,zip,x512x,25122,25122,provider_number->zip,1,1
+P3IT,817,measure_name,pazienti oxpedxlizzati per polmonite trxttati con antibiotico entro 6 ore dall accesso in ospedaxe,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,pazienti ospedalizzati per polmonite trattati con antibiotico entro 6 ore dall accesso in ospedale,measure_code->measure_name,1,1
+P3IT,822,city,bxescia,brescia,brescia,provider_number->city,1,1
+P3IT,825,phone,0300000xxx,0300000001,0300000001,provider_number->phone,1,1
+P3IT,828,state_average,xo_xma-1,lo_ima-1,lo_ima-1,state+measure_code->state_average,1,1
+P3IT,843,measure_code,polx6,pol-6,polx6,nessuna,0,0
+P3IT,843,state_average,lo_polx6,lo_pol-6,lo_polx6,nessuna,0,0
+P3IT,847,owner,struttura xanitaria prxvata accredixata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,849,type,presidi ospexalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,850,address_1,xxa verdi 1,via verdi 1,via verdi 1,provider_number->address_1,1,1
+P3IT,852,condition,prevenzione dellx infezioni xhixurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,856,city,abbiategrxsso,abbiategrasso,abbiategrasso,provider_number->city,1,1
+P3IT,856,phone,x200x00x07,0200000007,0200000007,provider_number->phone,1,1
+P3IT,858,address_1,via gramscix1,via gramsci 1,via gramsci 1,provider_number->address_1,1,1
+P3IT,860,provider_number,3xx30,30130,30130,phone->provider_number,1,1
+P3IT,866,phone,02x0000007,0200000007,0200000007,provider_number->phone,1,1
+P3IT,866,measure_code,pxl-4,pol-4,pxl-4,nessuna,0,0
+P3IT,867,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,869,owner,struttxra sanixarxa privata accreditata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,870,condition,prevenzione dexle infezxoni chiruxgichx,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,873,owner,struttura xanitaria prxvata accredixata ssn,struttura sanitaria privata accreditata ssn,struttura sanitaria privata accreditata ssn,provider_number->owner,1,1
+P3IT,878,type,presidi ospedalierixper acutx,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,879,provider_number,3xx31,30131,30131,phone->provider_number,1,1
+P3IT,882,phone,x3440x0001,0344000001,0344000001,provider_number->phone,1,1
+P3IT,884,phone,x3440x0001,0344000001,0344000001,provider_number->phone,1,1
+P3IT,885,state,xo,lo,lo,provider_number->state,1,1
+P3IT,887,state,xo,lo,lo,provider_number->state,1,1
+P3IT,889,provider_number,x0131,30131,30131,phone->provider_number,1,1
+P3IT,890,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,894,measure_name,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzxlx stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,pazienti ricoverati per polmonite valutati e sottoposti a vaccinazione antinfluenzale stagionale,measure_code->measure_name,1,1
+P3IT,896,city,plxsio,plesio,plesio,provider_number->city,1,1
+P3IT,896,county,coxo,como,como,provider_number->county,1,1
+P3IT,903,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,903,measure_name,bambini ricxveraxi per asma xhe hanno rixevuto farmaci xroncodixatatori a breve dxrataxd azione,bambini ricoverati per asma che hanno ricevuto farmaci broncodilatatori a breve durata d azione,bambini ricoverati per asma che hanno ricevuto farmaci broncodilatatori a breve durata d azione,measure_code->measure_name,1,1
+P3IT,904,name,prexidxo oxpedaliexo bresxiax2,presidio ospedaliero brescia 2,presidio ospedaliero brescia 2,provider_number->name,1,1
+P3IT,916,address_1,via txsxanixi x,via toscanini 1,via toscanini 1,provider_number->address_1,1,1
+P3IT,916,measure_name,pazienxi fumatori con insxfficiexza cardiaca che hanno ricevuto supxorto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,pazienti fumatori con insufficienza cardiaca che hanno ricevuto supporto antifumo durante il ricovero,measure_code->measure_name,1,1
+P3IT,917,phone,x300000x02,0300000002,0300000002,provider_number->phone,1,1
+P3IT,918,county,brescxa,brescia,brescia,provider_number->county,1,1
+P3IT,920,emergency_service,sx,si,si,provider_number->emergency_service,1,1
+P3IT,921,state_average,loxpol-6,lo_pol-6,lo_pol-6,state+measure_code->state_average,1,1
+P3IT,922,name,xresxdio xspedaliero brescia x,presidio ospedaliero brescia 2,presidio ospedaliero brescia 2,provider_number->name,1,1
+P3IT,922,emergency_service,xi,si,si,provider_number->emergency_service,1,1
+P3IT,923,name,presidio osxedaliero brescia 2,presidio ospedaliero brescia 2,presidio ospedaliero brescia 2,provider_number->name,1,1
+P3IT,923,state,lx,lo,lo,provider_number->state,1,1
+P3IT,924,zip,2512x,25121,25121,provider_number->zip,1,1
+P3IT,927,type,presxdi ospedalieri per xcuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,931,measure_code,imax1,ima-1,imax1,nessuna,0,0
+P3IT,934,provider_number,3xx33,30133,30133,phone->provider_number,1,1
+P3IT,935,address_1,via corelli x,via corelli 1,via corelli 1,provider_number->address_1,1,1
+P3IT,936,address_1,via corexli 1,via corelli 1,via corelli 1,provider_number->address_1,1,1
+P3IT,939,name,presidio osxedaliero lovero,presidio ospedaliero lovero,presidio ospedaliero lovero,provider_number->name,1,1
+P3IT,944,county,sondxio,sondrio,sondrio,provider_number->county,1,1
+P3IT,946,address_1,via coxelxi 1,via corelli 1,via corelli 1,provider_number->address_1,1,1
+P3IT,950,city,loxero,lovero,lovero,provider_number->city,1,1
+P3IT,950,type,presidi ospedalieri pxr acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,956,provider_number,3013x,30134,30134,phone->provider_number,1,1
+P3IT,956,condition,infaxto miocardico xcuto,infarto miocardico acuto,infarto miocardico acuto,measure_code->condition,1,1
+P3IT,957,name,presidxo ospxdaliero mariano comense,presidio ospedaliero mariano comense,presidio ospedaliero mariano comense,provider_number->name,1,1
+P3IT,957,address_1,vixxrossxni 1,via rossini 1,via rossini 1,provider_number->address_1,1,1
+P3IT,957,type,presidi oxpedalieri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,961,city,mariano comxnse,mariano comense,mariano comense,provider_number->city,1,1
+P3IT,963,name,presxdio ospedaliero mariano comxnse,presidio ospedaliero mariano comense,presidio ospedaliero mariano comense,provider_number->name,1,1
+P3IT,965,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,967,county,cxmo,como,como,provider_number->county,1,1
+P3IT,969,city,xariaxo comensx,mariano comense,mariano comense,provider_number->city,1,1
+P3IT,975,condition,prevenzione xelle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,prevenzione delle infezioni chirurgiche,measure_code->condition,1,1
+P3IT,977,type,presidixospedalxeri per acuti,presidi ospedalieri per acuti,presidi ospedalieri per acuti,provider_number->type,1,1
+P3IT,986,city,tuxbigo,turbigo,turbigo,provider_number->city,1,1
+P3IT,987,address_1,via cxrducci 1,via carducci 1,via carducci 1,provider_number->address_1,1,1
+P3IT,988,name,presidio ospedaliero xurbigo,presidio ospedaliero turbigo,presidio ospedaliero turbigo,provider_number->name,1,1
+P3IT,998,measure_name,pazienxi chirurgixi inxterapix cronxca con betabloccanti chx hanno mantenuto xl trattamento nel periodoxpxrioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,pazienti chirurgici in terapia cronica con betabloccanti che hanno mantenuto il trattamento nel periodo perioperatorio,measure_code->measure_name,1,1
+P3FR,1,measure_name,patients chirurgicaux sous bxtabloxuant au long cours axant poursuivi le xraitement en periode perioperatoire,patients chirurgicaux sous betabloquant au long cours ayant poursuivi le traitement en periode perioperatoire,patients chirurgicaux sous betabloquant au long cours ayant poursuivi le traitement en periode perioperatoire,measure_code->measure_name,1,1
+P3FR,4,city,toulouxe,toulouse,toulouse,provider_number->city,1,1
+P3FR,8,city,touloxse,toulouse,toulouse,provider_number->city,1,1
+P3FR,11,city,peysxies,peyssies,peyssies,provider_number->city,1,1
+P3FR,14,provider_number,3xx13,31013,31013,phone->provider_number,1,1
+P3FR,17,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,22,condition,infarctus du myocaxde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,23,owner,groupement hosxitalxerxde territoxre,groupement hospitalier de territoire,groupement hospitalier de territoire,provider_number->owner,1,1
+P3FR,23,condition,infarctxs du xyxcarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,25,phone,040000000x,0400000001,0400000001,provider_number->phone,1,1
+P3FR,25,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,27,name,centre hospitalier roquetaillaxe et conilhac 1,centre hospitalier roquetaillade et conilhac 1,centre hospitalier roquetaillade et conilhac 1,provider_number->name,1,1
+P3FR,28,owner,groupement hospitaxier de territoire,groupement hospitalier de territoire,groupement hospitalier de territoire,provider_number->owner,1,1
+P3FR,32,owner,groupemext hospxtaliex dx terrxtoixe,groupement hospitalier de territoire,groupement hospitalier de territoire,provider_number->owner,1,1
+P3FR,37,phone,xx000x0001,0400000001,0400000001,provider_number->phone,1,1
+P3FR,40,type,centxes hospitaliers de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,43,state,xc,oc,oc,provider_number->state,1,1
+P3FR,43,owner,gxoupement hxspitalier de xerritxire,groupement hospitalier de territoire,groupement hospitalier de territoire,provider_number->owner,1,1
+P3FR,44,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,45,zip,x1200,11200,11200,provider_number->zip,1,1
+P3FR,46,provider_number,x1002,31002,31002,phone->provider_number,1,1
+P3FR,47,state,xc,oc,oc,provider_number->state,1,1
+P3FR,51,state,xc,oc,oc,provider_number->state,1,1
+P3FR,52,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,57,city,conilhac coxbieres,conilhac corbieres,conilhac corbieres,provider_number->city,1,1
+P3FR,57,state_average,oc_pne-xb,oc_pne-3b,oc_pne-3b,state+measure_code->state_average,1,1
+P3FR,58,address_1,rux xx chaxexu 1,rue du chateau 1,rue du chateau 1,provider_number->address_1,1,1
+P3FR,58,phone,0x0x000002,0400000002,0400000002,provider_number->phone,1,1
+P3FR,61,phone,0x0x000002,0400000002,0400000002,provider_number->phone,1,1
+P3FR,64,zip,1120x,11200,11200,provider_number->zip,1,1
+P3FR,66,phone,0400x00002,0400000002,0400000002,provider_number->phone,1,1
+P3FR,68,county,xuxe,aude,aude,provider_number->county,1,1
+P3FR,70,state_average,oc_imx-1,oc_ima-1,oc_ima-1,state+measure_code->state_average,1,1
+P3FR,71,zip,1221x,12210,12210,provider_number->zip,1,1
+P3FR,73,county,avexrox,aveyron,aveyron,provider_number->county,1,1
+P3FR,74,condition,infarctxs du xyxcarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,78,county,avexron,aveyron,aveyron,provider_number->county,1,1
+P3FR,80,city,mxntpeyroux,montpeyroux,montpeyroux,provider_number->city,1,1
+P3FR,82,provider_number,3100x,31003,31003,phone->provider_number,1,1
+P3FR,84,state,xc,oc,oc,provider_number->state,1,1
+P3FR,89,city,montpexroux,montpeyroux,montpeyroux,provider_number->city,1,1
+P3FR,94,city,monxpeyroux,montpeyroux,montpeyroux,provider_number->city,1,1
+P3FR,94,zip,1221x,12210,12210,provider_number->zip,1,1
+P3FR,95,address_1,rue dx lx fontaixe 1,rue de la fontaine 1,rue de la fontaine 1,provider_number->address_1,1,1
+P3FR,95,measure_name,xatients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,measure_code->measure_name,1,1
+P3FR,98,measure_code,ixa-4,ima-4,ixa-4,nessuna,0,0
+P3FR,99,state,xc,oc,oc,provider_number->state,1,1
+P3FR,99,type,centres hospitaliers de sxins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,102,phone,0500x00004,0500000004,0500000004,provider_number->phone,1,1
+P3FR,102,measure_code,icx1,ic-1,icx1,nessuna,0,0
+P3FR,107,address_1,rue dexla fontxine 1,rue de la fontaine 1,rue de la fontaine 1,provider_number->address_1,1,1
+P3FR,109,measure_code,pnx-5c,pne-5c,pnx-5c,nessuna,0,0
+P3FR,112,measure_name,patientsxchirurgicxux sous betabloquant au loxg cours ayant poursuxvi le traitemxnt en periode pxrioperatoire,patients chirurgicaux sous betabloquant au long cours ayant poursuivi le traitement en periode perioperatoire,patients chirurgicaux sous betabloquant au long cours ayant poursuivi le traitement en periode perioperatoire,measure_code->measure_name,1,1
+P3FR,114,owner,fondatxon privee a butxnon lucratxf,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,120,state,ox,oc,oc,provider_number->state,1,1
+P3FR,120,measure_name,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgencex,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,measure_code->measure_name,1,1
+P3FR,121,measure_code,ixa-2,ima-2,ixa-2,nessuna,0,0
+P3FR,128,condition,insufxisance cardiaxue,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,132,name,centre hospitaliex saint martin dexvalgalgues,centre hospitalier saint martin de valgalgues,centre hospitalier saint martin de valgalgues,provider_number->name,1,1
+P3FR,137,county,gxrd,gard,gard,provider_number->county,1,1
+P3FR,138,zip,30x20,30520,30520,provider_number->zip,1,1
+P3FR,140,zip,305x0,30520,30520,provider_number->zip,1,1
+P3FR,141,state,ox,oc,oc,provider_number->state,1,1
+P3FR,146,measure_name,patients atteints d xnfarctus aigu du myocarde avec aspirine prescrite a la sortie dx l hopital,patients atteints d infarctus aigu du myocarde avec aspirine prescrite a la sortie de l hopital,patients atteints d infarctus aigu du myocarde avec aspirine prescrite a la sortie de l hopital,measure_code->measure_name,1,1
+P3FR,150,zip,3x350,30350,30350,provider_number->zip,1,1
+P3FR,158,zip,3x350,30350,30350,provider_number->zip,1,1
+P3FR,158,owner,clixique prixee a but lucrxtif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,158,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,160,owner,clinique xrivee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,162,address_1,rue arisxidexbrixnd x,rue aristide briand 1,rue aristide briand 1,provider_number->address_1,1,1
+P3FR,163,owner,xlinique privee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,165,owner,clixique prixee a but lucrxtif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,166,state,ox,oc,oc,provider_number->state,1,1
+P3FR,172,name,centre hospitalier bez xt esparxn,centre hospitalier bez et esparon,centre hospitalier bez et esparon,provider_number->name,1,1
+P3FR,176,address_1,rue hoxxe 1,rue hoche 1,rue hoche 1,provider_number->address_1,1,1
+P3FR,178,measure_code,ic-x,ic-2,ic-x,nessuna,0,0
+P3FR,181,city,bez ex esparox,bez et esparon,bez et esparon,provider_number->city,1,1
+P3FR,183,state,xc,oc,oc,provider_number->state,1,1
+P3FR,191,measure_code,pic-inx-4,pic-inf-4,pic-inx-4,nessuna,0,0
+P3FR,194,state_average,oc_picxvte-2,oc_pic-vte-2,oc_pic-vte-2,state+measure_code->state_average,1,1
+P3FR,197,zip,3x20x,31200,31200,provider_number->zip,1,1
+P3FR,200,type,centres hospitaliers de sxins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,200,condition,infarxtus du myocarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,208,city,toulxuse,toulouse,toulouse,provider_number->city,1,1
+P3FR,211,measure_name,patients hospxtalises pourxpneumonie evxlues xt vaccinxs contre la gxippe saisonniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,measure_code->measure_name,1,1
+P3FR,213,city,txuxouse,toulouse,toulouse,provider_number->city,1,1
+P3FR,214,provider_number,x10xx,31008,31008,phone->provider_number,1,1
+P3FR,214,type,centresxhospitalxers de soins aigus,centres hospitaliers de soins aigus,centresxhospitalxers de soins aigus,nessuna,0,0
+P3FR,214,state_average,oc_pxc-inf-2,oc_pic-inf-2,oc_pic-inf-2,state+measure_code->state_average,1,1
+P3FR,217,county,haute garoxne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,217,owner,fondatxon privee a butxnon lucratxf,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,218,phone,0500x0x005,0500000005,0500000005,provider_number->phone,1,1
+P3FR,219,owner,fondation privex a but nox lucratif,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,220,measure_name,patients atxeints d infarxtus aigu du myocarxe ayant recuxde l aspirine a x arrixee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,measure_code->measure_name,1,1
+P3FR,222,county,axeyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,222,owner,etablissemxnt prive conxexsionnel,etablissement prive confessionnel,etablissement prive confessionnel,provider_number->owner,1,1
+P3FR,224,county,xveyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,226,condition,infaxctus du myoxarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,228,county,axeyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,229,city,conques en rouerxue,conques en rouergue,conques en rouergue,provider_number->city,1,1
+P3FR,229,state,ox,oc,oc,provider_number->state,1,1
+P3FR,229,phone,0500000x06,0500000006,0500000006,provider_number->phone,1,1
+P3FR,230,condition,insuffisance cxrdiaque,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,233,zip,123x0,12320,12320,provider_number->zip,1,1
+P3FR,237,condition,prexention des infections cxirurgicales,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,239,county,xveyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,239,owner,etxblissement prive confessionnel,etablissement prive confessionnel,etablissement prive confessionnel,provider_number->owner,1,1
+P3FR,240,condition,prevextion des infecxions chirurgicxles,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,244,name,cenxre hospitalier conques en rouergue,centre hospitalier conques en rouergue,centre hospitalier conques en rouergue,provider_number->name,1,1
+P3FR,245,provider_number,x10x0,31010,31010,phone->provider_number,1,1
+P3FR,245,state_average,ox_ima-1,oc_ima-1,oc_ima-1,state+measure_code->state_average,1,1
+P3FR,248,phone,xx00x00007,0500000007,0500000007,provider_number->phone,1,1
+P3FR,248,owner,etablissexent public national,etablissement public national,etablissement public national,provider_number->owner,1,1
+P3FR,249,state_average,xc_xma-5,oc_ima-5,oc_ima-5,state+measure_code->state_average,1,1
+P3FR,253,county,xers,gers,gers,provider_number->county,1,1
+P3FR,254,provider_number,3xx10,31010,31010,phone->provider_number,1,1
+P3FR,257,condition,xneumonie,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,257,measure_name,patixntsxaux urgxxces pour pneumonie avec hemoxulture xxalixee avaxt l xntibiothexxpxe,patients aux urgences pour pneumonie avec hemoculture realisee avant l antibiotherapie,patients aux urgences pour pneumonie avec hemoculture realisee avant l antibiotherapie,measure_code->measure_name,1,1
+P3FR,261,address_1,rue sainx martin 1,rue saint martin 1,rue saint martin 1,provider_number->address_1,1,1
+P3FR,262,phone,050x0xx007,0500000007,0500000007,provider_number->phone,1,1
+P3FR,265,address_1,rue saint martinx1,rue saint martin 1,rue saint martin 1,provider_number->address_1,1,1
+P3FR,265,measure_code,pix-xnf-3,pic-inf-3,pix-xnf-3,nessuna,0,0
+P3FR,267,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,268,zip,x2270,32270,32270,provider_number->zip,1,1
+P3FR,270,state_average,oc_ixa-1,oc_ima-1,oc_ima-1,state+measure_code->state_average,1,1
+P3FR,274,provider_number,3xx11,31011,31011,phone->provider_number,1,1
+P3FR,276,address_1,rue vxctox hugox1,rue victor hugo 1,rue victor hugo 1,provider_number->address_1,1,1
+P3FR,279,state,xc,oc,oc,provider_number->state,1,1
+P3FR,280,condition,xnsuffisance cardiaque,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,281,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,282,measure_name,pxtientsxaux uxgencesxxour pneumonix avex hxmocultuxe realisee axant l antibxotherapie,patients aux urgences pour pneumonie avec hemoculture realisee avant l antibiotherapie,patients aux urgences pour pneumonie avec hemoculture realisee avant l antibiotherapie,measure_code->measure_name,1,1
+P3FR,284,zip,0x300,09300,09300,provider_number->zip,1,1
+P3FR,291,zip,x9300,09300,09300,provider_number->zip,1,1
+P3FR,291,measure_name,patients de cxirurgie cardiaque avec glycemie postoperatoire controlee dans xes premiers jourx,patients de chirurgie cardiaque avec glycemie postoperatoire controlee dans les premiers jours,patients de chirurgie cardiaque avec glycemie postoperatoire controlee dans les premiers jours,measure_code->measure_name,1,1
+P3FR,294,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,296,address_1,rue de xa gare 1,rue de la gare 1,rue de la gare 1,provider_number->address_1,1,1
+P3FR,312,city,bxlvix,belvis,belvis,provider_number->city,1,1
+P3FR,313,county,auxe,aude,aude,provider_number->county,1,1
+P3FR,314,owner,cliniqxe privee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,315,provider_number,310x6,31026,31026,phone->provider_number,1,1
+P3FR,317,address_1,rue jxan jacquxs roussexu 1,rue jean jacques rousseau 1,rue jean jacques rousseau 1,provider_number->address_1,1,1
+P3FR,319,emergency_service,xui,oui,oui,provider_number->emergency_service,1,1
+P3FR,322,phone,040000x006,0400000006,0400000006,provider_number->phone,1,1
+P3FR,325,county,axde,aude,aude,provider_number->county,1,1
+P3FR,326,zip,11x40,11340,11340,provider_number->zip,1,1
+P3FR,328,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,333,zip,1x300,11300,11300,provider_number->zip,1,1
+P3FR,333,owner,clinique xrivee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,333,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,335,address_1,ruexlaxartxne 1,rue lamartine 1,rue lamartine 1,provider_number->address_1,1,1
+P3FR,335,state_average,oc_pnex2,oc_pne-2,oc_pne-2,state+measure_code->state_average,1,1
+P3FR,338,name,centre hoxpitalier roquetaillade et conilhac 2,centre hospitalier roquetaillade et conilhac 2,centre hospitalier roquetaillade et conilhac 2,provider_number->name,1,1
+P3FR,341,zip,x1x00,11300,11300,provider_number->zip,1,1
+P3FR,343,phone,xx000x0007,0400000007,0400000007,provider_number->phone,1,1
+P3FR,347,county,auxe,aude,aude,provider_number->county,1,1
+P3FR,347,measure_name,patients chxrurgicaux pour lesquels le medecin a presxrit un traitement preventif des caillotx sanguins axres certaines interventions,patients chirurgicaux pour lesquels le medecin a prescrit un traitement preventif des caillots sanguins apres certaines interventions,patients chirurgicaux pour lesquels le medecin a prescrit un traitement preventif des caillots sanguins apres certaines interventions,measure_code->measure_name,1,1
+P3FR,348,state_average,oc_picxvtex2,oc_pic-vte-2,oc_pic-vte-2,state+measure_code->state_average,1,1
+P3FR,350,measure_code,imax2,ima-2,imax2,nessuna,0,0
+P3FR,351,address_1,rue xantonx1,rue danton 1,rue danton 1,provider_number->address_1,1,1
+P3FR,351,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,357,state,ox,oc,oc,provider_number->state,1,1
+P3FR,357,owner,cliniqxe privee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,361,provider_number,310x9,31039,31039,phone->provider_number,1,1
+P3FR,364,address_1,ruexdxxmoulix 1,rue du moulin 1,rue du moulin 1,provider_number->address_1,1,1
+P3FR,367,zip,3xx40,32240,32240,provider_number->zip,1,1
+P3FR,367,condition,pnxumonie,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,368,city,lannemaignax,lannemaignan,lannemaignan,provider_number->city,1,1
+P3FR,370,condition,pnexmonie,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,371,state_average,ocxpne-7,oc_pne-7,oc_pne-7,state+measure_code->state_average,1,1
+P3FR,374,state_average,oc_pxc-inf-2,oc_pic-inf-2,oc_pic-inf-2,state+measure_code->state_average,1,1
+P3FR,375,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,376,zip,3xx40,32240,32240,provider_number->zip,1,1
+P3FR,381,measure_name,patienxs atteints d infarctus aigu du myocarde avec aspirine prexcrite a la sortie de l hoxital,patients atteints d infarctus aigu du myocarde avec aspirine prescrite a la sortie de l hopital,patients atteints d infarctus aigu du myocarde avec aspirine prescrite a la sortie de l hopital,measure_code->measure_name,1,1
+P3FR,382,phone,04x00x0xx9,0400000009,0400000009,provider_number->phone,1,1
+P3FR,385,name,centxe hospitalier vergeze,centre hospitalier vergeze,centre hospitalier vergeze,provider_number->name,1,1
+P3FR,385,phone,04x00x0xx9,0400000009,0400000009,provider_number->phone,1,1
+P3FR,386,name,xentre xospitalier vergeze,centre hospitalier vergeze,centre hospitalier vergeze,provider_number->name,1,1
+P3FR,387,state,xc,oc,oc,provider_number->state,1,1
+P3FR,387,phone,04x00x0xx9,0400000009,0400000009,provider_number->phone,1,1
+P3FR,387,condition,inxuffisance cardiaqux,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,388,state_average,oc_ix-2,oc_ic-2,oc_ic-2,state+measure_code->state_average,1,1
+P3FR,390,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,390,measure_name,patients xumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,patients fumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,patients fumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,measure_code->measure_name,1,1
+P3FR,392,measure_code,pne-xb,pne-3b,pne-xb,nessuna,0,0
+P3FR,394,address_1,ruexjxles ferrx 1,rue jules ferry 1,rue jules ferry 1,provider_number->address_1,1,1
+P3FR,394,phone,05x000x011,0500000011,0500000011,provider_number->phone,1,1
+P3FR,399,measure_code,ix-1,ic-1,ix-1,nessuna,0,0
+P3FR,401,condition,inxuffisance cardiaqux,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,403,state,ox,oc,oc,provider_number->state,1,1
+P3FR,407,zip,3x2x0,31220,31220,provider_number->zip,1,1
+P3FR,409,provider_number,x1x41,31041,31041,phone->provider_number,1,1
+P3FR,410,measure_code,pic-xnfx1,pic-inf-1,pic-xnfx1,nessuna,0,0
+P3FR,411,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,412,address_1,rue julxs ferry 1,rue jules ferry 1,rue jules ferry 1,provider_number->address_1,1,1
+P3FR,412,type,centres hospitaliers de sxins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,414,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,416,address_1,rue alsace loxraine 1,rue alsace lorraine 1,rue alsace lorraine 1,provider_number->address_1,1,1
+P3FR,416,county,haute gaxonne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,419,emergency_service,xon,non,non,provider_number->emergency_service,1,1
+P3FR,421,zip,x1600,31600,31600,provider_number->zip,1,1
+P3FR,429,zip,3x6x0,31600,31600,provider_number->zip,1,1
+P3FR,432,address_1,rue xlsxce lorraixe 1,rue alsace lorraine 1,rue alsace lorraine 1,provider_number->address_1,1,1
+P3FR,435,measure_name,patientx avec ixsuffisxnce cardiaxxe et dysfonction ventrixulaire traixes par iex ou ara2,patients avec insuffisance cardiaque et dysfonction ventriculaire traites par iec ou ara2,patients avec insuffisance cardiaque et dysfonction ventriculaire traites par iec ou ara2,measure_code->measure_name,1,1
+P3FR,438,city,allinexc,allineuc,allineuc,provider_number->city,1,1
+P3FR,448,measure_name,patixnts xhiruxgixaux xyxntxeu uxe xepixatioxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,patients chirurgicaux ayant eu une depilation preoperatoire a la tondeuse electrique et non au rasoir,patients chirurgicaux ayant eu une depilation preoperatoire a la tondeuse electrique et non au rasoir,measure_code->measure_name,1,1
+P3FR,449,name,xextrexhospitalxer allinexc,centre hospitalier allineuc,centre hospitalier allineuc,provider_number->name,1,1
+P3FR,450,owner,clinique xrivee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,452,address_1,rue xierre xurie 1,rue pierre curie 1,rue pierre curie 1,provider_number->address_1,1,1
+P3FR,454,type,centres hospitaliers de soins aixus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,457,county,haxte xaronne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,457,owner,gxoupement hxspitalier de xerritxire,groupement hospitalier de territoire,groupement hospitalier de territoire,provider_number->owner,1,1
+P3FR,458,county,xaute garonne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,465,measure_code,pxc-vte-1,pic-vte-1,pxc-vte-1,nessuna,0,0
+P3FR,466,county,hauxx garonne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,468,condition,infaxctus du myoxarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,472,phone,050000x014,0500000014,0500000014,provider_number->phone,1,1
+P3FR,473,address_1,rux molierx 1,rue moliere 1,rue moliere 1,provider_number->address_1,1,1
+P3FR,474,measure_name,patienxs atteints d inxuffisance cardiaque sortis avec des instructionsxecrites completex pour le suivi,patients atteints d insuffisance cardiaque sortis avec des instructions ecrites completes pour le suivi,patients atteints d insuffisance cardiaque sortis avec des instructions ecrites completes pour le suivi,measure_code->measure_name,1,1
+P3FR,475,city,grazax,grazac,grazac,provider_number->city,1,1
+P3FR,478,state,xc,oc,oc,provider_number->state,1,1
+P3FR,478,state_average,ox_pne-2,oc_pne-2,ox_pne-2,nessuna,0,0
+P3FR,484,state,xc,oc,oc,provider_number->state,1,1
+P3FR,485,address_1,rxe moliere 1,rue moliere 1,rue moliere 1,provider_number->address_1,1,1
+P3FR,486,city,xrazac,grazac,grazac,provider_number->city,1,1
+P3FR,491,zip,x1x90,31190,31190,provider_number->zip,1,1
+P3FR,491,type,centres hospitxliers de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,493,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,494,type,centres hospitaliers xe soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,494,owner,fondation pxivee a but xonxlucratif,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,494,measure_name,pxtients avec infxrctus xu myocarde et dysfonction vextricxlaire gauche traites par iec ou ara2,patients avec infarctus du myocarde et dysfonction ventriculaire gauche traites par iec ou ara2,patients avec infarctus du myocarde et dysfonction ventriculaire gauche traites par iec ou ara2,measure_code->measure_name,1,1
+P3FR,496,measure_code,ima-x,ima-5,ima-x,nessuna,0,0
+P3FR,498,type,centresxhospitalxers de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,500,zip,x1270,11270,11270,provider_number->zip,1,1
+P3FR,503,county,axdx,aude,aude,provider_number->county,1,1
+P3FR,505,state,ox,oc,oc,provider_number->state,1,1
+P3FR,507,condition,pneumonix,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,508,measure_name,patients hosxitaxises pour pneumonie evalxes et vaccines contre la xripxe saisxnniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,measure_code->measure_name,1,1
+P3FR,512,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,514,county,axdx,aude,aude,provider_number->county,1,1
+P3FR,517,phone,0500xx0015,0500000015,0500000015,provider_number->phone,1,1
+P3FR,518,city,campxuriez,campouriez,campouriez,provider_number->city,1,1
+P3FR,522,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,527,owner,etaxlissement prive confessioxnel,etablissement prive confessionnel,etablissement prive confessionnel,provider_number->owner,1,1
+P3FR,528,county,avxyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,533,name,centre hospitalier cxmpouriez 1,centre hospitalier campouriez 1,centre hospitalier campouriez 1,provider_number->name,1,1
+P3FR,533,type,centres hospitaliers de sxins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,533,measure_name,pxtients xospitalises xour pneumonie evaluxs et vaccxnesxcontre xa grippe saixonnierx,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,measure_code->measure_name,1,1
+P3FR,537,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,541,county,aveyrxn,aveyron,aveyron,provider_number->county,1,1
+P3FR,542,measure_name,patixnts atteints dxinfarctus xigu du myocarde ayant recu de l aspirine a l xrrivee aux urgenxes,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,measure_code->measure_name,1,1
+P3FR,545,zip,1x14x,12140,12140,provider_number->zip,1,1
+P3FR,546,measure_name,patiexts atteints d infarctus aigu du myocarde avec betabloquanx prescrit a la soxtie,patients atteints d infarctus aigu du myocarde avec betabloquant prescrit a la sortie,patients atteints d infarctus aigu du myocarde avec betabloquant prescrit a la sortie,measure_code->measure_name,1,1
+P3FR,549,phone,0500000xxx,0500000016,0500000016,provider_number->phone,1,1
+P3FR,552,county,avxyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,556,condition,pxeumoxie,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,556,state_average,oc_pne-5x,oc_pne-5c,oc_pne-5c,state+measure_code->state_average,1,1
+P3FR,560,provider_number,3xx17,31017,31017,phone->provider_number,1,1
+P3FR,560,state,xc,oc,oc,zip->state,1,1
+P3FR,561,name,cextre hospitalier cxmpourxez x,centre hospitalier campouriez 2,centre hospitalier campouriez 2,provider_number->name,1,1
+P3FR,562,phone,05x0000016,0500000016,0500000016,provider_number->phone,1,1
+P3FR,563,phone,0500000xxx,0500000016,0500000016,provider_number->phone,1,1
+P3FR,563,measure_name,paxientx de cxirurgix carxiaqux avex glyxemie pxstxperxtoixe cxntrolex xanx lex prexierx jours,patients de chirurgie cardiaque avec glycemie postoperatoire controlee dans les premiers jours,patients de chirurgie cardiaque avec glycemie postoperatoire controlee dans les premiers jours,measure_code->measure_name,1,1
+P3FR,565,emergency_service,xui,oui,oui,provider_number->emergency_service,1,1
+P3FR,565,state_average,oc_picxvtex1,oc_pic-vte-1,oc_pic-vte-1,state+measure_code->state_average,1,1
+P3FR,568,state_average,xc_xma-2,oc_ima-2,oc_ima-2,state+measure_code->state_average,1,1
+P3FR,573,state,ox,oc,oc,provider_number->state,1,1
+P3FR,573,phone,050x000017,0500000017,0500000017,provider_number->phone,1,1
+P3FR,573,owner,etablissement prive d interet collextif,etablissement prive d interet collectif,etablissement prive d interet collectif,provider_number->owner,1,1
+P3FR,579,city,bretagne d armagnax,bretagne d armagnac,bretagne d armagnac,provider_number->city,1,1
+P3FR,579,county,xers,gers,gers,provider_number->county,1,1
+P3FR,580,emergency_service,xui,oui,oui,provider_number->emergency_service,1,1
+P3FR,581,measure_code,pxe-5c,pne-5c,pxe-5c,nessuna,0,0
+P3FR,588,emergency_service,xui,oui,oui,provider_number->emergency_service,1,1
+P3FR,589,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,591,city,bretxgne d armagnac,bretagne d armagnac,bretagne d armagnac,provider_number->city,1,1
+P3FR,591,county,gxrs,gers,gers,provider_number->county,1,1
+P3FR,593,state,ox,oc,oc,provider_number->state,1,1
+P3FR,594,phone,04x0000011,0400000011,0400000011,provider_number->phone,1,1
+P3FR,600,condition,insuffisance carxiaque,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,602,city,ventexac cabardes,ventenac cabardes,ventenac cabardes,provider_number->city,1,1
+P3FR,603,county,auxx,aude,aude,provider_number->county,1,1
+P3FR,609,provider_number,x1019,31019,31019,phone->provider_number,1,1
+P3FR,609,condition,prevention desxinfectioxs chirurgxcalex,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,613,measure_name,patienxs xe xhirurgie cardiaque avxc glycemie postoperatoixe contrxlee dans lesxpremierx jxuxs,patients de chirurgie cardiaque avec glycemie postoperatoire controlee dans les premiers jours,patients de chirurgie cardiaque avec glycemie postoperatoire controlee dans les premiers jours,measure_code->measure_name,1,1
+P3FR,623,state_average,oc_imax8a,oc_ima-8a,oc_ima-8a,state+measure_code->state_average,1,1
+P3FR,628,provider_number,x1020,31020,31020,phone->provider_number,1,1
+P3FR,629,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,632,condition,pneumonxe,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,634,county,xaute garonne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,635,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,640,provider_number,3xx20,31020,31020,phone->provider_number,1,1
+P3FR,640,measure_code,pic-vtx-1,pic-vte-1,pic-vtx-1,nessuna,0,0
+P3FR,646,provider_number,3xx21,31021,31021,phone->provider_number,1,1
+P3FR,647,state_average,ocxima-7a,oc_ima-7a,oc_ima-7a,state+measure_code->state_average,1,1
+P3FR,649,measure_code,icx1,ic-1,icx1,nessuna,0,0
+P3FR,651,measure_name,patients avec insuffisance cardiaque et dysfonction vextriculaire traites par iec ou xra2,patients avec insuffisance cardiaque et dysfonction ventriculaire traites par iec ou ara2,patients avec insuffisance cardiaque et dysfonction ventriculaire traites par iec ou ara2,measure_code->measure_name,1,1
+P3FR,652,measure_name,patients fuxeurs atteintx d insuffxsance cardiaxue ayant recuxune aide xu sevrage tabagxque,patients fumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,patients fumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,measure_code->measure_name,1,1
+P3FR,653,address_1,rue xouis paxteur 1,rue louis pasteur 1,rue louis pasteur 1,provider_number->address_1,1,1
+P3FR,654,emergency_service,xon,non,non,provider_number->emergency_service,1,1
+P3FR,655,name,centre hospitalier xstampes,centre hospitalier estampes,centre hospitalier estampes,provider_number->name,1,1
+P3FR,655,city,extampxx,estampes,estampes,provider_number->city,1,1
+P3FR,656,provider_number,3xx21,31021,31021,phone->provider_number,1,1
+P3FR,667,phone,05000xx020,0500000020,0500000020,provider_number->phone,1,1
+P3FR,673,county,haxte xaronne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,673,measure_name,patients xvec infarctux du myocarde ayxnt eu une xngioplxstie primairx danx les 90 minutex suixant l arrivee,patients avec infarctus du myocarde ayant eu une angioplastie primaire dans les 90 minutes suivant l arrivee,patients avec infarctus du myocarde ayant eu une angioplastie primaire dans les 90 minutes suivant l arrivee,measure_code->measure_name,1,1
+P3FR,674,measure_code,xc-1,ic-1,xc-1,nessuna,0,0
+P3FR,675,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,677,measure_code,icx4,ic-4,icx4,nessuna,0,0
+P3FR,679,state_average,ocxpne-3b,oc_pne-3b,oc_pne-3b,state+measure_code->state_average,1,1
+P3FR,680,zip,3x100,31100,31100,provider_number->zip,1,1
+P3FR,680,condition,xneumonie,pneumonie,pneumonie,measure_code->condition,1,1
+P3FR,686,zip,x11xx,31100,31100,provider_number->zip,1,1
+P3FR,690,county,hauxx garonne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,691,city,touloxse,toulouse,toulouse,provider_number->city,1,1
+P3FR,692,measure_code,imax1,ima-1,imax1,nessuna,0,0
+P3FR,693,county,haute garoxne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,695,measure_code,imx-4,ima-4,imx-4,nessuna,0,0
+P3FR,696,type,centres hospixaliers de soins xigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,696,condition,infarctus du myocaxde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,697,city,sauveterre de xoxminges,sauveterre de comminges,sauveterre de comminges,provider_number->city,1,1
+P3FR,698,name,centre hospitalixr sauveterre de comminges,centre hospitalier sauveterre de comminges,centre hospitalier sauveterre de comminges,provider_number->name,1,1
+P3FR,699,county,hautexgaronne,haute garonne,haute garonne,provider_number->county,1,1
+P3FR,699,condition,insuxfisancexcardiaque,insuffisance cardiaque,insuffisance cardiaque,measure_code->condition,1,1
+P3FR,700,phone,050x000021,0500000021,0500000021,provider_number->phone,1,1
+P3FR,702,state,xc,oc,oc,provider_number->state,1,1
+P3FR,705,provider_number,310x3,31023,31023,phone->provider_number,1,1
+P3FR,706,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,706,measure_name,pxtientsxhospitalisxs pour pnexmonxe traitesxpar antibiotique dans xes 6 heures suivant l arrivee,patients hospitalises pour pneumonie traites par antibiotique dans les 6 heures suivant l arrivee,patients hospitalises pour pneumonie traites par antibiotique dans les 6 heures suivant l arrivee,measure_code->measure_name,1,1
+P3FR,707,measure_name,paxients xtteints de pnexmonie commuxautaire traites par un antibiotique axapte selon lxs recommandations,patients atteints de pneumonie communautaire traites par un antibiotique adapte selon les recommandations,patients atteints de pneumonie communautaire traites par un antibiotique adapte selon les recommandations,measure_code->measure_name,1,1
+P3FR,711,name,centre hospitaxier sauveterrexde comminges,centre hospitalier sauveterre de comminges,centre hospitalier sauveterre de comminges,provider_number->name,1,1
+P3FR,711,zip,31x10,31510,31510,provider_number->zip,1,1
+P3FR,713,condition,prevention des infections xhirurgicales,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,714,phone,05x00000x1,0500000021,0500000021,provider_number->phone,1,1
+P3FR,714,measure_name,patienxsxchirurgicaux ayaxt eu une depilation preoperatoire a la txndeusx electrique et non au xasoir,patients chirurgicaux ayant eu une depilation preoperatoire a la tondeuse electrique et non au rasoir,patients chirurgicaux ayant eu une depilation preoperatoire a la tondeuse electrique et non au rasoir,measure_code->measure_name,1,1
+P3FR,717,condition,infarctusxdu myocarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,719,measure_code,imx-3,ima-3,imx-3,nessuna,0,0
+P3FR,722,provider_number,310x4,31024,31024,phone->provider_number,1,1
+P3FR,722,state_average,oc_imx-7a,oc_ima-7a,oc_ima-7a,state+measure_code->state_average,1,1
+P3FR,723,county,xude,aude,aude,provider_number->county,1,1
+P3FR,725,provider_number,3xx24,31024,31024,phone->provider_number,1,1
+P3FR,730,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,730,measure_code,pxe-4,pne-4,pxe-4,nessuna,0,0
+P3FR,731,name,centxe hospixalierxpepieux,centre hospitalier pepieux,centre hospitalier pepieux,provider_number->name,1,1
+P3FR,731,county,xude,aude,aude,provider_number->county,1,1
+P3FR,734,condition,prexention des infections cxirurgicales,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,736,measure_code,picxinf-2,pic-inf-2,picxinf-2,nessuna,0,0
+P3FR,737,address_1,ruexjeanxmoulix 1,rue jean moulin 1,rue jean moulin 1,provider_number->address_1,1,1
+P3FR,737,city,pexxeux,pepieux,pepieux,provider_number->city,1,1
+P3FR,745,owner,cliniqxe privee a but lucratif,clinique privee a but lucratif,clinique privee a but lucratif,provider_number->owner,1,1
+P3FR,750,measure_code,ix-2,ic-2,ix-2,nessuna,0,0
+P3FR,751,zip,0970x,09700,09700,provider_number->zip,1,1
+P3FR,752,phone,050xxx0022,0500000022,0500000022,provider_number->phone,1,1
+P3FR,753,county,axiege,ariege,ariege,provider_number->county,1,1
+P3FR,756,provider_number,3xx25,31025,31025,phone->provider_number,1,1
+P3FR,757,city,tremouxet,tremoulet,tremoulet,provider_number->city,1,1
+P3FR,759,name,centxe hospitalierxtremoulex,centre hospitalier tremoulet,centre hospitalier tremoulet,provider_number->name,1,1
+P3FR,761,state_average,oc_picxinfx2,oc_pic-inf-2,oc_pic-inf-2,state+measure_code->state_average,1,1
+P3FR,764,phone,05000000xx,0500000022,0500000022,provider_number->phone,1,1
+P3FR,765,state,xc,oc,oc,provider_number->state,1,1
+P3FR,765,state_average,oc_picxvte-1,oc_pic-vte-1,oc_pic-vte-1,state+measure_code->state_average,1,1
+P3FR,766,name,centrexhospitalier trexoulet,centre hospitalier tremoulet,centre hospitalier tremoulet,provider_number->name,1,1
+P3FR,768,address_1,rue jean jacques xousseau 1,rue jean jacques rousseau 1,rue jean jacques rousseau 1,provider_number->address_1,1,1
+P3FR,773,city,bexvis,belvis,belvis,provider_number->city,1,1
+P3FR,775,measure_code,xsx-1,ase-1,xsx-1,nessuna,0,0
+P3FR,778,name,centre hosxitalier la roxviere,centre hospitalier la rouviere,centre hospitalier la rouviere,provider_number->name,1,1
+P3FR,780,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,781,provider_number,3102x,31027,31027,phone->provider_number,1,1
+P3FR,781,condition,infarctus du myocaxde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,783,type,centres hospitaliers de soins aixus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,785,owner,grouxemxnt hospitalier de territoire,groupement hospitalier de territoire,groupement hospitalier de territoire,provider_number->owner,1,1
+P3FR,786,county,gaxd,gard,gard,provider_number->county,1,1
+P3FR,786,measure_name,patixnts attexnts d insuffisance cardiaque ayant eu une evaluatiox de laxfonction ventriculaire gauche,patients atteints d insuffisance cardiaque ayant eu une evaluation de la fonction ventriculaire gauche,patients atteints d insuffisance cardiaque ayant eu une evaluation de la fonction ventriculaire gauche,measure_code->measure_name,1,1
+P3FR,788,state_average,oc_ic-x,oc_ic-4,oc_ic-4,state+measure_code->state_average,1,1
+P3FR,789,measure_code,pne-x,pne-2,pne-x,nessuna,0,0
+P3FR,790,provider_number,3xx27,31027,31027,phone->provider_number,1,1
+P3FR,792,state,xc,oc,oc,provider_number->state,1,1
+P3FR,794,provider_number,310x7,31027,31027,phone->provider_number,1,1
+P3FR,797,state_average,xc_pic-inf-2,oc_pic-inf-2,oc_pic-inf-2,state+measure_code->state_average,1,1
+P3FR,798,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,799,county,garx,gard,gard,provider_number->county,1,1
+P3FR,803,measure_name,patients atteints d infarctus aiguxdu myocarde ayxnt recu de l asxirinx a l arrivee aux uxgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,patients atteints d infarctus aigu du myocarde ayant recu de l aspirine a l arrivee aux urgences,measure_code->measure_name,1,1
+P3FR,810,emergency_service,xui,oui,oui,provider_number->emergency_service,1,1
+P3FR,815,type,cextres hospitaliers de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,816,zip,x224x,12240,12240,provider_number->zip,1,1
+P3FR,817,measure_name,patients hxspixalises pour pneumonie trxites par antibiotique dans les 6 heures suivant l arrivxe,patients hospitalises pour pneumonie traites par antibiotique dans les 6 heures suivant l arrivee,patients hospitalises pour pneumonie traites par antibiotique dans les 6 heures suivant l arrivee,measure_code->measure_name,1,1
+P3FR,822,city,lexbas segala,le bas segala,le bas segala,provider_number->city,1,1
+P3FR,825,phone,0500000xxx,0500000023,0500000023,provider_number->phone,1,1
+P3FR,828,state_average,xc_xma-1,oc_ima-1,oc_ima-1,state+measure_code->state_average,1,1
+P3FR,843,measure_code,pnex6,pne-6,pnex6,nessuna,0,0
+P3FR,843,state_average,oc_pnex6,oc_pne-6,oc_pnex6,nessuna,0,0
+P3FR,847,owner,fondatiox privee axbut non lxcratif,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,849,type,centres hospitxliers de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,850,address_1,xuexde la republique 1,rue de la republique 1,rue de la republique 1,provider_number->address_1,1,1
+P3FR,852,condition,prevention des ixfections chxruxgicales,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,856,city,deaxx,deaux,deaux,provider_number->city,1,1
+P3FR,856,phone,x400x00x15,0400000015,0400000015,provider_number->phone,1,1
+P3FR,858,address_1,rue voltairx 1,rue voltaire 1,rue voltaire 1,provider_number->address_1,1,1
+P3FR,860,provider_number,3xx30,31030,31030,phone->provider_number,1,1
+P3FR,866,phone,04x0000015,0400000015,0400000015,provider_number->phone,1,1
+P3FR,866,measure_code,pxe-4,pne-4,pxe-4,nessuna,0,0
+P3FR,867,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,869,owner,fondaxion prxvxe a but non lucratif,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,870,condition,prevention desxinfectioxs chirurgxcalex,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,873,owner,fondatiox privee axbut non lxcratif,fondation privee a but non lucratif,fondation privee a but non lucratif,provider_number->owner,1,1
+P3FR,878,type,centres hospitaliers dexsoins aigux,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,879,provider_number,3xx31,31031,31031,phone->provider_number,1,1
+P3FR,882,phone,x5000x0024,0500000024,0500000024,provider_number->phone,1,1
+P3FR,884,phone,x5000x0024,0500000024,0500000024,provider_number->phone,1,1
+P3FR,885,state,xc,oc,oc,provider_number->state,1,1
+P3FR,887,state,xc,oc,oc,provider_number->state,1,1
+P3FR,889,provider_number,x1031,31031,31031,phone->provider_number,1,1
+P3FR,890,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,894,measure_name,patients hospitalises pour pneumonie evalues et vaccines contre la grippx xaisonniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,patients hospitalises pour pneumonie evalues et vaccines contre la grippe saisonniere,measure_code->measure_name,1,1
+P3FR,896,city,druexle balsac,druelle balsac,druelle balsac,provider_number->city,1,1
+P3FR,896,county,aveyxxn,aveyron,aveyron,provider_number->county,1,1
+P3FR,903,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,903,measure_name,enfants hoxpitaxises pour axthme ayantxrecu des bronxhodilatxteurs a courte xureexd action,enfants hospitalises pour asthme ayant recu des bronchodilatateurs a courte duree d action,enfants hospitalises pour asthme ayant recu des bronchodilatateurs a courte duree d action,measure_code->measure_name,1,1
+P3FR,904,name,cenxre xospxtalier lexbas segxlax2,centre hospitalier le bas segala 2,centre hospitalier le bas segala 2,provider_number->name,1,1
+P3FR,916,address_1,rue dxs xcacixs x,rue des acacias 1,rue des acacias 1,provider_number->address_1,1,1
+P3FR,916,measure_name,patienxs fumeurs atteinxs d ixsuffisance cardiaque ayant recx une aide au sevrage tabagique,patients fumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,patients fumeurs atteints d insuffisance cardiaque ayant recu une aide au sevrage tabagique,measure_code->measure_name,1,1
+P3FR,917,phone,x500000x25,0500000025,0500000025,provider_number->phone,1,1
+P3FR,918,county,aveyrxn,aveyron,aveyron,provider_number->county,1,1
+P3FR,920,emergency_service,oux,oui,oui,provider_number->emergency_service,1,1
+P3FR,921,state_average,ocxpne-6,oc_pne-6,oc_pne-6,state+measure_code->state_average,1,1
+P3FR,922,name,xentxe hosxitalier le bas segala x,centre hospitalier le bas segala 2,centre hospitalier le bas segala 2,provider_number->name,1,1
+P3FR,922,emergency_service,oxi,oui,oui,provider_number->emergency_service,1,1
+P3FR,923,name,centre hospixalier le bas segala 2,centre hospitalier le bas segala 2,centre hospitalier le bas segala 2,provider_number->name,1,1
+P3FR,923,state,ox,oc,oc,provider_number->state,1,1
+P3FR,924,zip,1220x,12200,12200,provider_number->zip,1,1
+P3FR,927,type,centrxs hospitaliers de soinsxaigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,931,measure_code,imax1,ima-1,imax1,nessuna,0,0
+P3FR,934,provider_number,3xx33,31033,31033,phone->provider_number,1,1
+P3FR,935,address_1,rue paul bert x,rue paul bert 1,rue paul bert 1,provider_number->address_1,1,1
+P3FR,936,address_1,rue paul bxrt 1,rue paul bert 1,rue paul bert 1,provider_number->address_1,1,1
+P3FR,939,name,centre hospixalier tournemire,centre hospitalier tournemire,centre hospitalier tournemire,provider_number->name,1,1
+P3FR,944,county,aveyxon,aveyron,aveyron,provider_number->county,1,1
+P3FR,946,address_1,rue paulxbext 1,rue paul bert 1,rue paul bert 1,provider_number->address_1,1,1
+P3FR,950,city,touxnemire,tournemire,tournemire,provider_number->city,1,1
+P3FR,950,type,centres hospitaliers de sxins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,956,provider_number,3103x,31034,31034,phone->provider_number,1,1
+P3FR,956,condition,infaxctus du myoxarde,infarctus du myocarde,infarctus du myocarde,measure_code->condition,1,1
+P3FR,957,name,centrx hoxpitalier bertholene,centre hospitalier bertholene,centre hospitalier bertholene,provider_number->name,1,1
+P3FR,957,address_1,ruexxes tillxuls 1,rue des tilleuls 1,rue des tilleuls 1,provider_number->address_1,1,1
+P3FR,957,type,centres hosxitaliers de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,961,city,bertholxne,bertholene,bertholene,provider_number->city,1,1
+P3FR,963,name,centxe hospitalier bertholxne,centre hospitalier bertholene,centre hospitalier bertholene,provider_number->name,1,1
+P3FR,965,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,967,county,axeyron,aveyron,aveyron,provider_number->county,1,1
+P3FR,969,city,xerxholenx,bertholene,bertholene,provider_number->city,1,1
+P3FR,975,condition,prevention dxs infections chirurgicales,prevention des infections chirurgicales,prevention des infections chirurgicales,measure_code->condition,1,1
+P3FR,977,type,centres hxspitaliexs de soins aigus,centres hospitaliers de soins aigus,centres hospitaliers de soins aigus,provider_number->type,1,1
+P3FR,986,city,bxzus,bazus,bazus,provider_number->city,1,1
+P3FR,987,address_1,rue dexla paix 1,rue de la paix 1,rue de la paix 1,provider_number->address_1,1,1
+P3FR,988,name,centre hospitalierxbazus,centre hospitalier bazus,centre hospitalier bazus,provider_number->name,1,1
+P3FR,998,measure_name,patiexts chirurgxcauxxsous xetabxoquant au long cours axant poursuivi lx traitement en periode xexioperatoire,patients chirurgicaux sous betabloquant au long cours ayant poursuivi le traitement en periode perioperatoire,patients chirurgicaux sous betabloquant au long cours ayant poursuivi le traitement en periode perioperatoire,measure_code->measure_name,1,1
 P4,1,measure_name,surgery patients who were taking heart drugs caxxed beta bxockers before coming to the hospitax who were kept on the beta bxockers during the period just before and after their surgery,surgery patients who were taking heart drugs called beta blockers before coming to the hospital who were kept on the beta blockers during the period just before and after their surgery,surgery patients who were taking heart drugs called beta blockers before coming to the hospital who were kept on the beta blockers during the period just before and after their surgery,measure_code->measure_name,1,1
 P4,4,city,birminghxm,birmingham,birmingham,provider_number->city,1,1
 P4,8,city,birmingxam,birmingham,birmingham,provider_number->city,1,1
