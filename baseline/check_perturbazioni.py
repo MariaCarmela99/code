@@ -174,8 +174,8 @@ def run(label, cpath, dpath, p4, required_edit, declared=()):
 results = {
     "P1": run("P1", V + "p1_clean.csv", V + "p1_dirty.csv", False, True),
     "P2": run("P2", V + "p2_clean.csv", V + "p2_dirty.csv", False, False),
-    "P3IT": run("P3IT", V + "p3it_clean.csv", V + "p3it_dirty.csv", False, False, declared=("county",)),
-    "P3FR": run("P3FR", V + "p3fr_clean.csv", V + "p3fr_dirty.csv", False, False, declared=("county",)),
+    "P3IT": run("P3IT", V + "p3it_clean.csv", V + "p3it_dirty.csv", False, True),
+    "P3FR": run("P3FR", V + "p3fr_clean.csv", V + "p3fr_dirty.csv", False, True),
     "P4": run("P4", V + "p4_clean.csv", V + "p4_dirty.csv", True, True),
 }
 print({k: ("OK" if v else "FALLITO") for k, v in results.items()})

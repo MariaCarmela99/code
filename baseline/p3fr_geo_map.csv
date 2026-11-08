@@ -1,40 +1,40 @@
-stato_originale,citta_originale,stato_p3fr,commune_p3fr,code_insee,departement_p3fr,region_code,codes_postaux,prefixe
-al,birmingham,oc,toulouse,31555,haute garonne,76,31000 31100 31200 31300 31400 31500,05
-al,dothan,oc,roquetaillade et conilhac,11323,aude,76,11190 11300,04
-al,gadsden,oc,le bas segala,12021,aveyron,76,12200 12240,05
-al,montgomery,oc,campouriez,12048,aveyron,76,12140 12460,05
-al,alabaster,oc,roquefixade,09249,ariege,76,09300,05
-al,andalusia,oc,tremoulet,09315,ariege,76,09700,05
-al,anniston,oc,belvis,11036,aude,76,11340,04
-al,boaz,oc,conilhac corbieres,11098,aude,76,11200,04
-al,centre,oc,gaja la selve,11159,aude,76,11270,04
-al,clanton,oc,marsa,11219,aude,76,11140,04
-al,cullman,oc,pepieux,11280,aude,76,11700,04
-al,decatur,oc,saint frichoux,11342,aude,76,11800,04
-al,elba,oc,ventenac cabardes,11404,aude,76,11610,04
-al,enterprise,oc,bertholene,12026,aveyron,76,12310,05
-al,fayette,oc,druelle balsac,12090,aveyron,76,12000 12510,05
-al,florence,oc,montpeyroux,12156,aveyron,76,12210,05
-al,fort payne,oc,conques en rouergue,12218,aveyron,76,12320,05
-al,georgiana,oc,tournemire,12282,aveyron,76,12250,05
-al,guntersville,oc,bez et esparon,30038,gard,76,30120,04
-al,hamilton,oc,deaux,30101,gard,76,30360,04
-al,hartselle,oc,mauressargues,30163,gard,76,30350,04
-al,huntsville,oc,la rouviere,30224,gard,76,30190,04
-al,luverne,oc,saint martin de valgalgues,30284,gard,76,30520,04
-al,mobile,oc,vergeze,30344,gard,76,30310,04
-al,oneonta,oc,bazus,31049,haute garonne,76,31380,05
-al,opelika,oc,cassagnabere tournas,31109,haute garonne,76,31420,05
-al,opp,oc,escanecrabe,31170,haute garonne,76,31350,05
-al,ozark,oc,grazac,31231,haute garonne,76,31190,05
-al,prattville,oc,lescuns,31292,haute garonne,76,31220,05
-al,russellville,oc,monestrol,31354,haute garonne,76,31560,05
-al,sheffield,oc,peyssies,31416,haute garonne,76,31390,05
-al,sylacauga,oc,saint clar de riviere,31475,haute garonne,76,31600,05
-al,tallassee,oc,sauveterre de comminges,31535,haute garonne,76,31510,05
-al,thomasville,oc,ansan,32002,gers,76,32270,05
-al,valley,oc,bretagne d armagnac,32064,gers,76,32800,05
-al,wedowee,oc,estampes,32126,gers,76,32170,05
-al,winfield,oc,lannemaignan,32189,gers,76,32240,05
-ak,anchorage,br,allineuc,22001,cotes d armor,53,22460,02
-ak,bethel,br,trebeurden,22343,cotes d armor,53,22560,02
+stato_originale,contea_originale,citta_originale,stato_p3fr,departement_p3fr,code_departement,commune_p3fr,code_insee,codes_postaux,prefixe
+ak,anchorage,anchorage,outremer,guadeloupe,971,les abymes,97101,97139 97142,0590
+ak,bethel,bethel,outremer,guyane,973,regina,97301,97353 97390,0594
+al,autauga,prattville,metropole,finistere,29,plouigneau,29199,29610 29650,02
+al,blount,oneonta,metropole,gard,30,nimes,30189,30000 30900,04
+al,butler,georgiana,metropole,gironde,33,bordeaux,33063,33000 33100 33200 33300 33800,05
+al,calhoun,anniston,metropole,indre,36,villentrois faverolles en berry,36244,36360 36600,02
+al,chambers,valley,metropole,jura,39,arlay,39017,39140 39210,03
+al,cherokee,centre,metropole,loire,42,saint etienne,42218,42000 42100 42230,04
+al,chilton,clanton,metropole,loiret,45,le malesherbois,45191,45300 45330,02
+al,clarke,thomasville,metropole,lozere,48,mont lozere et goulet,48027,48170 48190 48250,04
+al,coffee,elba,metropole,bouches du rhone,13,aix en provence,13001,13080 13090 13100 13290 13540,04
+al,coffee,enterprise,metropole,bouches du rhone,13,arles,13004,13104 13123 13129 13200 13280,04
+al,covington,andalusia,metropole,charente,16,courcome,16110,16240 16700,05
+al,covington,opp,metropole,charente,16,lignieres ambleville,16186,16130 16300,05
+al,crenshaw,luverne,metropole,marne,51,ay champagne,51030,51150 51160,03
+al,cullman,cullman,metropole,meurthe et moselle,54,val de briey,54099,54150 54790,03
+al,dale,ozark,metropole,moselle,57,metz,57463,57000 57050 57070,03
+al,de kalb,fort payne,metropole,oise,60,baugy,60048,60113 60190,03
+al,elmore,tallassee,metropole,puy de dome,63,clermont ferrand,63113,63000 63100,04
+al,etowah,gadsden,metropole,alpes de haute provence,04,chateau arnoux saint auban,04049,04160 04600,04
+al,fayette,fayette,metropole,pyrenees orientales,66,perpignan,66136,66000 66100,04
+al,franklin,russellville,metropole,rhone,69,porte des pierres dorees,69114,69400 69640,04
+al,houston,dothan,metropole,ardeche,07,vallees d antraigues asperjoc,07011,07530 07600,04
+al,jefferson,birmingham,metropole,alpes maritimes,06,nice,06088,06000 06100 06200 06300,04
+al,jefferson,sheffield,metropole,alpes maritimes,06,antibes,06004,06160 06600,04
+al,lauderdale,florence,metropole,sarthe,72,villeneuve en perseigne,72137,72600 72610,02
+al,lee,opelika,metropole,paris,75,paris,75116,75016 75116,01
+al,madison,huntsville,metropole,yvelines,78,saint germain en laye,78551,78100 78112,01
+al,marion,hamilton,metropole,correze,19,argentat sur dordogne,19010,19320 19400,05
+al,marion,winfield,metropole,correze,19,les trois saints,19248,19140 19210,05
+al,marshall,boaz,metropole,creuse,23,ahun,23001,23150,05
+al,marshall,guntersville,metropole,creuse,23,ajain,23002,23380,05
+al,mobile,mobile,metropole,tarn,81,puygouzon,81218,81120 81990,05
+al,montgomery,montgomery,metropole,aube,10,aix villemaur palis,10003,10160 10190,03
+al,morgan,decatur,metropole,drome,26,solaure en diois,26001,26150,04
+al,morgan,hartselle,metropole,drome,26,albon,26002,26140,04
+al,randolph,wedowee,metropole,vaucluse,84,avignon,84007,84000 84140,04
+al,shelby,alabaster,metropole,haute vienne,87,limoges,87085,87000 87100 87280,05
+al,talladega,sylacauga,metropole,territoire de belfort,90,andelnans,90001,90400,03
