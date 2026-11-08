@@ -1,13 +1,26 @@
-"""P3 variante italiana (P3IT): dominio italiano con geografia coerente.
-Stato -> regione (blocco), città -> comune della regione, provincia/CAP/ospedale derivati dal comune.
-Output: db/p3it_clean.csv, db/p3it_dirty.csv, baseline/p3it_geo_map.csv. Input aggiuntivo: baseline/comuni_cap_map.csv"""
-import os
-import pandas as pd
+"""P3 variante italiana (P3IT): trapianto di dominio USA -> Italia con struttura relazionale preservata.
 
-# I CSV di partenza stanno in code/db/ (lanciare lo script dalla directory code)
+Costruzione:
+  - stato -> macroarea ISTAT: al -> Italia settentrionale (Nord-ovest + Nord-est), ak -> Italia centrale;
+  - ogni contea -> una provincia DIVERSA della macroarea (la mappa delle contee è biiettiva);
+  - ogni città -> un comune della provincia assegnata alla sua contea, con almeno tanti CAP
+    quanti ne ha la città originale;
+  - CAP dal comune, nome dell'ospedale dal comune, telefono con il prefisso del capoluogo di provincia;
+  - proprietari, condizioni e misure cliniche abbinati per significato.
+Rumore: N_prop senza sovrapposizioni (stesse regole di p3fr_gen.py, vedi la funzione nprop).
+
+Usa solo la libreria standard di Python. Lanciare dalla cartella code/:
+    python baseline/p3it_gen.py
+Input:  db/clean.csv, db/dirty.csv, baseline/comuni_cap_map.csv (ISTAT, comuni con CAP)
+Output: db/p3it_clean.csv, db/p3it_dirty.csv, baseline/p3it_geo_map.csv
+Tutti i valori sono ASCII minuscoli (accenti traslitterati, apostrofi sostituiti da spazi),
+come nel dataset originale."""
+import csv
+import unicodedata
+
 HERE = "./baseline/"  # path relativi alla directory code (lanciare gli script da code/)
-D = "./db/"  # i CSV stanno in code/db/
-OUT = D  # anche i dataset perturbati stanno in code/db/
+D = "./db/"           # i CSV stanno in code/db/
+OUT = D
 
 CLEAN_TO_DIRTY = {
     "index": "index", "ProviderNumber": "provider_number", "HospitalName": "name",
@@ -18,10 +31,50 @@ CLEAN_TO_DIRTY = {
     "MeasureCode": "measure_code", "MeasureName": "measure_name",
     "Score": "score", "Sample": "sample", "Stateavg": "state_average",
 }
+FD_COLS = ["ProviderNumber", "HospitalName", "Address1", "City", "State", "ZipCode", "CountyName",
+           "PhoneNumber", "HospitalType", "HospitalOwner", "EmergencyService", "Condition",
+           "MeasureCode", "MeasureName"]
 
-# Stato originale -> regione ISTAT (codice) e sigla di stato nel dataset P3
-STATE_REGION = {"al": "03", "ak": "05"}      # Lombardia, Veneto
-STATE_NEW = {"al": "lo", "ak": "ve"}
+# Stato originale -> macroarea ISTAT (colonna ripartizione_geografica) e valore nel dataset P3IT.
+# L'Alabama ha 31 contee: serve un'area con almeno 31 province (il Nord ne ha 47).
+STATE_AREA = {"al": ("Nord-ovest", "Nord-est"), "ak": ("Centro",)}
+STATE_NEW = {"al": "nord", "ak": "centro"}
+
+# Provincia (sigla ISTAT) -> nome nel dataset e prefisso telefonico del capoluogo.
+# Per le province con due capoluoghi (FC, MS, PU) il secondo capoluogo ha il proprio prefisso (PREFIX_COMUNE).
+PROVINCE = {
+    "AL": ("alessandria", "0131"), "AN": ("ancona", "071"), "AO": ("aosta", "0165"),
+    "AP": ("ascoli piceno", "0736"), "AR": ("arezzo", "0575"), "AT": ("asti", "0141"),
+    "BG": ("bergamo", "035"), "BI": ("biella", "015"), "BL": ("belluno", "0437"),
+    "BO": ("bologna", "051"), "BS": ("brescia", "030"), "BZ": ("bolzano", "0471"),
+    "CN": ("cuneo", "0171"), "CO": ("como", "031"), "CR": ("cremona", "0372"),
+    "FC": ("forli cesena", "0543"), "FE": ("ferrara", "0532"), "FI": ("firenze", "055"),
+    "FM": ("fermo", "0734"), "FR": ("frosinone", "0775"), "GE": ("genova", "010"),
+    "GO": ("gorizia", "0481"), "GR": ("grosseto", "0564"), "IM": ("imperia", "0183"),
+    "LC": ("lecco", "0341"), "LI": ("livorno", "0586"), "LO": ("lodi", "0371"),
+    "LT": ("latina", "0773"), "LU": ("lucca", "0583"), "MB": ("monza e brianza", "039"),
+    "MC": ("macerata", "0733"), "MI": ("milano", "02"), "MN": ("mantova", "0376"),
+    "MO": ("modena", "059"), "MS": ("massa carrara", "0585"), "NO": ("novara", "0321"),
+    "PC": ("piacenza", "0523"), "PD": ("padova", "049"), "PG": ("perugia", "075"),
+    "PI": ("pisa", "050"), "PN": ("pordenone", "0434"), "PO": ("prato", "0574"),
+    "PR": ("parma", "0521"), "PT": ("pistoia", "0573"), "PU": ("pesaro e urbino", "0721"),
+    "PV": ("pavia", "0382"), "RA": ("ravenna", "0544"), "RE": ("reggio emilia", "0522"),
+    "RI": ("rieti", "0746"), "RM": ("roma", "06"), "RN": ("rimini", "0541"),
+    "RO": ("rovigo", "0425"), "SI": ("siena", "0577"), "SO": ("sondrio", "0342"),
+    "SP": ("la spezia", "0187"), "SV": ("savona", "019"), "TN": ("trento", "0461"),
+    "TO": ("torino", "011"), "TR": ("terni", "0744"), "TS": ("trieste", "040"),
+    "TV": ("treviso", "0422"), "UD": ("udine", "0432"), "VA": ("varese", "0332"),
+    "VB": ("verbano cusio ossola", "0323"), "VC": ("vercelli", "0161"), "VE": ("venezia", "041"),
+    "VI": ("vicenza", "0444"), "VR": ("verona", "045"), "VT": ("viterbo", "0761"),
+}
+
+PREFIX_COMUNE = {"cesena": "0547", "urbino": "0722"}
+
+
+def prefix_of(comune):
+    """Prefisso telefonico usato per un comune: quello del suo capoluogo di provincia."""
+    return PREFIX_COMUNE.get(comune["den"], PROVINCE[comune["sigla"]][1])
+
 
 STREETS = ["garibaldi", "mazzini", "cavour", "dante alighieri", "verdi", "roma", "milano",
     "matteotti", "gramsci", "leopardi", "manzoni", "carducci", "pascoli", "petrarca",
@@ -30,14 +83,27 @@ STREETS = ["garibaldi", "mazzini", "cavour", "dante alighieri", "verdi", "roma",
     "canova", "rossini", "bellini", "donizetti", "puccini", "vivaldi", "corelli", "toscanini",
     "de gasperi", "einaudi", "turati", "gobetti", "amendola", "calamandrei", "parri", "pertini"]
 
-OWNERS_ITALIANI = [
-    "azienda socio sanitaria territoriale - asst", "azienda ulss regionale",
-    "ente ecclesiastico civilmente riconosciuto", "fondazione irccs di diritto pubblico",
-    "istituto di ricovero e cura a carattere scientifico", "ospedale classificato no-profit",
-    "presidio ospedaliero a gestione diretta", "struttura sanitaria privata accreditata ssn"]
-CONDITIONS_ITALIANE = [
-    "cura dell asma pediatrico", "infarto miocardico acuto", "insufficienza cardiaca congestizia",
-    "polmonite acquisita in comunita", "prevenzione delle infezioni chirurgiche"]
+# Corrispondenze per significato (non per posizione)
+OWNER_MAP = {
+    "government - federal": "fondazione irccs di diritto pubblico",
+    "government - hospital district or authority": "azienda socio sanitaria territoriale - asst",
+    "government - local": "presidio ospedaliero a gestione diretta",
+    "government - state": "azienda ulss regionale",
+    "proprietary": "struttura sanitaria privata accreditata ssn",
+    "voluntary non-profit - church": "ente ecclesiastico civilmente riconosciuto",
+    "voluntary non-profit - other": "ospedale classificato no-profit",
+    "voluntary non-profit - private": "istituto di ricovero e cura a carattere scientifico",
+}
+COND_MAP = {
+    "children s asthma care": "cura dell asma pediatrico",
+    "heart attack": "infarto miocardico acuto",
+    "heart failure": "insufficienza cardiaca congestizia",
+    "pneumonia": "polmonite acquisita in comunita",
+    "surgical infection prevention": "prevenzione delle infezioni chirurgiche",
+}
+TYPE_MAP = {"acute care hospitals": "presidi ospedalieri per acuti"}
+EMG_MAP = {"yes": "si", "no": "no"}
+
 MEASURES_ITALIANE = [
     ("ima-1", "pazienti con infarto miocardico acuto a cui e stata somministrata aspirina all arrivo in pronto soccorso"),
     ("ima-2", "pazienti con infarto miocardico acuto a cui e stata prescritta aspirina alla dimissione ospedaliera"),
@@ -65,11 +131,10 @@ MEASURES_ITALIANE = [
     ("pic-inf-3", "pazienti chirurgici la cui profilassi antibiotica e stata sospesa entro 24 ore dal termine della chirurgia"),
     ("pic-inf-4", "pazienti cardiochirurgici con glicemia postoperatoria mantenuta sotto controllo nei primi giorni dopo l intervento"),
     ("pic-inf-6", "pazienti chirurgici sottoposti a tricotomia preoperatoria mediante clipper elettrico e non con rasoio"),
-    ("pic-vte-1", "pazienti chirurgici per i quali il medico ha prescritto trattamenti per prevenire la formazione di coaguli di sangue dopo alcuni tipi di intervento"),
+    ("pic-vte-1", "pazienti chirurgici per i quali il medico ha prescritto trattamenti per prevenire la formazione di coaguli dopo determinati interventi"),
     ("pic-vte-2", "pazienti chirurgici sottoposti a profilassi del tromboembolismo venoso entro 24 ore dall intervento"),
 ]
-
-# Corrispondenza per significato clinico: codice originale -> codice italiano (opzione A)
+# Corrispondenza per significato clinico: codice originale -> codice italiano
 MEASURE_MAP = {
     "ami-1": "ima-1", "ami-2": "ima-2", "ami-3": "ima-3", "ami-4": "ima-4", "ami-5": "ima-5",
     "ami-7a": "ima-7a", "ami-8a": "ima-8a",
@@ -81,210 +146,338 @@ MEASURE_MAP = {
     "scip-vte-1": "pic-vte-1", "scip-vte-2": "pic-vte-2",
 }
 
+# Simboli di rumore, nell'ordine in cui vengono provati (come in P1)
+MARKERS = ["x", "q", "z", "j", "k", "w", "v"]
 
-def corrupt(clean_orig, dirty_orig, new_clean):
-    if clean_orig == dirty_orig or not new_clean:
+
+# ---------- funzioni di supporto ----------
+def read_csv(path, sep=",", encoding="utf-8"):
+    with open(path, newline="", encoding=encoding) as f:
+        r = csv.DictReader(f, delimiter=sep)
+        cols = r.fieldnames
+        rows = [{k: (v or "").strip() for k, v in row.items()} for row in r]
+    return cols, rows
+
+
+def write_csv(path, cols, rows):
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, lineterminator="\n")
+        w.writeheader()
+        w.writerows(rows)
+
+
+def ascii_name(s):
+    """Nome leggibile in ASCII minuscolo: accenti tolti, apostrofi e trattini sostituiti da spazi."""
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    s = s.lower().replace("'", " ").replace("-", " ")
+    return " ".join(s.split())
+
+
+def lev(a, b):
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def edit_script(a, b):
+    """Sequenza ottima di operazioni da a a b (ricostruzione all'indietro di Wagner e Fischer).
+    Restituisce coppie (op, i) con op in C (copia), S (sostituzione), D (cancellazione), I (inserimento);
+    i è la posizione in a a cui l'operazione si riferisce (per I, la posizione davanti a cui si inserisce)."""
+    n, m = len(a), len(b)
+    dp = [[0] * (m + 1) for _ in range(n + 1)]
+    for i in range(n + 1):
+        dp[i][0] = i
+    for j in range(m + 1):
+        dp[0][j] = j
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            dp[i][j] = min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (a[i - 1] != b[j - 1]))
+    ops, i, j = [], n, m
+    while i > 0 or j > 0:
+        if i > 0 and j > 0 and dp[i][j] == dp[i - 1][j - 1] + (a[i - 1] != b[j - 1]):
+            ops.append(("C" if a[i - 1] == b[j - 1] else "S", i - 1))
+            i, j = i - 1, j - 1
+        elif i > 0 and dp[i][j] == dp[i - 1][j] + 1:
+            ops.append(("D", i - 1))
+            i -= 1
+        else:
+            ops.append(("I", i))
+            j -= 1
+    return ops[::-1]
+
+
+def nprop(orig_clean, orig_dirty, new_clean):
+    """Operatore N_prop senza sovrapposizioni.
+    Ogni operazione di edit che trasforma il pulito originale nello sporco originale viene proiettata
+    in proporzione sulla nuova stringa pulita; se la posizione è già occupata da un'altra operazione,
+    si usa la posizione libera più vicina. In ogni posizione si scrive un simbolo di rumore: il primo di
+    MARKERS che è diverso da tutti i caratteri sostituiti e per cui la distanza di Levenshtein tra nuovo
+    sporco e nuovo pulito è uguale a quella originale. Se nessun simbolo la preserva, lo script si ferma."""
+    if orig_clean == orig_dirty:
         return new_clean
-    xs = [i for i, (c, d) in enumerate(zip(clean_orig, dirty_orig)) if c != d]
-    chars = list(new_clean)
-    for pos in xs:
-        mp = int(round(pos * (len(chars) - 1) / max(1, len(clean_orig) - 1)))
-        chars[mp] = "x"
-    res = "".join(chars)
-    return res if res != new_clean else ("x" + new_clean[1:])
+    target = lev(orig_clean, orig_dirty)
+    ops = [(op, i) for op, i in edit_script(orig_clean, orig_dirty) if op != "C"]
+    assert len(ops) == target
+    n0, n1 = len(orig_clean), len(new_clean)
+    assert target <= n1, ("valore troppo corto per preservare la distanza", orig_clean, new_clean)
+    used, positions = set(), []
+    for _, i in ops:
+        i = min(i, n0 - 1)
+        q = int(round(i * (n1 - 1) / max(1, n0 - 1)))
+        for d in range(n1):
+            free = [p for p in (q + d, q - d) if 0 <= p < n1 and p not in used]
+            if free:
+                q = free[0]
+                break
+        used.add(q)
+        positions.append(q)
+    for m in MARKERS:
+        if any(new_clean[p] == m for p in positions):
+            continue
+        chars = list(new_clean)
+        for p in positions:
+            chars[p] = m
+        cand = "".join(chars)
+        if lev(cand, new_clean) == target:
+            return cand
+    raise AssertionError(("distanza di edit non preservabile", orig_clean, orig_dirty, new_clean))
 
-def functional(df, x, y):
-    return bool((df.groupby(x)[y].nunique() == 1).all())
+
+def functional(rows, x, y):
+    seen = {}
+    for r in rows:
+        if seen.setdefault(r[x], r[y]) != r[y]:
+            return False
+    return True
+
+
+def distinct(rows, col):
+    return len({r[col] for r in rows})
+
 
 # ---------- caricamento ----------
-clean = pd.read_csv(D + "clean.csv", dtype=str, keep_default_na=False).apply(lambda s: s.str.strip())
-dirty = pd.read_csv(D + "dirty.csv", dtype=str, keep_default_na=False).apply(lambda s: s.str.strip())
-dirty = dirty.set_index("index", drop=False).loc[clean["index"]].reset_index(drop=True)
-clean = clean.reset_index(drop=True)
+clean_cols, clean = read_csv(D + "clean.csv")
+dirty_cols, dirty_rows = read_csv(D + "dirty.csv")
+by_idx = {r["index"]: r for r in dirty_rows}
+dirty = [by_idx[r["index"]] for r in clean]
+n = len(clean)
 
-assert set(clean.State.unique()) == {"al", "ak"}, clean.State.unique()
-checks = {
-    "City->State": functional(clean, "City", "State"),
-    "ZipCode->City": functional(clean, "ZipCode", "City"),
-    "City->CountyName": functional(clean, "City", "CountyName"),
-    "ProviderNumber->City": functional(clean, "ProviderNumber", "City"),
-    "ProviderNumber->HospitalName": functional(clean, "ProviderNumber", "HospitalName"),
-}
+assert {r["State"] for r in clean} == set(STATE_AREA), {r["State"] for r in clean}
+FD_ORIG = [("City", "State"), ("ZipCode", "City"), ("City", "CountyName"), ("CountyName", "State"),
+           ("ProviderNumber", "City"), ("ProviderNumber", "HospitalName"), ("PhoneNumber", "City")]
+checks = {f"{x}->{y}": functional(clean, x, y) for x, y in FD_ORIG}
 print("FD nel dataset originale:", checks)
 assert all(checks.values()), "dipendenze originali non funzionali: lo script si ferma"
 
 # ---------- tabella comuni (ISTAT + CAP) ----------
-cap = pd.read_csv(HERE + "comuni_cap_map.csv", sep=";", dtype=str, keep_default_na=False)
-cap = cap.apply(lambda s: s.str.strip())
-comuni = (cap.groupby("codice_istat")
-          .agg(den=("denominazione_ita", "first"), prov=("denominazione_provincia", "first"),
-               reg=("codice_regione", "first"), caps=("cap", lambda x: sorted(set(x))))
-          .reset_index().sort_values("codice_istat").reset_index(drop=True))
-comuni = comuni.rename(columns={"codice_istat": "codice_istat"})
+_, cap = read_csv(HERE + "comuni_cap_map.csv", sep=";")
+groups = {}
+for r in cap:
+    g = groups.setdefault(r["codice_istat"], {
+        "code": r["codice_istat"], "den": ascii_name(r["denominazione_ita"]), "sigla": r["sigla_provincia"],
+        "area": r["ripartizione_geografica"], "capoluogo": r["flag_capoluogo"] == "SI", "caps": set()})
+    g["caps"].add(r["cap"])
+comuni = [dict(g, caps=sorted(g["caps"])) for _, g in sorted(groups.items())]
 
-# ---------- città -> comune (stessa regione dello stato, abbastanza CAP per le città) ----------
-city_map = {}
-used = set()
-used_caps = set()
-for st, reg in STATE_REGION.items():
-    pool = comuni[comuni.reg == reg].reset_index(drop=True)
-    cities = sorted(clean.loc[clean.State == st, "City"].unique())
-    need = {c: clean.loc[(clean.State == st) & (clean.City == c), "ZipCode"].nunique() for c in cities}
-    stride = max(1, len(pool) // (len(cities) * 2))
-    for i, c in enumerate(cities):
-        cands = [j for j in range(len(pool)) if len(pool.at[j, "caps"]) >= need[c]
-                 and pool.at[j, "codice_istat"] not in used
-                 and not (set(pool.at[j, "caps"]) & used_caps)]
-        start = (i * stride) % len(pool)
-        ordered = sorted(cands, key=lambda j: (j - start) % len(pool))
-        assert ordered, (st, c, need[c])
-        j = ordered[0]
-        used.add(pool.at[j, "codice_istat"])
-        used_caps |= set(pool.at[j, "caps"])
-        city_map[(st, c)] = pool.iloc[j]
+
+# ---------- contea -> provincia, città -> comune ----------
+def assign(state, pool):
+    """Assegna a ogni contea dello stato una provincia diversa e a ogni sua città un comune di quella
+    provincia (capoluogo per primo, poi i comuni con più CAP), con abbastanza CAP e nomi univoci."""
+    rows = [r for r in clean if r["State"] == state]
+    counties = sorted({r["CountyName"] for r in rows})
+    cities_of = {c: sorted({r["City"] for r in rows if r["CountyName"] == c}) for c in counties}
+    need = {ct: len({r["ZipCode"] for r in rows if r["City"] == ct}) for c in counties for ct in cities_of[c]}
+    by_prov = {}
+    for c in pool:
+        by_prov.setdefault(c["sigla"], []).append(c)
+    for sg in by_prov:
+        by_prov[sg].sort(key=lambda c: (not c["capoluogo"], -len(c["caps"]), c["code"]))
+    provs = sorted(by_prov)
+    assert len(provs) >= len(counties), (state, len(provs), len(counties))
+    order = sorted(counties, key=lambda c: (-max(need[x] for x in cities_of[c]), -len(cities_of[c]), c))
+    stride = max(1, len(provs) // len(counties))
+    for k, county in enumerate(order):
+        start = (k * stride) % len(provs)
+        placed = None
+        for off in range(len(provs)):
+            sg = provs[(start + off) % len(provs)]
+            if sg in used_prov:
+                continue
+            pick, taken = {}, set()
+            for ct in sorted(cities_of[county], key=lambda x: (-need[x], x)):
+                cand = next((c for c in by_prov[sg] if c["code"] not in used_com and c["code"] not in taken
+                             and c["den"] not in used_names and len(c["caps"]) >= need[ct]
+                             and not (set(c["caps"]) & used_caps)), None)
+                if cand is None:
+                    break
+                pick[ct] = cand
+                taken.add(cand["code"])
+            if len(pick) == len(cities_of[county]):
+                placed = (sg, pick)
+                break
+        assert placed, (state, county)
+        sg, pick = placed
+        used_prov.add(sg)
+        county_map[(state, county)] = sg
+        for ct, c in pick.items():
+            used_com.add(c["code"])
+            used_names.add(c["den"])
+            used_caps.update(c["caps"])
+            city_map[(state, ct)] = c
+
+
+county_map, city_map = {}, {}
+used_prov, used_com, used_names, used_caps = set(), set(), set(), set()
+for st, areas in STATE_AREA.items():
+    assign(st, [c for c in comuni if c["area"] in areas and c["sigla"] in PROVINCE])
+assert len(set(county_map.values())) == len(county_map), "province non distinte"
 
 # ---------- CAP: ogni CAP originale -> CAP del comune ----------
 zip_map = {}
-for (st, c), row in city_map.items():
-    zips = sorted(clean.loc[(clean.State == st) & (clean.City == c), "ZipCode"].unique())
-    assert len(zips) <= len(row.caps), (c, len(zips), len(row.caps))
-    for z, cp in zip(zips, row.caps):
+for (st, ct), c in city_map.items():
+    zips = sorted({r["ZipCode"] for r in clean if r["State"] == st and r["City"] == ct})
+    assert len(zips) <= len(c["caps"]), (ct, len(zips), len(c["caps"]))
+    for z, cp in zip(zips, c["caps"]):
         assert z not in zip_map
         zip_map[z] = cp
 assert len(set(zip_map.values())) == len(zip_map), "CAP non univoci"
 
 # ---------- ospedale: nome dal comune; indirizzo per valore ----------
-prov_info = clean.drop_duplicates("ProviderNumber")[["ProviderNumber", "State", "City"]].copy()
-assert prov_info.ProviderNumber.is_unique
-prov_info["comune"] = [city_map[(s, c)].den for s, c in zip(prov_info.State, prov_info.City)]
+prov_info = {}
+for r in clean:
+    prov_info.setdefault(r["ProviderNumber"], (r["State"], r["City"]))
+by_comune = {}
+for p, (s, ct) in prov_info.items():
+    by_comune.setdefault(city_map[(s, ct)]["den"], []).append(p)
 name_map = {}
-for comune, grp in prov_info.groupby("comune"):
-    provs = sorted(grp.ProviderNumber)
+for comune in sorted(by_comune):
+    provs = sorted(by_comune[comune])
     for k, p in enumerate(provs, 1):
-        name_map[p] = f"presidio ospedaliero {comune.lower()}" + ("" if len(provs) == 1 else f" {k}")
-
+        name_map[p] = f"presidio ospedaliero {comune}" + ("" if len(provs) == 1 else f" {k}")
 addr_map = {}
-for i, a in enumerate(sorted(clean.Address1.unique())):
+for i, a in enumerate(sorted({r["Address1"] for r in clean})):
     addr_map[a] = a if a == "empty" else f"via {STREETS[i % len(STREETS)]} {1 + i // len(STREETS)}"
 
-# ---------- prefissi telefonici per comune (fonti: schede tuttitalia, pagine provinciali) ----------
-PREFIX = {
-    "Agra": "0332", "Brunello": "0332", "Castelseprio": "0331", "Ispra": "0332",
-    "Oggiona con Santo Stefano": "0331", "Travedona-Monate": "0332",
-    "Milano": "02", "Abbiategrasso": "02", "Busto Garolfo": "0331", "Colturano": "02",
-    "Legnano": "0331", "Ozzero": "02", "Turbigo": "0331",
-    "Alzate Brianza": "031", "Caglio": "031", "Grandate": "031", "Mariano Comense": "031",
-    "Plesio": "0344", "Tavernerio": "031", "Centro Valle Intelvi": "031",
-    "Bergamo": "035", "Alzano Lombardo": "035", "Bolgare": "035", "Capizzone": "035",
-    "Cerete": "0346", "Dalmine": "035", "Ghisalba": "035", "Martinengo": "0363",
-    "Pagazzano": "0363", "Romano di Lombardia": "0363",   # provvisorio, non verificato
-    "Sedrina": "0345", "Trescore Balneario": "035", "Villa d'Almè": "035",  # provvisorio, non verificato
-    "Brescia": "030", "Lovero": "0342", "Sondalo": "0342", "Montalto Pavese": "0383",
-    "Affi": "045", "Laghi": "0445",
-}
-
-# ---------- mappe per le colonne non geografiche (come prima) ----------
-def simple_map(vals, fn):
-    return {v: fn(i, v) for i, v in enumerate(sorted(vals))}
-
-prov_map = simple_map(clean.ProviderNumber.unique(), lambda i, v: f"{30101 + i:05d}")
-# telefono: prefisso del comune assegnato + cifre rimanenti, lunghezza totale 10
-phone_rows = clean.drop_duplicates("PhoneNumber")[["PhoneNumber", "State", "City"]]
+# ---------- codici, telefoni, misure ----------
+prov_map = {v: f"{30101 + i:05d}" for i, v in enumerate(sorted({r["ProviderNumber"] for r in clean}))}
 phone_map, counter = {}, {}
-for _, r in phone_rows.iterrows():
-    comune = city_map[(r.State, r.City)].den
-    p = PREFIX[comune]
+for r in clean:
+    if r["PhoneNumber"] in phone_map:
+        continue
+    p = prefix_of(city_map[(r["State"], r["City"])])
     counter[p] = counter.get(p, 0) + 1
-    phone_map[r.PhoneNumber] = p + f"{counter[p]:0{10 - len(p)}d}"
+    phone_map[r["PhoneNumber"]] = p + f"{counter[p]:0{10 - len(p)}d}"
 assert all(len(v) == 10 for v in phone_map.values())
-owner_map = simple_map(clean.HospitalOwner.unique(), lambda i, v: OWNERS_ITALIANI[i])
-cond_map = simple_map(clean.Condition.unique(), lambda i, v: CONDITIONS_ITALIANE[i])
-type_map = {"acute care hospitals": "presidi ospedalieri per acuti"}
-emg_map = {"yes": "si", "no": "no"}
+assert len(set(phone_map.values())) == len(phone_map), "telefoni non univoci"
+
+for mp, col in [(OWNER_MAP, "HospitalOwner"), (COND_MAP, "Condition"), (TYPE_MAP, "HospitalType"),
+                (EMG_MAP, "EmergencyService")]:
+    assert set(mp) == {r[col] for r in clean}, ("valori originali non coperti", col)
+    assert len(set(mp.values())) == len(mp), ("mappa non iniettiva", col)
 IT_NAME = dict(MEASURES_ITALIANE)
-assert set(MEASURE_MAP) == set(clean.MeasureCode.unique()), "codici originali non coperti"
+assert set(MEASURE_MAP) == {r["MeasureCode"] for r in clean}, "codici originali non coperti"
 assert set(MEASURE_MAP.values()) == set(IT_NAME), "codici italiani mancanti o non usati"
 mcode_map, mname_map = {}, {}
-for mc in sorted(clean.MeasureCode.unique()):
-    orig_mname = clean.loc[clean.MeasureCode == mc, "MeasureName"].iloc[0]
+for mc in sorted(MEASURE_MAP):
+    orig_mname = next(r["MeasureName"] for r in clean if r["MeasureCode"] == mc)
     mcode_map[mc] = MEASURE_MAP[mc]
     mname_map[orig_mname] = IT_NAME[MEASURE_MAP[mc]]
-assert len(set(mcode_map.values())) == len(mcode_map), "codici italiani non univoci"
+assert len(set(mcode_map.values())) == len(mcode_map)
 
 # ---------- costruzione ----------
-new_clean = clean.copy()
-new_dirty = dirty.copy()
+new_clean = [dict(r) for r in clean]
+new_dirty = [dict(r) for r in dirty]
+for i in range(n):
+    c, nc = clean[i], new_clean[i]
+    com = city_map[(c["State"], c["City"])]
+    nc["State"] = STATE_NEW[c["State"]]
+    nc["City"] = com["den"]
+    nc["CountyName"] = PROVINCE[county_map[(c["State"], c["CountyName"])]][0]
+    nc["ZipCode"] = zip_map[c["ZipCode"]]
+    nc["HospitalName"] = name_map[c["ProviderNumber"]]
+    nc["Address1"] = addr_map[c["Address1"]]
+    nc["ProviderNumber"] = prov_map[c["ProviderNumber"]]
+    nc["PhoneNumber"] = phone_map[c["PhoneNumber"]]
+    nc["HospitalType"] = TYPE_MAP[c["HospitalType"]]
+    nc["HospitalOwner"] = OWNER_MAP[c["HospitalOwner"]]
+    nc["EmergencyService"] = EMG_MAP[c["EmergencyService"]]
+    nc["Condition"] = COND_MAP[c["Condition"]]
+    nc["MeasureCode"] = mcode_map[c["MeasureCode"]]
+    nc["MeasureName"] = mname_map[c["MeasureName"]]
+    nc["Stateavg"] = f"{nc['State']}_{nc['MeasureCode']}"
+    nc["Sample"] = c["Sample"].replace("patients", "pazienti") if c["Sample"] != "empty" else "empty"
 
-for i in range(len(clean)):
-    st, ct = clean.at[i, "State"], clean.at[i, "City"]
-    row = city_map[(st, ct)]
-    new_clean.at[i, "State"] = STATE_NEW[st]
-    new_clean.at[i, "City"] = row.den.lower()
-    new_clean.at[i, "CountyName"] = row.prov.lower()
-    new_clean.at[i, "ZipCode"] = zip_map[clean.at[i, "ZipCode"]]
-    new_clean.at[i, "HospitalName"] = name_map[clean.at[i, "ProviderNumber"]]
-    new_clean.at[i, "Address1"] = addr_map[clean.at[i, "Address1"]]
-    new_clean.at[i, "ProviderNumber"] = prov_map[clean.at[i, "ProviderNumber"]]
-    new_clean.at[i, "PhoneNumber"] = phone_map[clean.at[i, "PhoneNumber"]]
-    new_clean.at[i, "HospitalType"] = type_map.get(clean.at[i, "HospitalType"], clean.at[i, "HospitalType"])
-    new_clean.at[i, "HospitalOwner"] = owner_map[clean.at[i, "HospitalOwner"]]
-    new_clean.at[i, "EmergencyService"] = emg_map.get(clean.at[i, "EmergencyService"], clean.at[i, "EmergencyService"])
-    new_clean.at[i, "Condition"] = cond_map[clean.at[i, "Condition"]]
-    new_clean.at[i, "MeasureCode"] = mcode_map[clean.at[i, "MeasureCode"]]
-    new_clean.at[i, "MeasureName"] = mname_map[clean.at[i, "MeasureName"]]
-
-geo_and_other = ["State", "City", "CountyName", "ZipCode", "HospitalName", "Address1", "ProviderNumber",
-                 "PhoneNumber", "HospitalType", "HospitalOwner", "EmergencyService", "Condition",
-                 "MeasureCode", "MeasureName"]
-for i in range(len(clean)):
-    new_clean.at[i, "Stateavg"] = f"{new_clean.at[i, 'State']}_{new_clean.at[i, 'MeasureCode']}"
-    c_smp = clean.at[i, "Sample"]
-    new_clean.at[i, "Sample"] = c_smp.replace("patients", "pazienti") if c_smp != "empty" else "empty"
-
-for i in range(len(clean)):
-    for cc in geo_and_other + ["Sample", "Stateavg"]:
+TRANSFORMED = FD_COLS + ["Sample", "Stateavg"]
+for i in range(n):
+    for cc in TRANSFORMED:
         dc = CLEAN_TO_DIRTY[cc]
-        new_dirty.at[i, dc] = corrupt(clean.at[i, cc], dirty.at[i, dc], new_clean.at[i, cc])
+        new_dirty[i][dc] = nprop(clean[i][cc], dirty[i][dc], new_clean[i][cc])
 
 # ---------- verifiche ----------
-out = new_clean.copy()
-print("\nFD nel dataset P3IT:", {
-    "City->State": functional(out, "City", "State"),
-    "ZipCode->City": functional(out, "ZipCode", "City"),
-    "City->CountyName": functional(out, "City", "CountyName"),
-    "ProviderNumber->HospitalName": functional(out, "ProviderNumber", "HospitalName"),
-    "ProviderNumber->City": functional(out, "ProviderNumber", "City"),
-})
-
-PREFIX_LC = {k.lower(): v for k, v in PREFIX.items()}
-phone_bad = [i for i in range(len(out)) if not out.at[i, "PhoneNumber"].startswith(PREFIX_LC[out.at[i, "City"]])]
-print("telefoni con prefisso diverso dal comune:", len(phone_bad))
-assert not phone_bad
-caps_set = set(zip(cap.denominazione_ita.str.lower(), cap.cap, cap.denominazione_provincia.str.lower(),
-                   cap.codice_regione))
+out = new_clean
+fd_new = {f"{x}->{y}": functional(out, x, y) for x, y in FD_ORIG}
+print("\nFD nel dataset P3IT:", fd_new)
+assert all(fd_new.values()), "FD rotte nel dataset P3IT"
+# tutte le dipendenze tra coppie di attributi valide nell'originale devono valere anche in P3IT
+lost = [f"{a}->{b}" for a in FD_COLS for b in FD_COLS
+        if a != b and functional(clean, a, b) and not functional(out, a, b)]
+print("dipendenze tra coppie perse:", lost)
+assert not lost
+for col in FD_COLS + ["Sample", "Stateavg"]:
+    pairs = {(clean[i][col], out[i][col]) for i in range(n)}
+    assert len({a for a, _ in pairs}) == len({b for _, b in pairs}) == len(pairs), ("mappa non biiettiva", col)
+assert all(v.isascii() for r in out for v in r.values()), "valori non ASCII nel clean"
+bad_phone = [i for i in range(n) if not out[i]["PhoneNumber"].startswith(
+    prefix_of(city_map[(clean[i]["State"], clean[i]["City"])]))]
+print("telefoni con prefisso diverso dalla provincia:", len(bad_phone))
+assert not bad_phone
+table = {(ascii_name(r["denominazione_ita"]), r["cap"], r["sigla_provincia"], r["ripartizione_geografica"]) for r in cap}
 bad = []
-for i in range(len(out)):
-    st_orig = clean.at[i, "State"]
-    reg = STATE_REGION[st_orig]
-    key = (out.at[i, "City"], out.at[i, "ZipCode"], out.at[i, "CountyName"], reg)
-    if key not in caps_set:
-        bad.append(key)
-print("righe con comune/CAP/provincia non coerenti:", len(bad))
-assert not bad, bad[:5]
+for i in range(n):
+    com = city_map[(clean[i]["State"], clean[i]["City"])]
+    if (out[i]["City"], out[i]["ZipCode"], com["sigla"], com["area"]) not in table:
+        bad.append(i)
+    if PROVINCE[com["sigla"]][0] != out[i]["CountyName"] or com["area"] not in STATE_AREA[clean[i]["State"]]:
+        bad.append(i)
+print("righe con comune/CAP/provincia/macroarea non coerenti:", len(bad))
+assert not bad
 
+inv = {v: k for k, v in CLEAN_TO_DIRTY.items()}
+corrupted = exact = 0
+for i in range(n):
+    for dc in dirty_cols:
+        cc = inv[dc]
+        o = dirty[i][dc] != clean[i][cc]
+        m = new_dirty[i][dc] != new_clean[i][cc]
+        assert o == m, ("maschera degli errori diversa", i, dc)
+        if o:
+            corrupted += 1
+            exact += int(lev(dirty[i][dc], clean[i][cc]) == lev(new_dirty[i][dc], new_clean[i][cc]))
+assert exact == corrupted, ("distanza di edit", exact, corrupted)
 for col in ["State", "City", "ZipCode", "CountyName", "HospitalName", "Address1", "ProviderNumber"]:
-    print(f"valori distinti {col}: originale={clean[col].nunique()} P3IT={out[col].nunique()}")
-
-diffs = int(new_dirty.ne(new_clean.rename(columns=CLEAN_TO_DIRTY)).to_numpy().sum())
-print("celle corrotte (tutte le colonne):", diffs)
+    print(f"valori distinti {col}: originale={distinct(clean, col)} P3IT={distinct(out, col)}")
+print(f"[P3IT] celle corrotte {corrupted}; distanza di edit esatta {exact}/{corrupted}")
 
 # ---------- salvataggio ----------
-new_clean.to_csv(OUT + "p3it_clean.csv", index=False)
-new_dirty.to_csv(OUT + "p3it_dirty.csv", index=False)
-mappa = pd.DataFrame([{"stato_originale": st, "citta_originale": c, "stato_p3": STATE_NEW[st],
-                       "comune_p3": r.den, "provincia_p3": r.prov, "regione_codice": r.reg, "prefisso": PREFIX[r.den]}
-                      for (st, c), r in city_map.items()])
-mappa.to_csv(HERE + "p3it_geo_map.csv", index=False)
+write_csv(OUT + "p3it_clean.csv", clean_cols, new_clean)
+write_csv(OUT + "p3it_dirty.csv", dirty_cols, new_dirty)
+mappa_cols = ["stato_originale", "contea_originale", "citta_originale", "stato_p3it", "provincia_p3it",
+              "sigla_provincia", "comune_p3it", "codice_istat", "macroarea", "cap", "prefisso"]
+mappa = []
+for (st, ct), c in city_map.items():
+    county = next(r["CountyName"] for r in clean if r["State"] == st and r["City"] == ct)
+    mappa.append({"stato_originale": st, "contea_originale": county, "citta_originale": ct,
+                  "stato_p3it": STATE_NEW[st], "provincia_p3it": PROVINCE[c["sigla"]][0], "sigla_provincia": c["sigla"],
+                  "comune_p3it": c["den"], "codice_istat": c["code"], "macroarea": c["area"],
+                  "cap": " ".join(c["caps"]), "prefisso": prefix_of(c)})
+mappa.sort(key=lambda m: (m["stato_originale"], m["contea_originale"], m["citta_originale"]))
+write_csv(HERE + "p3it_geo_map.csv", mappa_cols, mappa)
 print("\nMappa città:")
-print(mappa.to_string(index=False))
+for m in mappa:
+    print("  " + " | ".join(m[k] for k in mappa_cols if k != "cap"))
 print("\nSalvati:", OUT + "p3it_clean.csv", OUT + "p3it_dirty.csv", HERE + "p3it_geo_map.csv")
