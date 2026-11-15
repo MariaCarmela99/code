@@ -18,6 +18,7 @@ ed esperimenti di riparazione delle celle con un LLM locale (Ollama).
 | `baseline/laposte_cp_map.csv` | *Base officielle des codes postaux* (La Poste, data.gouv.fr), usato da P3FR |
 | `baseline/p3it_geo_map.csv`, `baseline/p3fr_geo_map.csv` | corrispondenze stato/contea/città prodotte da P3 |
 | `test_hospitals.py` | esperimento con l'LLM (Ollama) |
+| `requirements.txt` | dipendenze Python dell'esperimento con l'LLM |
 
 ## Le perturbazioni
 
@@ -31,6 +32,21 @@ ed esperimenti di riparazione delle celle con un LLM locale (Ollama).
 
 In tutte le versioni la maschera degli errori è identica all'originale (509 celle) e le dipendenze
 funzionali sono preservate. In P3 tutte le mappe, contea compresa, sono biiettive.
+
+## Preparazione dell'ambiente
+
+I generatori e la baseline girano con il solo Python di sistema (le versioni in `baseline/stdlib/`
+non richiedono nulla). L'esperimento con l'LLM ha invece bisogno di alcune librerie: su Debian e
+Ubuntu recenti il Python di sistema non permette l'installazione diretta, quindi conviene un
+ambiente virtuale dedicato.
+
+```
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+```
+
+Da qui in avanti si usa `.venv/bin/python` al posto di `python`, oppure si attiva l'ambiente una
+volta per sessione con `source .venv/bin/activate`.
 
 ## Esecuzione
 
@@ -49,11 +65,28 @@ python baseline/baseline.py
 Senza pandas: `python baseline/stdlib/p1_gen_stdlib.py` e così via. P3IT e P3FR usano già solo la
 libreria standard. Le due versioni producono file identici.
 
-Esperimento con l'LLM (serve Ollama con il modello `llama3.1:8b`):
+Esperimento con l'LLM (serve Ollama in esecuzione con il modello scelto già scaricato):
 
 ```
 python test_hospitals.py --dry-run --max-rows 0
 python test_hospitals.py --max-rows 0 --prefix p3it_
+python test_hospitals.py --max-rows 0 --prefix p3it_ --model mistral:latest
 ```
 
 Prefissi disponibili: `""` (originale), `p1_`, `p2_`, `p3it_`, `p3fr_`, `p4_`.
+
+### Scelta del modello
+
+`--model` seleziona il modello Ollama; il valore predefinito è `llama3.1:8b`. Con il modello
+predefinito i risultati finiscono in `db/<prefisso>hospital_output_log.csv` e
+`db/<prefisso>hospital_output_repaired.csv`; con un modello diverso i nomi prendono un suffisso
+(per esempio `db/p3it_hospital_output_log_mistral-latest.csv`), così i confronti fra modelli non
+si sovrascrivono.
+
+Ogni modello occupa circa 5 GB di RAM e `test_hospitals.py` lo mantiene in memoria per trenta
+minuti dopo l'ultima chiamata. Su una macchina con 16 GB conviene quindi scaricare il modello
+precedente prima di passare al successivo:
+
+```
+ollama stop llama3.1:8b
+```
