@@ -3,6 +3,8 @@
 Generazione e verifica dei dataset perturbati del benchmark Hospital, baseline deterministica
 ed esperimenti di riparazione delle celle con un LLM locale (Ollama).
 
+Modelli usati negli esperimenti: **Llama 3.1 8B** (`llama3.1:8b`) e **Mistral 7B** (`mistral:latest`).
+
 ## Struttura
 
 | Percorso | Contenuto |
