@@ -1,40 +1,40 @@
-stato_originale,citta_originale,stato_p3,comune_p3,provincia_p3,regione_codice,prefisso
-al,alabaster,lo,Agra,Varese,03,0332
-al,andalusia,lo,Brunello,Varese,03,0332
-al,anniston,lo,Castelseprio,Varese,03,0331
-al,birmingham,lo,Milano,Milano,03,02
-al,boaz,lo,Ispra,Varese,03,0332
-al,centre,lo,Oggiona con Santo Stefano,Varese,03,0331
-al,clanton,lo,Travedona-Monate,Varese,03,0332
-al,cullman,lo,Alzate Brianza,Como,03,031
-al,decatur,lo,Caglio,Como,03,031
-al,dothan,lo,Bergamo,Bergamo,03,035
-al,elba,lo,Grandate,Como,03,031
-al,enterprise,lo,Mariano Comense,Como,03,031
-al,fayette,lo,Plesio,Como,03,0344
-al,florence,lo,Tavernerio,Como,03,031
-al,fort payne,lo,Centro Valle Intelvi,Como,03,031
-al,gadsden,lo,Brescia,Brescia,03,030
-al,georgiana,lo,Lovero,Sondrio,03,0342
-al,guntersville,lo,Sondalo,Sondrio,03,0342
-al,hamilton,lo,Abbiategrasso,Milano,03,02
-al,hartselle,lo,Busto Garolfo,Milano,03,0331
-al,huntsville,lo,Colturano,Milano,03,02
-al,luverne,lo,Legnano,Milano,03,0331
-al,mobile,lo,Ozzero,Milano,03,02
-al,montgomery,lo,Montalto Pavese,Pavia,03,0383
-al,oneonta,lo,Turbigo,Milano,03,0331
-al,opelika,lo,Alzano Lombardo,Bergamo,03,035
-al,opp,lo,Bolgare,Bergamo,03,035
-al,ozark,lo,Capizzone,Bergamo,03,035
-al,prattville,lo,Cerete,Bergamo,03,0346
-al,russellville,lo,Dalmine,Bergamo,03,035
-al,sheffield,lo,Ghisalba,Bergamo,03,035
-al,sylacauga,lo,Martinengo,Bergamo,03,0363
-al,tallassee,lo,Pagazzano,Bergamo,03,0363
-al,thomasville,lo,Romano di Lombardia,Bergamo,03,0363
-al,valley,lo,Sedrina,Bergamo,03,0345
-al,wedowee,lo,Trescore Balneario,Bergamo,03,035
-al,winfield,lo,Villa d'Almè,Bergamo,03,035
-ak,anchorage,ve,Affi,Verona,05,045
-ak,bethel,ve,Laghi,Vicenza,05,0445
+stato_originale,contea_originale,citta_originale,stato_p3it,provincia_p3it,sigla_provincia,comune_p3it,codice_istat,macroarea,cap,prefisso
+ak,anchorage,anchorage,centro,ancona,AN,ancona,042002,Centro,60121 60122 60123 60124 60125 60126 60127 60128 60129 60131,071
+ak,bethel,bethel,centro,massa carrara,MS,carrara,045003,Centro,54033,0585
+al,autauga,prattville,nord,cremona,CR,cremona,019036,Nord-ovest,26100,0372
+al,blount,oneonta,nord,ferrara,FE,ferrara,038008,Nord-est,44121 44122 44123 44124,0532
+al,butler,georgiana,nord,genova,GE,genova,010025,Nord-ovest,16121 16122 16123 16124 16125 16126 16127 16128 16129 16131 16132 16133 16134 16135 16136 16137 16138 16139 16141 16142 16143 16144 16145 16146 16147 16148 16149 16151 16152 16153 16154 16155 16156 16157 16158 16159 16161 16162 16163 16164 16165 16166 16167,010
+al,calhoun,anniston,nord,gorizia,GO,gorizia,031007,Nord-est,34170,0481
+al,chambers,valley,nord,imperia,IM,imperia,008031,Nord-ovest,18100,0183
+al,cherokee,centre,nord,lecco,LC,lecco,097042,Nord-ovest,23900,0341
+al,chilton,clanton,nord,lodi,LO,lodi,098031,Nord-ovest,26900,0371
+al,clarke,thomasville,nord,monza e brianza,MB,monza,108033,Nord-ovest,20900,039
+al,coffee,elba,nord,biella,BI,biella,096004,Nord-ovest,13900,015
+al,coffee,enterprise,nord,biella,BI,ailoche,096001,Nord-ovest,13861,015
+al,covington,andalusia,nord,belluno,BL,belluno,025006,Nord-est,32100,0437
+al,covington,opp,nord,belluno,BL,agordo,025001,Nord-est,32021,0437
+al,crenshaw,luverne,nord,milano,MI,milano,015146,Nord-ovest,20121 20122 20123 20124 20125 20126 20127 20128 20129 20131 20132 20133 20134 20135 20136 20137 20138 20139 20141 20142 20143 20144 20145 20146 20147 20148 20149 20151 20152 20153 20154 20155 20156 20157 20158 20159 20161 20162,02
+al,cullman,cullman,nord,mantova,MN,mantova,020030,Nord-ovest,46100,0376
+al,dale,ozark,nord,modena,MO,modena,036023,Nord-est,41121 41122 41123 41124 41125 41126,059
+al,de kalb,fort payne,nord,novara,NO,novara,003106,Nord-ovest,28100,0321
+al,elmore,tallassee,nord,piacenza,PC,piacenza,033032,Nord-est,29121 29122,0523
+al,etowah,gadsden,nord,bologna,BO,bologna,037006,Nord-est,40121 40122 40123 40124 40125 40126 40127 40128 40129 40131 40132 40133 40134 40135 40136 40137 40138 40139 40141,051
+al,fayette,fayette,nord,padova,PD,padova,028060,Nord-est,35121 35122 35123 35124 35125 35126 35127 35128 35129 35131 35132 35133 35134 35135 35136 35137 35138 35139 35141 35142 35143,049
+al,franklin,russellville,nord,pordenone,PN,pordenone,093033,Nord-est,33170,0434
+al,houston,dothan,nord,brescia,BS,brescia,017029,Nord-ovest,25121 25122 25123 25124 25125 25126 25127 25128 25129 25131 25132 25133 25134 25135 25136,030
+al,jefferson,birmingham,nord,bergamo,BG,bergamo,016024,Nord-ovest,24121 24122 24123 24124 24125 24126 24127 24128 24129,035
+al,jefferson,sheffield,nord,bergamo,BG,adrara san martino,016001,Nord-ovest,24060,035
+al,lauderdale,florence,nord,parma,PR,parma,034027,Nord-est,43121 43122 43123 43124 43125 43126,0521
+al,lee,opelika,nord,pavia,PV,pavia,018110,Nord-ovest,27100,0382
+al,madison,huntsville,nord,ravenna,RA,ravenna,039014,Nord-est,48121 48122 48123 48124 48125,0544
+al,marion,hamilton,nord,bolzano,BZ,bolzano,021008,Nord-est,39100,0471
+al,marion,winfield,nord,bolzano,BZ,aldino,021001,Nord-est,39040,0471
+al,marshall,boaz,nord,cuneo,CN,cuneo,004078,Nord-ovest,12100,0171
+al,marshall,guntersville,nord,cuneo,CN,acceglio,004001,Nord-ovest,12021,0171
+al,mobile,mobile,nord,reggio emilia,RE,reggio nell emilia,035033,Nord-est,42121 42122 42123 42124,0522
+al,montgomery,montgomery,nord,forli cesena,FC,cesena,040007,Nord-est,47521 47522,0547
+al,morgan,decatur,nord,como,CO,como,013075,Nord-ovest,22100,031
+al,morgan,hartselle,nord,como,CO,albavilla,013003,Nord-ovest,22031,031
+al,randolph,wedowee,nord,rimini,RN,rimini,099014,Nord-est,47921 47922 47923 47924,0541
+al,shelby,alabaster,nord,rovigo,RO,rovigo,029041,Nord-est,45100,0425
+al,talladega,sylacauga,nord,sondrio,SO,sondrio,014061,Nord-ovest,23100,0342
