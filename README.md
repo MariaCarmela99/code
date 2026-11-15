@@ -1,4 +1,4 @@
-# Tesi di Maria Carmela Scibilia – codice
+# Tesi di Maria Carmela Scibilia
 
 Generazione e verifica dei dataset perturbati del benchmark Hospital, baseline deterministica
 ed esperimenti di riparazione delle celle con un LLM locale (Ollama).
@@ -80,9 +80,9 @@ predefinito i risultati finiscono in `db/<prefisso>hospital_output_log.csv` e
 (per esempio `db/p3it_hospital_output_log_mistral-latest.csv`), così i confronti fra modelli non
 si sovrascrivono.
 
-Ogni modello occupa circa 5 GB di RAM e `test_hospitals.py` lo mantiene in memoria per trenta
-minuti dopo l'ultima chiamata. Su una macchina con 16 GB conviene quindi scaricare il modello
-precedente prima di passare al successivo:
+I modell `llama3.1:8b` e `mistral:latest` occupano circa 5 GB di RAM e `test_hospitals.py` lo mantiene
+in memoria per trenta minuti dopo l'ultima chiamata. Su una macchina con 16 GB conviene quindi scaricare
+il modello precedente prima di passare al successivo:
 
 ```
 ollama stop llama3.1:8b
