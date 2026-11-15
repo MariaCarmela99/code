@@ -13,7 +13,6 @@ ed esperimenti di riparazione delle celle con un LLM locale (Ollama).
 | `baseline/p3it_gen.py`, `baseline/p3fr_gen.py` | P3 nelle varianti italiana e francese |
 | `baseline/check_perturbazioni.py` | controllo indipendente delle proprietà di P1–P4 |
 | `baseline/baseline.py` | baseline deterministica e controllo di invarianza |
-| `baseline/stdlib/` | le stesse versioni senza pandas (per i computer su cui pandas non si installa) |
 | `baseline/comuni_cap_map.csv` | comuni italiani con CAP (ISTAT), usato da P3IT |
 | `baseline/laposte_cp_map.csv` | *Base officielle des codes postaux* (La Poste, data.gouv.fr), usato da P3FR |
 | `baseline/p3it_geo_map.csv`, `baseline/p3fr_geo_map.csv` | corrispondenze stato/contea/città prodotte da P3 |
@@ -35,10 +34,9 @@ funzionali sono preservate. In P3 tutte le mappe, contea compresa, sono biiettiv
 
 ## Preparazione dell'ambiente
 
-I generatori e la baseline girano con il solo Python di sistema (le versioni in `baseline/stdlib/`
-non richiedono nulla). L'esperimento con l'LLM ha invece bisogno di alcune librerie: su Debian e
-Ubuntu recenti il Python di sistema non permette l'installazione diretta, quindi conviene un
-ambiente virtuale dedicato.
+Quasi tutti gli script hanno bisogno di pandas (`p3it_gen.py` e `p3fr_gen.py` usano solo la
+libreria standard): su Debian e Ubuntu recenti il Python di sistema non permette l'installazione
+diretta dei pacchetti, quindi conviene un ambiente virtuale dedicato.
 
 ```
 python3 -m venv .venv
@@ -61,9 +59,6 @@ python baseline/p4_gen.py
 python baseline/check_perturbazioni.py
 python baseline/baseline.py
 ```
-
-Senza pandas: `python baseline/stdlib/p1_gen_stdlib.py` e così via. P3IT e P3FR usano già solo la
-libreria standard. Le due versioni producono file identici.
 
 Esperimento con l'LLM (serve Ollama in esecuzione con il modello scelto già scaricato):
 
