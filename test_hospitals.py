@@ -1,4 +1,4 @@
-"""Esperimento di cell repair (Hospital dirty/clean) con Llama 3.1 + retrieval.
+"""Esperimento di cell repair (Hospital dirty/clean) con LLM locale (Ollama) + retrieval.
 Supporta il dataset originale e le perturbazioni (p1_, p2_, p3it_, p3fr_, p4_) da protocollo.
 
 Esecuzione:
@@ -8,12 +8,14 @@ Esecuzione:
     python test_hospitals.py --prefix p3it_   (P3 variante italiana)
     python test_hospitals.py --prefix p3fr_   (P3 variante francese)
     python test_hospitals.py --prefix p4_
+    python test_hospitals.py --model mistral:latest --prefix p1_
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -22,8 +24,8 @@ from pydantic import BaseModel
 from tqdm import tqdm
 
 # ============================= CONFIGURAZIONE =============================
-MODEL_NAME = "llama3.1:8b"
-MAX_ROWS = 200               # Righe CON errori; 0 = tutte
+DEFAULT_MODEL = "llama3.1:8b"   # Modello di default; override con --model (es. mistral:latest)
+MAX_ROWS = 200                  # Righe CON errori; 0 = tutte
 K_CONTEXT_ROWS = 3
 NUM_THREADS = 6
 SEED = 42
@@ -113,7 +115,12 @@ class CellRepair(BaseModel):
     repaired_value: str
 
 
-def resolve_paths(prefix: str) -> tuple[Path, Path, Path, Path, Path]:
+def model_slug(model: str) -> str:
+    """Nome modello -> suffisso valido per i file (es. 'mistral:latest' -> 'mistral-latest')."""
+    return re.sub(r"[^A-Za-z0-9.]+", "-", model).strip("-")
+
+
+def resolve_paths(prefix: str, model: str) -> tuple[Path, Path, Path, Path, Path]:
     data_dir = HERE / "db" if (HERE / "db").exists() else HERE
     dirty_csv = data_dir / f"{prefix}dirty.csv"
     clean_csv = data_dir / f"{prefix}clean.csv"
@@ -121,8 +128,11 @@ def resolve_paths(prefix: str) -> tuple[Path, Path, Path, Path, Path]:
         data_dir = HERE
         dirty_csv = data_dir / f"{prefix}dirty.csv"
         clean_csv = data_dir / f"{prefix}clean.csv"
-    output_log = data_dir / f"{prefix}hospital_output_log.csv"
-    output_repaired = data_dir / f"{prefix}hospital_output_repaired.csv"
+    # Col modello di default i nomi restano invariati (compatibilità con i run già fatti);
+    # con altri modelli gli output hanno un suffisso per non sovrascrivere i log esistenti.
+    tag = "" if model == DEFAULT_MODEL else f"_{model_slug(model)}"
+    output_log = data_dir / f"{prefix}hospital_output_log{tag}.csv"
+    output_repaired = data_dir / f"{prefix}hospital_output_repaired{tag}.csv"
     return data_dir, dirty_csv, clean_csv, output_log, output_repaired
 
 
@@ -202,8 +212,8 @@ def get_context_indices(
     return ranked.index[ranked > 0].tolist()
 
 
-def ask_llama(
-    dirty_row: dict, target_col: str, context_rows: list[dict] | None
+def ask_llm(
+    model: str, dirty_row: dict, target_col: str, context_rows: list[dict] | None
 ) -> tuple[str | None, str]:
     from ollama import chat
 
@@ -222,7 +232,7 @@ def ask_llama(
 
     try:
         response = chat(
-            model=MODEL_NAME,
+            model=model,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": json.dumps(payload, ensure_ascii=False)},
@@ -246,8 +256,8 @@ def norm(text: str | None) -> str:
     return "" if text is None else "".join(text.lower().split())
 
 
-def run(max_rows: int, dry_run: bool, prefix: str, include_non_fd: bool) -> None:
-    data_dir, dirty_csv, clean_csv, output_log, output_repaired = resolve_paths(prefix)
+def run(max_rows: int, dry_run: bool, prefix: str, include_non_fd: bool, model: str) -> None:
+    data_dir, dirty_csv, clean_csv, output_log, output_repaired = resolve_paths(prefix, model)
     dirty, clean, logical_to_actual = load_data(dirty_csv, clean_csv)
     actual_to_logical = {v: k for k, v in logical_to_actual.items()}
 
@@ -269,7 +279,8 @@ def run(max_rows: int, dry_run: bool, prefix: str, include_non_fd: bool) -> None
         for col in target_cols
         if bool(target_mask.at[i, col])
     ]
-    print(f"\nPrefisso attivo: {prefix!r}")
+    print(f"\nModello: {model}")
+    print(f"Prefisso attivo: {prefix!r}")
     print(f"Righe con errori nelle colonne target: {len(affected)}")
     print(f"Righe selezionate per il test: {len(selected)}")
     print(f"Celle reali da riparare: {len(positions)}")
@@ -287,7 +298,7 @@ def run(max_rows: int, dry_run: bool, prefix: str, include_non_fd: bool) -> None
     repaired = dirty.copy()
     logs: list[dict] = []
 
-    for i, col in tqdm(positions, desc=f"Llama 3.1 ({prefix or 'orig'}) - cell repair"):
+    for i, col in tqdm(positions, desc=f"{model} ({prefix or 'orig'}) - cell repair"):
         original = dirty.at[i, col]
         truth = clean.at[i, col]
         # Mantiene l'ordine esatto delle colonne del CSV (fondamentale per P4!)
@@ -298,8 +309,8 @@ def run(max_rows: int, dry_run: bool, prefix: str, include_non_fd: bool) -> None
         context_values = dirty.loc[context_idx, col].tolist()
         context_ids = dirty.loc[context_idx, "index"].tolist()
 
-        with_ctx, error_with = ask_llama(dirty_row, col, context_rows)
-        without_ctx, error_without = ask_llama(dirty_row, col, None)
+        with_ctx, error_with = ask_llm(model, dirty_row, col, context_rows)
+        without_ctx, error_without = ask_llm(model, dirty_row, col, None)
 
         if with_ctx is not None:
             repaired.at[i, col] = with_ctx
@@ -365,8 +376,10 @@ def run(max_rows: int, dry_run: bool, prefix: str, include_non_fd: bool) -> None
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Riparazione Hospital dirty/clean con Llama 3.1")
+    parser = argparse.ArgumentParser(description="Riparazione Hospital dirty/clean con LLM locale (Ollama)")
     parser.add_argument("--dry-run", action="store_true", help="Stampa differenze senza usare Ollama")
+    parser.add_argument("--model", type=str, default=DEFAULT_MODEL,
+                        help=f"Modello Ollama da usare (default: {DEFAULT_MODEL}; es. mistral:latest)")
     parser.add_argument("--max-rows", type=int, default=MAX_ROWS,
                         help="Numero di righe CON errori da testare (0=tutte)")
     parser.add_argument("--prefix", type=str, default="", choices=PREFIXES,
@@ -381,4 +394,5 @@ if __name__ == "__main__":
         dry_run=args.dry_run,
         prefix=args.prefix,
         include_non_fd=args.include_non_fd,
+        model=args.model,
     )
